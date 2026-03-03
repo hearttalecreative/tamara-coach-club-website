@@ -203,6 +203,32 @@ p {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.header-ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line-soft);
+  color: #f4f7fb;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.header-ig svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.header-ig:hover,
+.header-ig:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(240, 0, 140, 0.55);
+  background: rgba(240, 0, 140, 0.16);
+}
+
 .lang-btn {
   border: 0;
   border-radius: 999px;
@@ -1492,6 +1518,11 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     margin-left: auto;
   }
 
+  .header-ig {
+    width: 33px;
+    height: 33px;
+  }
+
   .menu a {
     padding: 0.45rem 0.52rem;
     font-size: 0.72rem;
@@ -1626,6 +1657,11 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
   .lang-btn {
     padding: 0.22rem 0.48rem;
     font-size: 0.58rem;
+  }
+
+  .header-ig {
+    width: 31px;
+    height: 31px;
   }
 
   .eyebrow {

@@ -47,7 +47,7 @@ const I18N = {
     title: "Tamara's Coaching & Fitness Club | Alto Rendimiento en Tulum",
     description:
       "Tamara's Coaching & Fitness Club: gimnasio de alto rendimiento en Tulum con coaching fitness estructurado, entrenador personal y programas presenciales y online.",
-    menu: ["El Método", "Trayectoria", "Premios", "Programas", "Online", "App", "Ubicacion", "Instagram", "Transfórmate!"],
+    menu: ["El Método", "Trayectoria", "Premios", "Programas", "Online", "App", "Ubicacion", "Transfórmate!"],
     heroEyebrow: "Tulum, Mexico",
     heroTitle: "Disciplina primero.<br>La <span>transformacion</span> es consecuencia.",
     heroLead:
@@ -213,7 +213,7 @@ const I18N = {
     title: "Tamara's Coaching & Fitness Club | High Performance in Tulum",
     description:
       "Tamara's Coaching & Fitness Club: high-performance gym in Tulum with structured fitness coaching, personal training, and in-person plus online programs.",
-    menu: ["Method", "Career", "Awards", "Programs", "Online", "App", "Location", "Instagram", "Transform Yourself!"],
+    menu: ["Method", "Career", "Awards", "Programs", "Online", "App", "Location", "Transform Yourself!"],
     heroEyebrow: "Tulum, Mexico",
     heroTitle: "Discipline first.<br><span>Transformation</span> is the consequence.",
     heroLead:
