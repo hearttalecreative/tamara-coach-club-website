@@ -1181,7 +1181,7 @@ main {
 .form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.78rem;
+  gap: 1rem;
   padding: clamp(1rem, 2.5vw, 1.4rem);
 }
 
@@ -1190,6 +1190,11 @@ main {
   gap: 0.35rem;
   font-size: 0.88rem;
   color: #dce5ed;
+  min-width: 0;
+}
+
+.form .field-message {
+  grid-column: 1 / -1;
 }
 
 .form input,
@@ -1222,6 +1227,12 @@ main {
 .form .btn,
 .form-note {
   grid-column: 1 / -1;
+}
+
+.form .btn {
+  justify-self: start;
+  width: auto;
+  min-width: 320px;
 }
 
 .form-note {
@@ -1491,10 +1502,13 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     inset: 0.55rem 0 auto;
     padding: 0.6rem 0.72rem 0.6rem 0.95rem;
     border-radius: 18px;
+    justify-content: flex-start;
+    gap: 0.6rem;
   }
 
   .menu-toggle {
     display: inline-flex;
+    margin-left: auto;
   }
 
   .menu {
@@ -1515,12 +1529,15 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
   }
 
   .lang-switch {
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .header-ig {
-    width: 33px;
-    height: 33px;
+    display: none;
+  }
+
+  .menu .cta-link {
+    display: none;
   }
 
   .menu a {
@@ -1619,6 +1636,11 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     padding: 0.85rem;
   }
 
+  .form .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
   .media-panel {
     min-height: 370px;
   }
@@ -1660,8 +1682,12 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
   }
 
   .header-ig {
-    width: 31px;
-    height: 31px;
+    display: none;
+  }
+
+  .menu-toggle {
+    padding: 0.34rem 0.7rem;
+    font-size: 0.62rem;
   }
 
   .eyebrow {
@@ -1699,6 +1725,11 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
 
   .form {
     padding: 0.9rem;
+  }
+
+  .form .btn {
+    width: 100%;
+    min-width: 0;
   }
 
   .whatsapp-fab {
