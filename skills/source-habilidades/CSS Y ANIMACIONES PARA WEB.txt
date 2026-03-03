@@ -1,0 +1,165 @@
+Defines structured best practices for creating modern, responsive, and visually engaging web interfaces with high-quality layout systems, scalable design tokens, and performant animations. Use when designing or auditing UI/UX for websites, landing pages, dashboards, or web applications.
+
+Purpose
+Establish a deterministic framework for designing modern, responsive, and visually attractive web interfaces. This skill enforces structured layout systems, responsive scaling logic, animation discipline, accessibility standards, and visual hierarchy consistency.
+It is not a style inspiration guide. It is an execution protocol for production-grade UI design.
+Activation Criteria
+Use this skill when:
+	•	Designing a new website or web application interface 
+	•	Redesigning an existing layout 
+	•	Auditing UI quality or visual consistency 
+	•	Improving responsiveness across breakpoints 
+	•	Introducing animations or motion systems 
+	•	Creating landing pages, dashboards, SaaS interfaces, or marketing sites 
+Do not use for backend logic, branding strategy, or copywriting tasks.
+Inputs
+Expected inputs may include:
+	•	Project type (landing page, SaaS dashboard, ecommerce, etc.) 
+	•	Target audience 
+	•	Brand guidelines (if available) 
+	•	Functional requirements 
+	•	Existing layout or URL (if auditing) 
+	•	Device targets (mobile-first, desktop-first, etc.) 
+If critical inputs are missing, request clarification before proceeding.
+Design Framework
+The agent must structure all design decisions across five pillars:
+	•	Layout System 
+	•	Responsive Strategy 
+	•	Visual Hierarchy 
+	•	Motion & Animation 
+	•	Accessibility & Performance 
+All outputs must explicitly address each pillar.
+Procedure
+1. Define Layout Architecture
+1.1 Select layout model:
+	•	Grid-based system (recommended) 
+	•	Flex-based sections 
+	•	Hybrid system 
+1.2 Enforce spacing system:
+	•	Use consistent spacing scale (e.g., 4px, 8px, or 12px base unit) 
+	•	Avoid arbitrary spacing values 
+1.3 Define container rules:
+	•	Max-width constraints 
+	•	Horizontal padding 
+	•	Vertical rhythm consistency 
+1.4 Establish section structure:
+	•	Hero 
+	•	Value proposition 
+	•	Content blocks 
+	•	CTA zones 
+	•	Footer 
+If redesigning, identify layout inconsistencies before proposing improvements.
+
+2. Responsive Strategy
+2.1 Use mobile-first approach by default.
+2.2 Define breakpoint logic explicitly:
+	•	Small (mobile) 
+	•	Medium (tablet) 
+	•	Large (desktop) 
+	•	Extra large (wide screens) 
+2.3 For each breakpoint:
+	•	Adjust grid columns 
+	•	Scale typography 
+	•	Reposition CTAs 
+	•	Collapse complex navigation into drawer/menu 
+2.4 Avoid hiding critical content across breakpoints unless necessary.
+If responsiveness requirements are unspecified, default to standard mobile-first scaling.
+
+3. Visual Hierarchy
+3.1 Define typographic scale:
+	•	H1 (primary headline) 
+	•	H2 (section headline) 
+	•	H3 (subsection) 
+	•	Body 
+	•	Caption 
+Use consistent scale ratios (e.g., 1.2–1.333 modular scale).
+3.2 Enforce contrast rules:
+	•	Clear foreground/background contrast 
+	•	CTA buttons visually dominant 
+	•	Avoid low-contrast gray-on-gray designs 
+3.3 Establish focal points:
+	•	Primary CTA must be visually prioritized 
+	•	Avoid competing visual weights 
+3.4 Use whitespace intentionally to:
+	•	Separate sections 
+	•	Improve readability 
+	•	Reduce cognitive overload 
+
+4. Motion & Animation System
+Animations must follow these constraints:
+4.1 Purpose-driven motion only:
+	•	Guide attention 
+	•	Provide feedback 
+	•	Improve perceived performance 
+	•	Enhance transitions 
+4.2 Animation types:
+	•	Microinteractions (hover, focus, click states) 
+	•	Scroll-based reveals 
+	•	Page transitions 
+	•	Loading states (skeletons, subtle shimmer) 
+4.3 Timing standards:
+	•	Microinteractions: 150–300ms 
+	•	Section transitions: 300–600ms 
+	•	Easing: ease-out or cubic-bezier optimized for natural feel 
+4.4 Performance rules:
+	•	Prefer transform and opacity 
+	•	Avoid layout-triggering properties 
+	•	Avoid heavy parallax unless performance-tested 
+If animation degrades usability or performance, reduce complexity.
+
+5. Accessibility & Performance
+5.1 Ensure:
+	•	WCAG contrast compliance 
+	•	Keyboard navigability 
+	•	Focus states visible 
+	•	Proper semantic structure 
+5.2 Optimize performance:
+	•	Lazy-load non-critical assets 
+	•	Compress images 
+	•	Avoid excessive animation loops 
+5.3 Maintain clarity over decoration.
+If accessibility constraints conflict with aesthetics, prioritize accessibility.
+Decision Logic
+If project type is:
+Landing Page:
+	•	Prioritize conversion hierarchy 
+	•	Strong hero 
+	•	High-contrast CTA 
+	•	Social proof sections 
+SaaS Dashboard:
+	•	Emphasize information density control 
+	•	Clear navigation 
+	•	Modular cards 
+	•	Minimal motion 
+Ecommerce:
+	•	Highlight product imagery 
+	•	Clear pricing visibility 
+	•	Smooth add-to-cart feedback 
+	•	Simplified checkout layout 
+If project type is unclear:
+	•	Ask for clarification before finalizing layout recommendations. 
+Output Requirements
+The response must include:
+	•	Layout Strategy 
+	•	Responsive Structure 
+	•	Typography & Hierarchy Plan 
+	•	Motion & Animation Plan 
+	•	Accessibility & Performance Checklist 
+	•	Specific Improvement Recommendations (if auditing) 
+Each section must contain actionable, structured guidance. Avoid vague suggestions.
+Constraints
+	•	Do not provide random aesthetic trends without structural reasoning. 
+	•	Do not rely solely on visual decoration. 
+	•	Do not introduce animation without defined purpose. 
+	•	Do not ignore performance implications. 
+	•	Do not assume brand identity unless provided. 
+Edge Cases
+If insufficient information is provided:
+	•	Explicitly list missing inputs. 
+	•	Request clarification before generating final structured plan. 
+If the user requests purely visual inspiration without context:
+	•	Ask for project type and constraints first. 
+If the design request conflicts with usability best practices:
+	•	Prioritize usability and explain trade-offs. 
+This skill enforces modern, scalable, and production-ready web design discipline across all web interface projects.
+

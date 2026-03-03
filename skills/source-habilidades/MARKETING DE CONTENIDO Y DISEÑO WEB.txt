@@ -1,0 +1,139 @@
+---
+name: strategic-marketing-design-alignment
+description: Applies strategic thinking and marketing principles to design decisions while preserving brand identity, communication consistency, and content coherence. Use when evaluating or creating visual, digital, or brand assets that must align with business objectives, positioning, and messaging strategy.
+---
+
+# Purpose
+
+This skill ensures that any design output is strategically aligned with business objectives, marketing positioning, brand identity, and communication principles.  
+
+It prevents purely aesthetic decisions detached from strategy and enforces coherence between visual execution, messaging, and brand consistency.
+
+# Activation Criteria
+
+Use this skill when:
+
+- Creating or reviewing brand assets (websites, landing pages, social media, ads, presentations, packaging, etc.).
+- Evaluating whether a design aligns with marketing objectives.
+- Redesigning visual systems while preserving brand identity.
+- Aligning communication, content, and visual hierarchy with strategic goals.
+- Making design decisions that impact positioning, perception, or conversion.
+
+Do NOT use this skill for purely technical design execution (e.g., software usage instructions).
+
+# Inputs
+
+Expected inputs may include:
+
+- Brand identity guidelines (logo, typography, color palette, tone).
+- Business objectives (growth, positioning, awareness, conversion).
+- Target audience definition.
+- Marketing strategy or campaign brief.
+- Existing design assets or prototypes.
+- Content or messaging framework.
+- Competitive landscape (optional).
+
+If key inputs are missing, request clarification before proceeding.
+
+# Strategic Evaluation Framework
+
+All design decisions must be evaluated across five layers:
+
+1. Business Objective Alignment  
+2. Audience Relevance  
+3. Brand Consistency  
+4. Messaging & Content Coherence  
+5. Conversion & Behavioral Intent  
+
+No design recommendation may be made without referencing at least three of these layers.
+
+# Procedure
+
+1. Clarify the Strategic Context  
+   - Identify primary business objective.  
+   - Define target audience segment.  
+   - Determine desired perception or positioning.  
+
+2. Audit Brand Identity Constraints  
+   - Validate visual consistency (color, typography, imagery style).  
+   - Validate tone and communication style.  
+   - Detect inconsistencies with existing brand system.  
+
+3. Evaluate Marketing Alignment  
+   - Does the design reinforce positioning?  
+   - Is the value proposition visually prioritized?  
+   - Is differentiation from competitors clear?  
+
+4. Analyze Content-Design Integration  
+   - Check hierarchy of information.  
+   - Validate clarity of message.  
+   - Ensure design enhances comprehension, not decoration.  
+
+5. Assess Behavioral Impact  
+   - Identify primary action (CTA).  
+   - Validate visual guidance toward that action.  
+   - Detect friction or cognitive overload.  
+
+6. Produce Structured Recommendations  
+   - Separate strategic issues from aesthetic improvements.  
+   - Prioritize changes based on impact.
+
+# Decision Logic
+
+If the design conflicts with brand identity:
+- Recommend adjustments that preserve brand coherence.
+- Do not propose changes that alter core brand attributes unless explicitly requested.
+
+If business objectives are unclear:
+- Pause execution.
+- Request clarification about primary objective before continuing.
+
+If content and design are misaligned:
+- Recommend restructuring hierarchy before suggesting stylistic changes.
+
+If audience definition is missing:
+- Request target segment clarification.
+- Do not assume demographic or psychographic traits.
+
+# Output Requirements
+
+The response must include the following sections:
+
+1. Strategic Context Summary  
+2. Brand Alignment Assessment  
+3. Marketing & Positioning Evaluation  
+4. Content & Communication Review  
+5. Conversion & Behavioral Analysis  
+6. Prioritized Recommendations  
+   - High Impact  
+   - Medium Impact  
+   - Low Impact  
+
+Recommendations must be specific, actionable, and strategically justified.
+
+# Constraints
+
+- Do not provide generic design advice.
+- Do not suggest rebranding unless explicitly requested.
+- Do not prioritize aesthetics over strategy.
+- Do not assume missing strategic data.
+- Maintain respect for existing brand identity.
+
+# Edge Cases
+
+If insufficient information is provided:
+- Explicitly list missing elements.
+- Ask structured clarification questions.
+- Do not fabricate assumptions.
+
+If the design intentionally breaks brand rules:
+- Identify whether it is a strategic exception.
+- Evaluate risk vs. strategic gain before recommending change.
+
+If multiple business objectives conflict:
+- Identify trade-offs.
+- Recommend prioritization based on likely impact.
+
+This skill enforces strategic rigor, marketing coherence, and brand consistency in all design-related decision-making.
+
+

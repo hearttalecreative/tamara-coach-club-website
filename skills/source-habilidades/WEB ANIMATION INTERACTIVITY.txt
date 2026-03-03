@@ -1,0 +1,158 @@
+---
+name: web-animation-interactivity
+description: Diseña y aplica un patrón robusto de parallax en React/Next.js evitando conflictos entre transformaciones CSS (framer-motion) y el layout dinámico de next/image (especialmente con fill). Usar cuando se construyen wrappers de parallax, heroes animados o fondos con imágenes responsivas y se requiere estabilidad de layout y animación sin glitches.
+---
+
+# Purpose
+Construir parallax **estable y predecible** en Next.js/React, minimizando glitches causados por:
+- `next/image` con `fill` (layout dependiente del contenedor, posicionamiento absoluto).
+- Transformaciones CSS (`transform`) sobre nodos que participan en layout/reflow o stacking contexts.
+- Animaciones en el mismo elemento que controla el sizing/ratio del media.
+
+El objetivo es producir un `ParallaxWrapper` que mantenga:
+- Layout estable (sin CLS/jitter).
+- Transformaciones aisladas (sin romper `fill` ni el stacking).
+- API de uso consistente (para imágenes, fondos y contenido).
+
+# Activation Criteria
+Usar este skill cuando:
+- Se implementa parallax con **framer-motion** (scroll-based transforms) y hay `next/image` en modo `fill`.
+- El parallax causa recortes inesperados, “saltos”, flicker, o el `Image` deja de cubrir el contenedor.
+- Se requiere un wrapper reutilizable (hero, secciones con background media, cards con parallax).
+- Se observan bugs por `overflow`, `position`, `z-index`, `transform` creando nuevos stacking contexts.
+
+# Inputs
+Requeridos:
+- Stack: Next.js version, router (app/pages), framer-motion version.
+- Caso de uso del parallax:
+  - background media (imagen/video)
+  - contenido (texto/cards)
+  - ambos
+- Direcciones de movimiento (Y, X), rango (px o %), y trigger (scroll container o viewport).
+- Breakpoints relevantes (móvil/desktop) y si hay `prefers-reduced-motion`.
+- Restricciones de layout: ratio fijo, altura mínima, full-bleed, etc.
+
+Opcionales:
+- Snippet actual de `ParallaxWrapper` y del componente que contiene `next/image`.
+
+# Core Principles (non-negotiable)
+1. **Nunca** aplicar `transform` al mismo nodo que define el *containing block* del `Image fill`.
+2. Con `next/image fill`, el contenedor inmediato debe ser:
+   - `position: relative;`
+   - dimensiones determinísticas (height/ratio explícito)
+   - `overflow` definido (normalmente `hidden`)
+3. Las transformaciones del parallax deben ir en un **hijo interno** (inner layer), no en el contenedor de layout.
+4. El media (imagen) debe renderizarse en una **capa dedicada**, separada del contenido animado, salvo que el efecto requiera lo contrario.
+5. Si hay `overflow: hidden` + `transform`, controlar clipping moviendo el transform al layer correcto.
+
+# Procedure
+## 1) Diagnóstico del conflicto (rápido y determinístico)
+1. Identificar el `next/image`:
+   - ¿usa `fill`? ¿tiene `sizes`?
+2. Localizar el nodo con `transform` (framer-motion) en el árbol:
+   - Si el `motion.*` envuelve al contenedor `relative` del `Image fill`, marcar como **fault**.
+3. Revisar:
+   - ¿el contenedor `relative` tiene altura/ratio explícito?
+   - ¿hay `overflow: hidden` en el contenedor correcto?
+   - ¿hay `filter`, `backdrop-filter`, `transform`, `opacity` que cree stacking context inesperado?
+
+## 2) Establecer el “Layout Shell” (contenedor inmutable)
+Crear un contenedor externo (Shell) que **no** se transforma:
+- Responsabilidades del Shell:
+  - define tamaño (height/min-height/aspect-ratio)
+  - define clipping (overflow)
+  - define stacking base (z-index local si hace falta)
+- Reglas:
+  - Shell: `position: relative; overflow: hidden;`
+  - Shell NO recibe `transform` ni animación de framer-motion
+
+## 3) Introducir “Parallax Inner Layer” (donde vive el transform)
+Crear un hijo interno (Inner) que sí se transforma:
+- Inner recibe `motion.div` con `y`/`x` transform.
+- Inner se posiciona para cubrir el shell:
+  - `position: absolute; inset: 0;`
+- Importante:
+  - Si el media debe moverse, el media vive dentro del Inner.
+  - Si solo el contenido debe moverse, el contenido vive dentro del Inner y el media fuera.
+
+## 4) Patrón recomendado: 3 capas (Media / Overlay / Content)
+Estructura recomendada (nombres lógicos, no prescriptivos):
+- Shell (layout + clipping)
+  - MediaLayer (no transform) **o** dentro de Inner si media parallax
+  - ParallaxInner (transform)
+    - ContentLayer (texto, elementos)
+  - OverlayLayer (gradientes, scrims, etc. sin afectar layout)
+
+Decisión:
+- **Parallax de media**: `MediaLayer` dentro de `ParallaxInner`.
+- **Parallax de contenido**: `MediaLayer` fuera, contenido dentro.
+- **Parallax de ambos**: dos `ParallaxInner` separados (uno para media, uno para contenido) con rangos distintos.
+
+## 5) Garantizar determinismo de sizing para `Image fill`
+Para `next/image fill`:
+- El **padre inmediato** del `Image` debe ser `position: relative` y tener tamaño determinístico.
+- Establecer ratio o altura:
+  - preferir `aspect-ratio` o `min-height` + breakpoints.
+- En parallax de media, añadir “overscan” para evitar bordes al mover:
+  - media container más grande que el shell (p.ej., `inset: -10%`) o scale ligero.
+- Evitar que el nodo del `Image` sea el que se transforma.
+
+## 6) Reduced motion y degradación
+- Si `prefers-reduced-motion`:
+  - desactivar transforms (y=0) y mantener layout
+- En móvil:
+  - reducir rango o desactivar si afecta INP/scroll smoothness
+
+## 7) Validación
+Checklist mínima:
+- No hay CLS al cargar la imagen (shell tiene dimensiones).
+- `Image fill` cubre siempre (sin “letterboxing” al transformar).
+- No hay flicker al scroll (transform solo en inner; evitar layout thrash).
+- Z-index/overlay consistente (sin stacking context inesperado).
+- Reduced motion respeta accesibilidad.
+
+# Decision Logic
+- Si el `motion` envuelve el contenedor `relative` del `Image fill`:
+  - **Refactor obligatorio** a Shell + ParallaxInner.
+- Si el efecto requiere mover el fondo:
+  - mover **MediaLayer** (no el Shell) y aplicar overscan.
+- Si se recortan bordes durante el scroll:
+  - aumentar overscan o aplicar `scale` al media, sin tocar el Shell.
+- Si aparecen problemas de z-index:
+  - evitar `transform` en capas que deban actuar como contexto raíz; asignar z-index en capas hijas.
+- Si el scroll se vuelve “pesado”:
+  - reducir rango, usar `will-change: transform` solo en Inner, y limitar elementos animados.
+
+# Output Requirements
+El entregable SIEMPRE debe incluir:
+
+## 1) Root Cause
+- Qué nodo se transformaba incorrectamente y por qué afectaba `next/image fill`.
+
+## 2) ParallaxWrapper Contract
+- Props mínimas: `range`, `axis`, `mode` (media/content/both), `disabled`.
+- Reglas: Shell inmutable + Inner transformable + sizing determinístico.
+
+## 3) Layer Diagram
+- Árbol de capas (Shell / Media / ParallaxInner / Content / Overlay) y dónde va `next/image`.
+
+## 4) Implementation Rules
+- Lista de “must” y “must-not” (transform isolation, relative parent, overscan).
+
+## 5) Validation Checklist
+- CLS, coverage, clipping, z-index, reduced motion, móvil.
+
+# Constraints
+- No aplicar `transform` al Shell.
+- No usar `Image fill` sin dimensiones determinísticas en el contenedor.
+- No mezclar múltiples responsabilidades (layout + transform + media sizing) en el mismo nodo.
+- No introducir efectos que dependan de reflow por frame (evitar leer layout en scroll handlers).
+
+# Edge Cases
+- Scroll container no-window (parallax dentro de contenedor):
+  - el wrapper debe aceptar el “scroll target” y usar observers/scroll values del contenedor.
+- Hero con height dinámico por contenido:
+  - fijar `min-height`/`aspect-ratio` y permitir contenido fluido dentro de ContentLayer.
+- Varias imágenes en el mismo parallax:
+  - una sola capa transformada; el resto estático o con transform coordinado (no anidado).
+

@@ -1,0 +1,95 @@
+Integrates Google Analytics 4 (GA4) into web applications or digital products, including tracking configuration, event instrumentation, conversion setup, and validation. Use when implementing, auditing, or troubleshooting Google Analytics tracking.
+
+Purpose
+This skill defines a deterministic framework for integrating Google Analytics 4 (GA4) into a website, web application, or digital product. It ensures correct tracking architecture, event instrumentation, and validation without ambiguous implementation decisions.
+Activation Criteria
+Use this skill when:
+	•	Implementing Google Analytics 4 tracking 
+	•	Configuring events or conversions in GA4 
+	•	Auditing an existing GA4 integration 
+	•	Troubleshooting missing or incorrect analytics data 
+	•	Designing a tracking plan for a digital product 
+Do not use this skill for SEO strategy, marketing analysis, or data interpretation. This skill focuses strictly on technical integration and configuration.
+Inputs
+Expected inputs:
+	•	Website or application type (static site, SPA, SSR, e-commerce, etc.) 
+	•	Access method (direct gtag.js or Google Tag Manager) 
+	•	Measurement ID (G-XXXXXXXXXX), if available 
+	•	List of events to track (if defined) 
+	•	Conversion goals (if applicable) 
+	•	Technical stack (React, Next.js, WordPress, etc.), if relevant 
+If required inputs are missing, request clarification before proceeding.
+Decision Framework
+	•	If no Measurement ID is provided: 
+	•	Instruct user to create a GA4 property and obtain the Measurement ID. 
+	•	Pause implementation steps until provided. 
+	•	If Google Tag Manager is specified: 
+	•	Configure GA4 via GTM container. 
+	•	Do not provide direct gtag.js installation steps. 
+	•	If direct integration is specified: 
+	•	Provide gtag.js installation instructions. 
+	•	If the application is a Single Page Application (SPA): 
+	•	Implement manual page_view event triggering on route changes. 
+	•	If events are not defined: 
+	•	Propose a minimal event tracking schema before implementation. 
+Procedure
+	•	Validate Integration Context 
+	•	Confirm platform, access method, and tracking objectives. 
+	•	Install Base Tracking 
+	•	Implement GA4 base tag (gtag.js or GTM). 
+	•	Ensure script is loaded in the global layout or head section. 
+	•	Configure Page Tracking 
+	•	Confirm automatic page_view tracking. 
+	•	For SPA, implement manual route-based page_view events. 
+	•	Define Event Taxonomy 
+	•	Categorize events into: 
+	•	Engagement events 
+	•	Conversion events 
+	•	E-commerce events (if applicable) 
+	•	Implement Custom Events 
+	•	Use event naming conventions (snake_case). 
+	•	Define required parameters. 
+	•	Ensure deterministic event payload structure. 
+	•	Configure Conversions in GA4 
+	•	Mark relevant events as conversions. 
+	•	Validate event registration in GA4 DebugView. 
+	•	Validation and Testing 
+	•	Use GA4 DebugView. 
+	•	Confirm events fire once per trigger. 
+	•	Validate parameter accuracy. 
+	•	Documentation 
+	•	Produce a tracking summary including: 
+	•	Installed method 
+	•	Events configured 
+	•	Conversion mapping 
+	•	Testing confirmation 
+Output Requirements
+Response must include:
+	•	Integration Overview 
+	•	Step-by-Step Implementation Instructions 
+	•	Event Schema (table or structured list) 
+	•	Conversion Configuration Steps 
+	•	Validation Checklist 
+	•	Known Limitations or Assumptions 
+All instructions must be implementation-ready and technically explicit.
+Constraints
+	•	Do not fabricate Measurement IDs. 
+	•	Do not assume e-commerce tracking unless explicitly requested. 
+	•	Do not mix Universal Analytics (UA) with GA4. 
+	•	Do not provide marketing strategy or traffic optimization advice. 
+	•	Avoid speculative debugging without evidence. 
+Edge Cases
+If the user:
+	•	Provides incomplete technical context: 
+	•	Request clarification before proceeding. 
+	•	Reports missing data: 
+	•	Provide a structured troubleshooting checklist: 
+	•	Script installation check 
+	•	Network request validation 
+	•	DebugView confirmation 
+	•	Ad blocker interference 
+	•	Consent mode configuration 
+	•	Requires compliance (GDPR/CCPA): 
+	•	Include consent-mode configuration guidance before event firing. 
+If ambiguity remains, halt execution and request specific technical details rather than assuming implementation context.
+

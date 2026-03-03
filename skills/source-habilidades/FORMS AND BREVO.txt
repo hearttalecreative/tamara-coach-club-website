@@ -1,0 +1,104 @@
+Configures and manages Brevo (formerly Sendinblue) email forms, including form creation, data collection workflows, contact list integration, and automated email responses. Use when integrating Brevo forms into websites or funnels for lead capture and automated email communication.
+
+Purpose
+This skill defines a deterministic framework for integrating Brevo forms into digital properties, configuring data capture fields, connecting submissions to contact lists, and implementing automated email responses.
+It ensures structured implementation, validation, and automation consistency.
+Activation Criteria
+Use this skill when:
+	•	Creating a new Brevo form for email capture. 
+	•	Integrating Brevo forms into a website or landing page. 
+	•	Connecting form submissions to contact lists. 
+	•	Configuring autoresponders or automation workflows in Brevo. 
+	•	Designing structured data collection flows using Brevo forms. 
+Do not use this skill for general marketing strategy, CRM comparison, or non-Brevo platforms.
+Inputs
+Expected inputs:
+	•	Objective of the form (e.g., newsletter signup, lead magnet, contact request). 
+	•	Required data fields (e.g., email, name, phone, custom fields). 
+	•	Target Brevo list or segmentation logic. 
+	•	Automation requirements (e.g., confirmation email, follow-up sequence). 
+	•	Deployment environment (e.g., WordPress, custom HTML site, funnel builder). 
+If any required input is missing, request clarification before proceeding.
+Procedure
+	•	Define Form Objective 
+	•	Identify the primary purpose (lead capture, event registration, inquiry, etc.). 
+	•	Confirm required fields based on use case. 
+	•	Define Data Structure 
+	•	Map each form field to a Brevo contact attribute. 
+	•	If custom fields are required, instruct creation of corresponding attributes in Brevo before form deployment. 
+	•	Configure Contact List Assignment 
+	•	Determine target list. 
+	•	If segmentation is required, define tag or attribute-based logic. 
+	•	Ensure submissions are automatically added to the correct list. 
+	•	Configure Double Opt-in (if required) 
+	•	If compliance-sensitive use case: 
+	•	Enable double opt-in. 
+	•	Define confirmation email template. 
+	•	Else: 
+	•	Use single opt-in and document rationale. 
+	•	Configure Automation Workflow 
+	•	Define trigger: “Contact added to list” or “Form submitted”. 
+	•	Create automated email sequence: 
+	•	Email 1: Immediate confirmation or delivery. 
+	•	Email 2+: Follow-up or nurturing (if specified). 
+	•	Validate delays, personalization tokens, and conditional branches. 
+	•	Embed Form 
+	•	If using Brevo hosted form: generate embed code. 
+	•	If using API integration: 
+	•	Validate API key configuration. 
+	•	Ensure secure server-side submission. 
+	•	Confirm mobile responsiveness. 
+	•	Validation Testing 
+	•	Submit test entry. 
+	•	Confirm: 
+	•	Contact creation in Brevo. 
+	•	Correct list assignment. 
+	•	Automation triggered. 
+	•	Email deliverability. 
+	•	Compliance Check 
+	•	Ensure GDPR or regional compliance if applicable. 
+	•	Verify consent checkbox if required. 
+	•	Confirm privacy policy link inclusion. 
+Decision Logic
+If custom fields do not exist in Brevo:
+	•	Instruct creation before form publication. 
+If automation depends on segmentation:
+	•	Apply tag or attribute condition inside workflow builder.  Else: 
+	•	Use simple list-trigger automation. 
+If integration environment restricts script injection:
+	•	Use API-based submission instead of embedded script. 
+If email confirmation fails during testing:
+	•	Verify sender authentication (SPF, DKIM). 
+	•	Confirm automation trigger configuration. 
+Output Requirements
+Response must include:
+	•	Implementation Plan 
+	•	Step-by-step configuration summary. 
+	•	Data Field Mapping Table 
+	•	Form Field 
+	•	Brevo Attribute 
+	•	Required (Yes/No) 
+	•	Automation Structure 
+	•	Trigger 
+	•	Email sequence overview 
+	•	Timing logic 
+	•	Deployment Instructions 
+	•	Embed method or API instructions. 
+	•	Validation Checklist 
+	•	Explicit confirmation steps. 
+Output must be structured using clear headings and bullet lists.
+Constraints
+	•	Do not provide vague marketing advice. 
+	•	Do not assume list names or automation goals without confirmation. 
+	•	Do not fabricate API credentials or system-specific details. 
+	•	Do not skip validation steps. 
+Edge Cases
+If objective is unclear:
+	•	Ask user to define conversion goal before proceeding. 
+If no automation is requested:
+	•	Confirm explicitly whether autoresponder is required. 
+If incomplete technical environment is provided:
+	•	Request platform clarification before giving embed instructions. 
+If compliance requirements are unknown:
+	•	Ask which jurisdiction applies before enabling opt-in configuration.
+

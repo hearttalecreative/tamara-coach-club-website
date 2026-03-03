@@ -1,0 +1,153 @@
+---
+name: website-performance-optimization
+description: Define y ejecuta una estrategia "Performance First" para landings y sitios con medios pesados (fondos de video, embeds de YouTube, imágenes hero, animaciones) optimizando lazy loading, prioridades de carga y presupuesto de rendimiento para evitar retrabajo en componentes y lógica de carga.
+---
+
+# Purpose
+Prevenir y corregir degradaciones de performance causadas por **medios pesados** (YouTube background, imágenes superiores, efectos visuales) mediante una estrategia determinística de carga: qué se carga, cuándo, con qué prioridad y con qué fallback.
+
+# Activation Criteria
+Usar este skill cuando:
+- La landing/sitio usa **fondos de video** (YouTube/Vimeo/self-hosted) y/o animaciones pesadas.
+- Hay métricas pobres o riesgo en **LCP**, **INP**, **CLS**, TTI o consumo de datos en móvil.
+- Se detecta retrabajo en componentes tipo `YouTubeBackground.tsx`, lógica de `priority` en imágenes hero o “parches” de lazy loading.
+- Se planea un hero con media dominante o un above-the-fold complejo.
+
+# Inputs
+Requeridos (si faltan, pedirlos antes de optimizar):
+- Framework/stack (p.ej., Next.js/React/Vite), hosting/CDN, y si hay SSR/SSG.
+- Páginas objetivo (URLs o rutas) y cuál es el **hero / above-the-fold**.
+- Lista de medios pesados:
+  - videos (fuente: YouTube/archivo), resolución, autoplay, loop, mute
+  - imágenes (hero, banners), tamaños, formatos actuales
+  - librerías de animación/efectos (si aplica)
+- Objetivo de performance (móvil/desktop) y presupuesto deseado (ver “Budgets”).
+- Componentes críticos implicados (p.ej., `YouTubeBackground.tsx`) y reglas actuales de prioridad/carga.
+- Restricciones de branding (no se puede remover video, etc.).
+
+# Definitions (normativas)
+- **Above-the-fold**: contenido visible sin scroll en viewport móvil típico.
+- **Critical path**: recursos estrictamente necesarios para renderizar el hero con layout estable.
+- **Tiered loading**: cargar por capas (0: esencial, 1: visible, 2: bajo demanda).
+- **Fallback-first**: siempre existe un fallback estático (imagen/poster) antes de cargar video/embeds.
+
+# Performance Budgets (defaults)
+Si el cliente no define budgets, usar estos como baseline:
+- LCP: <= 2.5s (móvil)
+- CLS: <= 0.1
+- INP: <= 200ms
+- JS inicial: minimizar; evitar cargar player/SDK en el critical path
+- Media above-the-fold: **1 imagen hero optimizada** o **poster**; video real solo si/cuando el usuario puede verlo y/o interactuar
+
+# Procedure
+## 1) Inventory + Critical Path Map
+1. Identificar el **elemento LCP probable** (usualmente hero image/poster/título).
+2. Listar recursos que participan en el render inicial:
+   - CSS crítico, fuentes, JS base
+   - imagen hero/poster
+   - scripts de terceros (YouTube iframe API, analytics, etc.)
+3. Clasificar cada recurso en Tier 0/1/2:
+   - Tier 0: necesario para el primer render estable (layout + contenido principal)
+   - Tier 1: visible pronto pero no bloqueante (decoración, animaciones ligeras)
+   - Tier 2: diferido (video background real, embeds, efectos pesados, below-the-fold)
+
+## 2) Establish "Performance First" Rules
+Definir reglas operables (no opinables):
+- **Regla A (Video):** ningún iframe/player de YouTube entra en Tier 0.
+- **Regla B (Poster):** el hero usa poster/imagen optimizada como LCP, no el video.
+- **Regla C (Priority):** solo 1 recurso visual above-the-fold puede ir con prioridad alta (normalmente el poster/hero).
+- **Regla D (Defer):** animaciones pesadas y shaders/filters se activan después de `requestIdleCallback` o interacción.
+- **Regla E (Motion):** respetar `prefers-reduced-motion` con fallback sin video/efectos.
+
+## 3) Refactor Strategy for YouTube Background
+Aplicar patrón “Facade + Deferred Mount”:
+1. Render inicial: **contenedor con poster** (misma relación de aspecto) + overlay (si aplica).
+2. Trigger de carga del video (elegir 1 o 2 triggers):
+   - `IntersectionObserver` (cuando el hero está en viewport)
+   - `requestIdleCallback` (cuando el main thread esté libre)
+   - interacción del usuario (click/scroll), para móviles o si hay restricciones de autoplay
+3. Solo después del trigger:
+   - montar iframe/SDK de YouTube
+   - habilitar autoplay/mute/loop (si permitido)
+4. Mantener fallback si:
+   - falla la carga del iframe
+   - conexión lenta (p.ej., `saveData`/`effectiveType`)
+   - `prefers-reduced-motion`
+
+## 4) Above-the-fold Image Priority Rules
+1. Identificar imágenes en el primer viewport (incluye logo si es grande, hero, badges).
+2. Designar **una sola** como “LCP candidate” (hero/poster).
+3. Para el resto:
+   - lazy load + tamaños responsivos
+   - evitar `priority`/preload múltiple
+4. Verificar que el layout no salte:
+   - reservar dimensiones (width/height o aspect-ratio)
+   - evitar insertar contenido que cambie altura del hero
+
+## 5) Third-party & Effects Containment
+1. Mover scripts no críticos a Tier 2 (post-interactive).
+2. Medir costo de efectos:
+   - blur, parallax, video filters, WebGL
+3. Aplicar degradación:
+   - desactivar efectos en móvil o bajo `saveData`
+   - activar efectos solo después del primer render estable
+
+## 6) Validate
+1. Validación funcional:
+   - hero se ve completo sin video (poster correcto)
+   - video aparece sin parpadeo
+   - fallback se mantiene ante fallo
+2. Validación de performance (mínimo):
+   - LCP mejora o no empeora
+   - CLS se mantiene bajo
+   - interacción no se degrada (INP)
+3. Documentar decisiones congeladas (ver Outputs).
+
+# Decision Logic
+- Si el hero depende de video para “wow effect”:
+  - Mantener el video, pero **no** como LCP: poster primero, video diferido.
+- Si el usuario está en móvil / red lenta / save-data:
+  - No cargar video background automáticamente; mantener poster.
+- Si el cliente exige autoplay y hay bloqueos:
+  - Forzar `muted` + fallback; ofrecer “tap to play” como alternativa.
+- Si hay varias imágenes above-the-fold compitiendo:
+  - Priorizar la que impacta LCP (poster/hero) y degradar el resto a lazy.
+
+# Output Requirements
+Entregar SIEMPRE en este formato:
+
+## 1) Performance First Plan
+- Tier 0 / Tier 1 / Tier 2: lista de recursos y razón.
+
+## 2) Rules Frozen
+- Reglas A–E (adaptadas al proyecto) + excepciones permitidas.
+
+## 3) Component Actions
+- `YouTubeBackground.tsx`:
+  - patrón elegido (Facade + Deferred Mount)
+  - trigger(s) definidos
+  - fallback(s) definidos
+- Imágenes above-the-fold:
+  - cuál es la imagen LCP candidate
+  - qué va con prioridad alta y qué va con lazy
+
+## 4) Risks & Trade-offs
+- Qué se sacrifica (p.ej., video inmediato) vs qué se gana (LCP/INP/consumo de datos).
+
+## 5) Validation Checklist
+- Checks funcionales + checks de métricas (LCP/CLS/INP) a verificar antes de merge.
+
+# Constraints
+- No “optimizar” a ciegas: siempre mapear tiers antes de tocar código.
+- No usar prioridad alta en múltiples imágenes above-the-fold.
+- No cargar YouTube iframe/SDK en el critical path salvo excepción documentada.
+- No introducir CLS: reservar dimensiones/ratio para poster, video y overlays.
+
+# Edge Cases
+- Video como único contenido (sin copy):
+  - forzar overlay mínimo de texto/CTA o poster significativo para LCP.
+- Hero con múltiples breakpoints:
+  - posters e imágenes responsivas por breakpoint, mismo ratio.
+- A/B tests y trackers:
+  - cargar en Tier 2; si deben estar en Tier 0, documentar el impacto y mitigaciones.
+

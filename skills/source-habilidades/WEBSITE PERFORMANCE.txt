@@ -1,0 +1,142 @@
+Optimizes website performance focusing on page load speed, background media usage (images and YouTube/Vimeo videos), and responsive behavior. Use when auditing or improving frontend performance, Core Web Vitals, media loading strategies, and cross-device responsiveness.
+Purpose
+This skill evaluates and optimizes website performance with emphasis on:
+	•	Page load speed 
+	•	Background images and background videos (YouTube, Vimeo, self-hosted) 
+	•	Responsive design and device adaptation 
+It provides deterministic analysis and structured optimization recommendations.
+Activation Criteria
+Use when:
+	•	Auditing website speed 
+	•	Improving Core Web Vitals 
+	•	Implementing background images or videos 
+	•	Embedding YouTube or Vimeo as background media 
+	•	Fixing responsive design issues 
+	•	Optimizing frontend performance for mobile and desktop 
+Do not use for backend infrastructure optimization unless it directly affects frontend performance.
+Inputs
+Expected inputs (one or more):
+	•	Website URL 
+	•	Page source code (HTML/CSS/JS) 
+	•	Performance report (Lighthouse, PageSpeed, GTmetrix) 
+	•	Description of performance issues 
+	•	Media implementation details (image format, video embed method) 
+If inputs are incomplete, request clarification before proceeding.
+Evaluation Framework
+The evaluation must cover three domains independently:
+	•	Load Speed 
+	•	Background Media Implementation 
+	•	Responsiveness 
+Each domain must be analyzed separately before generating conclusions.
+Procedure
+1. Page Load Speed Analysis
+	•	Identify critical rendering path issues. 
+	•	Detect render-blocking resources (CSS, JS, fonts). 
+	•	Evaluate: 
+	•	Image weight and formats 
+	•	Script bundling and minification 
+	•	Lazy loading implementation 
+	•	Caching strategy (if visible) 
+	•	Identify impact on: 
+	•	LCP (Largest Contentful Paint) 
+	•	CLS (Cumulative Layout Shift) 
+	•	INP or interaction latency 
+	•	Classify severity of issues: High / Medium / Low. 
+2. Background Images and Video Analysis
+A. Background Images
+	•	Determine: 
+	•	File format (JPEG, PNG, WebP, AVIF) 
+	•	Resolution vs display size 
+	•	Compression level 
+	•	Verify: 
+	•	Responsive image handling 
+	•	Proper sizing for breakpoints 
+	•	Lazy loading (if below the fold) 
+	•	Detect anti-patterns: 
+	•	Full-resolution desktop images served to mobile 
+	•	CSS background images without responsive alternatives 
+	•	Uncompressed PNG for photographic content 
+B. Background Videos (YouTube/Vimeo/Self-hosted)
+	•	Identify embedding method: 
+	•	iframe 
+	•	API-based lazy load 
+	•	Static poster with deferred playback 
+	•	Evaluate: 
+	•	Autoplay behavior 
+	•	Muted configuration 
+	•	Mobile fallback 
+	•	Impact on LCP 
+	•	Detect performance risks: 
+	•	Immediate iframe load above the fold 
+	•	Multiple video embeds 
+	•	No poster image 
+	•	Recommend: 
+	•	Click-to-load strategy 
+	•	Static fallback for mobile 
+	•	Conditional loading after user interaction 
+	•	Use of lightweight embed wrappers 
+3. Responsiveness Analysis
+	•	Verify viewport configuration. 
+	•	Evaluate breakpoints consistency. 
+	•	Detect layout shifts across devices. 
+	•	Identify: 
+	•	Fixed-width containers 
+	•	Overflow issues 
+	•	Non-scalable background media 
+	•	Validate: 
+	•	Proper media queries 
+	•	Fluid typography or responsive scaling 
+	•	Mobile-first structure 
+Decision Logic
+If page speed score is below acceptable threshold:
+	•	Prioritize critical rendering path and media optimization before cosmetic changes. 
+If background video is above the fold:
+	•	Recommend replacing with static poster + deferred video load. 
+If mobile performance is significantly worse than desktop:
+	•	Prioritize image resizing, conditional media loading, and script deferral. 
+If insufficient technical data is provided:
+	•	Request URL or performance report. 
+	•	Do not assume implementation details. 
+Output Requirements
+The response must be structured as follows:
+Executive Summary
+Brief overview of performance status and primary risks.
+Load Speed Findings
+	•	Issue 
+	•	Impact 
+	•	Severity 
+	•	Recommended Fix 
+Background Media Findings
+Separate sections for:
+	•	Images 
+	•	Videos 
+Each must include:
+	•	Problem 
+	•	Performance Impact 
+	•	Optimization Strategy 
+Responsiveness Findings
+	•	Structural issues 
+	•	Media behavior issues 
+	•	Breakpoint or scaling problems 
+	•	Recommended corrections 
+Priority Action Plan
+Ordered list:
+	•	Immediate fixes (high impact) 
+	•	Secondary improvements 
+	•	Advanced optimizations 
+Constraints
+	•	Do not rewrite entire code unless explicitly requested. 
+	•	Do not assume server-level configurations without evidence. 
+	•	Do not recommend tools without explaining implementation rationale. 
+	•	Avoid generic advice; tie recommendations to detected issues. 
+Edge Cases
+If only conceptual guidance is requested (no URL provided):
+	•	Provide best-practice structured recommendations. 
+	•	Clearly label them as general guidelines. 
+If background media is required for branding reasons:
+	•	Optimize rather than remove. 
+	•	Propose performance-safe alternatives. 
+If conflicting requirements exist (e.g., autoplay required but performance critical):
+	•	Provide trade-off analysis. 
+	•	Recommend controlled loading strategies.
+

@@ -1,0 +1,137 @@
+Implements structured front-end development solutions using semantic HTML, advanced CSS, responsive design with media queries, Flexbox and Grid layouts, JavaScript (basic to intermediate), performance optimization, lazy loading, image optimization, and integration with external tools. Use when building, auditing, or improving modern web interfaces with performance and scalability standards.
+Purpose
+This skill provides a deterministic execution framework for designing, building, reviewing, or optimizing front-end web interfaces according to modern standards of structure, responsiveness, performance, and maintainability.
+It enforces architectural discipline, performance optimization, and structured output generation.
+Activation Criteria
+Use this skill when:
+	•	Building a front-end from scratch. 
+	•	Refactoring or improving an existing web interface. 
+	•	Reviewing HTML/CSS/JS implementation quality. 
+	•	Implementing responsive layouts. 
+	•	Optimizing loading speed and web performance. 
+	•	Applying lazy loading or image optimization. 
+	•	Integrating third-party tools or APIs into a front-end. 
+	•	Auditing performance issues in a web interface. 
+Do not use this skill for backend-only tasks or infrastructure configuration.
+Inputs
+Expected inputs may include:
+	•	Functional requirements or UI specifications. 
+	•	Wireframes or design descriptions. 
+	•	Existing HTML, CSS, or JavaScript code. 
+	•	Performance metrics (LCP, CLS, FID, TTI, etc.). 
+	•	External tool or API documentation. 
+	•	Target device or browser requirements. 
+If critical inputs are missing (e.g., requirements, target devices), request clarification before proceeding.
+Procedure
+Execute the following steps in order:
+	•	Requirement Analysis 
+	•	Identify scope (new build, refactor, optimization, audit). 
+	•	Identify target devices and performance constraints. 
+	•	Determine required integrations. 
+	•	Semantic HTML Structure 
+	•	Use proper structural elements (header, nav, main, section, article, aside, footer). 
+	•	Ensure accessibility basics (alt attributes, labels, ARIA only if necessary). 
+	•	Avoid non-semantic container overuse. 
+	•	CSS Architecture 
+	•	Define layout strategy (Flexbox, Grid, or hybrid). 
+	•	Ensure scalable class naming (consistent methodology). 
+	•	Separate layout logic from visual styling. 
+	•	Avoid unnecessary specificity and cascading conflicts. 
+	•	Responsive Implementation 
+	•	Implement mobile-first strategy. 
+	•	Use structured media queries. 
+	•	Validate breakpoints based on layout behavior, not devices. 
+	•	Ensure fluid typography and adaptable spacing. 
+	•	Layout System Decision 
+	•	Use Flexbox for one-dimensional alignment. 
+	•	Use Grid for two-dimensional layout control. 
+	•	Avoid mixing both without clear responsibility boundaries. 
+	•	JavaScript Implementation 
+	•	Use vanilla JS unless framework is explicitly required. 
+	•	Separate DOM selection, event binding, and logic. 
+	•	Avoid global scope pollution. 
+	•	Validate input data before processing. 
+	•	Handle asynchronous behavior explicitly. 
+	•	Performance Optimization 
+	•	Minimize render-blocking resources. 
+	•	Defer or async non-critical scripts. 
+	•	Reduce DOM complexity. 
+	•	Remove unused CSS and JS where applicable. 
+	•	Lazy Loading 
+	•	Apply native loading="lazy" where appropriate. 
+	•	Defer non-critical images, iframes, or heavy components. 
+	•	Avoid lazy loading above-the-fold critical assets. 
+	•	Image Optimization 
+	•	Use modern formats (WebP/AVIF if supported). 
+	•	Compress images appropriately. 
+	•	Provide responsive images (srcset, sizes). 
+	•	Avoid oversized media for small containers. 
+	•	External Tool Integration 
+	•	Validate dependency necessity. 
+	•	Ensure scripts load non-blocking. 
+	•	Isolate integration logic from core layout. 
+	•	Implement error handling for failed loads. 
+	•	Avoid vendor lock-in patterns when possible. 
+Decision Logic
+If task type is:
+New Build:
+	•	Follow full procedure from step 1 to 10. 
+Refactor:
+	•	Audit existing implementation. 
+	•	Identify structural, responsiveness, and performance issues. 
+	•	Apply only necessary corrections. 
+Performance Audit:
+	•	Prioritize steps 7, 8, and 9. 
+	•	Provide measurable improvement recommendations. 
+Integration Task:
+	•	Prioritize step 10. 
+	•	Validate compatibility with current architecture before modifying layout. 
+If information is incomplete:
+	•	List missing data. 
+	•	Request clarification. 
+	•	Do not assume UI or business logic intent. 
+Output Requirements
+The response must be structured using the following sections:
+	•	Project Context 
+	•	Type of task 
+	•	Assumptions (if any, explicitly stated) 
+	•	Structural Implementation 
+	•	HTML strategy explanation 
+	•	Styling & Layout Strategy 
+	•	CSS architecture 
+	•	Flexbox/Grid decision 
+	•	Responsive Strategy 
+	•	Breakpoints and scaling logic 
+	•	JavaScript Logic 
+	•	Behavior description 
+	•	Event handling structure 
+	•	Performance Optimizations 
+	•	Applied or recommended improvements 
+	•	Lazy Loading & Media Optimization 
+	•	Implementation details 
+	•	External Integrations 
+	•	Tools used 
+	•	Loading strategy 
+	•	Risk considerations 
+All sections must be present unless explicitly not applicable.  Do not produce unstructured responses.
+Constraints
+	•	Do not introduce frameworks unless explicitly requested. 
+	•	Do not mix layout systems without justification. 
+	•	Do not ignore accessibility basics. 
+	•	Do not provide generic advice without implementation logic. 
+	•	Do not assume backend capabilities unless specified. 
+	•	Do not produce overly verbose explanations. 
+Edge Cases
+If design specifications conflict with performance best practices:
+	•	Prioritize performance. 
+	•	Explicitly document trade-offs. 
+If integration script blocks rendering:
+	•	Propose deferred or asynchronous alternative. 
+If images are mandatory but heavy:
+	•	Propose compression and responsive delivery strategy. 
+If browser compatibility constraints exist:
+	•	Provide fallback layout strategies. 
+If requirements are ambiguous:
+	•	Pause execution. 
+	•	Request precise clarification before continuing. 
+

@@ -1,0 +1,118 @@
+Evalúa y estructura interfaces digitales aplicando principios de UX, arquitectura de información, jerarquía visual, patrones de escaneo (F-pattern y Z-pattern), diseño centrado en el usuario, microinteracciones, diseño responsive real y accesibilidad básica. Usar cuando se diseñe, rediseñe o audite una interfaz web o aplicación.
+Purpose
+Este skill analiza, diseña o audita interfaces digitales garantizando coherencia estructural, claridad jerárquica, escaneabilidad, adaptabilidad real y cumplimiento básico de accesibilidad.
+Su objetivo es producir evaluaciones o propuestas estructuradas, no opiniones subjetivas.
+
+Activation Criteria
+Usar este skill cuando:
+	•	Se solicite diseño o rediseño de una interfaz. 
+	•	Se evalúe experiencia de usuario. 
+	•	Se requiera estructurar arquitectura de información. 
+	•	Se analice jerarquía visual. 
+	•	Se optimice conversión mediante patrones de escaneo. 
+	•	Se evalúe diseño responsive. 
+	•	Se revisen aspectos básicos de accesibilidad. 
+No usar para tareas puramente gráficas sin contexto funcional.
+
+Inputs
+Entradas esperadas:
+	•	Descripción del producto o sistema. 
+	•	Público objetivo. 
+	•	Objetivo principal de la interfaz. 
+	•	Wireframe, estructura o descripción de secciones. 
+	•	Restricciones técnicas si existen. 
+	•	Plataforma objetivo (web, mobile, SaaS, ecommerce, etc.). 
+Si falta información crítica (objetivo o usuario), solicitar aclaración antes de continuar.
+
+Procedure
+	•	Definir Usuario y Objetivo 
+	•	Identificar usuario principal. 
+	•	Identificar tarea principal que debe completar. 
+	•	Detectar fricción potencial. 
+	•	Evaluar Arquitectura de Información 
+	•	Validar claridad de estructura. 
+	•	Verificar agrupación lógica de contenido. 
+	•	Confirmar profundidad de navegación razonable. 
+	•	Eliminar redundancias estructurales. 
+	•	Analizar Jerarquía Visual 
+	•	Verificar orden de lectura intencional. 
+	•	Confirmar contraste entre niveles (H1, H2, CTA, cuerpo). 
+	•	Identificar elementos que compiten visualmente. 
+	•	Validar uso de tamaño, peso y espacio como señal jerárquica. 
+	•	Aplicar Patrones de Escaneo 
+	•	Para páginas informativas: evaluar coherencia con F-pattern. 
+	•	Para landings o páginas dirigidas a acción: evaluar coherencia con Z-pattern. 
+	•	Alinear ubicación de CTA con trayectorias naturales de mirada. 
+	•	Detectar bloques que interrumpen flujo visual. 
+	•	Validar Diseño Centrado en el Usuario 
+	•	Confirmar que cada sección responde a una necesidad real. 
+	•	Detectar contenido autoreferencial irrelevante. 
+	•	Verificar claridad de beneficios y tareas. 
+	•	Evaluar Microinteracciones 
+	•	Confirmar feedback en acciones (hover, click, envío). 
+	•	Verificar estados: loading, éxito, error. 
+	•	Validar consistencia de comportamiento interactivo. 
+	•	Revisar Responsive Real 
+	•	Confirmar que la jerarquía se redefine en mobile. 
+	•	Verificar que no sea solo reducción proporcional. 
+	•	Evaluar orden de bloques en pantallas pequeñas. 
+	•	Confirmar legibilidad táctil (botones, espaciado). 
+	•	Verificar Accesibilidad Básica 
+	•	Validar contraste suficiente. 
+	•	Confirmar legibilidad tipográfica. 
+	•	Verificar navegación clara y predecible. 
+	•	Confirmar que acciones no dependan exclusivamente de color. 
+	•	Validar claridad de labels en formularios. 
+
+Decision Logic
+Si la interfaz es principalmente informativa:
+	•	Priorizar F-pattern. 
+	•	Optimizar encabezados y subtítulos escaneables. 
+Si la interfaz es transaccional o de conversión:
+	•	Priorizar Z-pattern. 
+	•	Asegurar CTA dominante y repetido estratégicamente. 
+Si el usuario objetivo es técnico:
+	•	Permitir mayor densidad informativa.  Else: 
+	•	Priorizar claridad y simplicidad. 
+Si el diseño mobile altera orden lógico:
+	•	Reestructurar bloques para mantener prioridad funcional. 
+Si hay conflicto entre estética y claridad:
+	•	Priorizar claridad funcional. 
+
+Output Requirements
+La respuesta debe incluir obligatoriamente:
+1. Diagnóstico General
+Breve evaluación del estado actual.
+2. Arquitectura de Información
+Problemas detectados y mejoras propuestas.
+3. Jerarquía Visual
+Análisis estructural y ajustes sugeridos.
+4. Escaneabilidad
+Evaluación del patrón aplicado (F o Z) y recomendaciones.
+5. Diseño Centrado en Usuario
+Evaluación de alineación con necesidades reales.
+6. Microinteracciones
+Observaciones y mejoras propuestas.
+7. Responsive
+Evaluación de adaptación estructural real.
+8. Accesibilidad
+Problemas detectados y correcciones necesarias.
+Las recomendaciones deben ser accionables, no genéricas.
+
+Constraints
+	•	No emitir juicios subjetivos sin justificación estructural. 
+	•	No proponer rediseño completo si no es necesario. 
+	•	No asumir información no proporcionada. 
+	•	No evaluar branding o identidad visual salvo que afecte usabilidad. 
+	•	No mezclar análisis UX con estrategia de marketing salvo que impacte conversión estructural. 
+
+Edge Cases
+Si la información es insuficiente:
+	•	Solicitar objetivo principal y tipo de usuario antes de continuar. 
+Si solo se proporciona una idea abstracta:
+	•	Proponer estructura base antes de evaluar. 
+Si se pide validación sin contexto de usuario:
+	•	Declarar limitación y evaluar bajo supuestos explícitos. 
+Si el diseño contradice principios de accesibilidad:
+	•	Señalarlo como prioridad crítica.
+

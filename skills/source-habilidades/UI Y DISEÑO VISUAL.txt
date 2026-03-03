@@ -1,0 +1,153 @@
+Evaluates UI and visual design quality based on typography, design system coherence, visual consistency, whitespace strategy, composition, color psychology, responsive breakpoints, and reusable component architecture. Use when auditing interfaces, reviewing design work, or validating visual system maturity.
+
+Purpose
+This skill performs a structured evaluation of UI and visual design work using system-level criteria.  It enforces disciplined, system-driven design analysis rather than subjective or improvisational feedback.
+The objective is to determine whether the design reflects professional system thinking and scalable architecture.
+Activation Criteria
+Use this skill when:
+	•	Reviewing UI designs (web, mobile, SaaS, product interfaces). 
+	•	Auditing visual consistency across screens. 
+	•	Evaluating design system maturity. 
+	•	Assessing typography and color strategy. 
+	•	Validating responsive behavior across breakpoints. 
+	•	Reviewing component reuse and scalability. 
+	•	Determining whether a design is system-driven or improvisational. 
+Do not use for branding-only evaluations or purely marketing graphics without UI context.
+Inputs
+Expected inputs may include:
+	•	Screenshots or UI mockups. 
+	•	Figma/Sketch design exports. 
+	•	Design system documentation. 
+	•	Component libraries. 
+	•	Style guides. 
+	•	Product URLs. 
+	•	Responsive variants (desktop/tablet/mobile). 
+If multiple screens are provided, evaluate system coherence across them.
+Evaluation Framework
+All evaluations must follow this structured framework.  Do not skip sections.
+1. Typography System
+Evaluate:
+	•	Font selection appropriateness. 
+	•	Hierarchical clarity (H1–H6, body, captions, labels). 
+	•	Scale consistency. 
+	•	Line height and readability. 
+	•	Typographic rhythm. 
+	•	Use of font weights (avoid arbitrary variation). 
+Determine whether typography is token-based or manually adjusted per screen.
+2. Design System Coherence
+Evaluate:
+	•	Existence of spacing scale. 
+	•	Use of design tokens. 
+	•	Consistent grid usage. 
+	•	Standardized UI patterns. 
+	•	Alignment consistency. 
+	•	Repeated layout logic. 
+If inconsistencies exist, identify whether they are systemic or isolated.
+3. Visual Consistency
+Analyze:
+	•	Button styles. 
+	•	Input fields. 
+	•	Iconography consistency. 
+	•	Border radius usage. 
+	•	Shadow logic. 
+	•	Interaction states (hover, active, disabled). 
+Determine if visual rules are globally defined or manually altered per instance.
+4. Strategic Use of Whitespace
+Assess:
+	•	Padding consistency. 
+	•	Margin hierarchy. 
+	•	Section breathing space. 
+	•	Visual grouping clarity. 
+	•	Density balance. 
+	•	Cognitive load distribution. 
+Whitespace must appear intentional, not accidental.
+5. Composition & Layout
+Evaluate:
+	•	Grid alignment. 
+	•	Visual balance. 
+	•	Focal hierarchy. 
+	•	Scan patterns (Z-pattern, F-pattern). 
+	•	Symmetry or asymmetry strategy. 
+	•	Section transitions. 
+Identify layout logic rather than aesthetic opinion.
+6. Color Psychology & Strategy
+Analyze:
+	•	Primary/secondary color roles. 
+	•	Semantic color usage (error, success, warning). 
+	•	Contrast ratios. 
+	•	Accessibility compliance. 
+	•	Emotional tone alignment. 
+	•	Overuse or underuse of accent colors. 
+Determine whether color decisions are strategic or decorative.
+7. Responsive & Breakpoints Design
+Evaluate:
+	•	Layout adaptation between breakpoints. 
+	•	Typography scaling. 
+	•	Component stacking logic. 
+	•	Navigation transformation. 
+	•	Interaction changes on mobile. 
+	•	Preservation of hierarchy across devices. 
+If responsive variants are missing, flag as structural deficiency.
+8. Reusable Component Architecture
+Assess:
+	•	Presence of atomic/molecular structure. 
+	•	Component variants. 
+	•	State handling. 
+	•	Modularity. 
+	•	Scalability. 
+	•	Repetition patterns. 
+Determine whether the system supports growth without redesign.
+Decision Logic
+If design shows:
+	•	Inconsistent typography scale → classify as "Non-systematic Typography". 
+	•	Arbitrary spacing → classify as "Lack of Spacing System". 
+	•	Inconsistent components → classify as "Improvised Component Usage". 
+	•	Missing responsive logic → classify as "Non-Responsive Architecture". 
+	•	Overuse of decorative color → classify as "Aesthetic-Driven, Not System-Driven". 
+If all systems are coherent and repeatable → classify as "Mature Design System Implementation".
+If inputs are incomplete:
+	•	State missing artifacts. 
+	•	Continue evaluation only on available material. 
+	•	Do not assume unseen system structure. 
+Procedure
+	•	Identify provided artifacts. 
+	•	Map artifacts against the evaluation framework. 
+	•	Evaluate each section independently. 
+	•	Detect systemic patterns (positive or negative). 
+	•	Classify overall system maturity. 
+	•	Provide structured recommendations prioritized by impact. 
+Output Requirements
+Response must include the following sections:
+Executive Summary
+Concise system-level verdict.
+System Maturity Classification
+One of:
+	•	Improvised Design 
+	•	Emerging System 
+	•	Structured but Inconsistent 
+	•	Mature Design System 
+Section-by-Section Analysis
+Detailed evaluation of all 8 framework categories.
+Critical Structural Issues
+List high-impact systemic weaknesses.
+Strategic Recommendations
+Actionable, prioritized improvements.
+Scalability Risk Assessment
+Short evaluation of long-term maintainability.
+Do not provide generic praise.  Do not provide subjective aesthetic commentary.  Do not rewrite the design unless explicitly requested.
+Constraints
+	•	Evaluate structure, not taste. 
+	•	Avoid personal stylistic bias. 
+	•	Do not invent missing design system documentation. 
+	•	Do not speculate beyond visible evidence. 
+	•	Avoid narrative explanations. 
+Edge Cases
+If only one screen is provided:
+	•	Evaluate internal coherence. 
+	•	Flag absence of system-wide validation. 
+If artifacts conflict:
+	•	Prioritize visual evidence over claimed documentation. 
+If insufficient information:
+	•	Explicitly request required materials before final classification. 
+A serious designer works with systems, not improvisation.  This skill enforces that standard.
+

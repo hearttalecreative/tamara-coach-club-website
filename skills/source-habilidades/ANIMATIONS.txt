@@ -1,0 +1,152 @@
+Defines and structures high-value animation and interactivity patterns for modern websites, including hover states, scroll-triggered effects, parallax, sticky elements, and progressive transitions. Use when designing or improving visual interactivity and motion systems in web interfaces.
+Purpose
+This skill defines a deterministic framework for designing modern, high-value UI animations and interactive behaviors in websites.  It ensures animations are purposeful, performance-conscious, conversion-oriented, and visually cohesive rather than decorative.
+The skill must transform general animation requests into a structured motion strategy.
+
+Activation Criteria
+Use this skill when:
+	•	Designing animations for a website. 
+	•	Improving perceived modernity of a UI. 
+	•	Adding interactivity to landing pages or product pages. 
+	•	Structuring scroll-based or state-based motion systems. 
+	•	Evaluating which animations add real UX value. 
+Do not use for backend logic, game animation systems, or video production tasks.
+
+Inputs
+Expected inputs:
+	•	Website type (e.g., landing page, SaaS, portfolio, ecommerce). 
+	•	Target audience (if available). 
+	•	Sections involved (hero, features, forms, pricing, etc.). 
+	•	Interaction goals (conversion, engagement, clarity). 
+	•	Technical constraints (optional). 
+If missing, request clarification before proceeding.
+
+Procedure
+1. Classify Animation Category
+Map requested animations into these functional groups:
+	•	Microinteractions 
+	•	Scroll-triggered reveals 
+	•	Layout transitions 
+	•	Depth and spatial effects 
+	•	Structural motion behaviors 
+Every animation must belong to one of these categories.
+
+2. Define UX Objective for Each Animation
+For each animation proposed, explicitly define:
+	•	Purpose (feedback, focus, guidance, hierarchy, conversion) 
+	•	Trigger (hover, scroll, click, load, state change) 
+	•	Intensity level (subtle / moderate / expressive) 
+	•	Performance sensitivity (low / medium / high) 
+Reject animations that do not serve a functional UX purpose.
+
+3. Structure Recommended Animations
+Generate structured animation recommendations across the following areas:
+A. Microinteractions (High Value)
+Include:
+	•	Hover effects on buttons 
+	•	Active/pressed states 
+	•	Form field focus states 
+	•	Real-time validation feedback 
+	•	Success animation after form submission 
+Each must define:
+	•	Visual behavior 
+	•	Timing (ms range) 
+	•	Easing style 
+	•	UX purpose 
+
+B. Scroll-Based Animations
+Include:
+	•	Fade-in on scroll 
+	•	Sequential element reveals 
+	•	Progressive content activation 
+	•	Section transitions 
+	•	Scroll-triggered content blocks 
+Define:
+	•	Entry direction (up, left, scale, opacity) 
+	•	Delay sequencing 
+	•	Scroll threshold trigger 
+	•	Performance recommendation (IntersectionObserver or equivalent) 
+
+C. Progressive Layout Motion
+Include:
+	•	Smooth section transitions 
+	•	Scroll-driven section change 
+	•	Progressive reveal storytelling 
+	•	Subtle parallax 
+	•	Content that activates as user advances 
+Define:
+	•	Motion consistency rules 
+	•	Maximum movement distance 
+	•	Depth layering logic 
+	•	Mobile behavior adjustments 
+
+D. Structural Enhancements
+Include:
+	•	Strategic sticky elements 
+	•	Sticky CTAs 
+	•	Sticky navigation with transformation on scroll 
+	•	Dynamic header resizing 
+	•	Context-aware floating elements 
+Define:
+	•	When sticky activates 
+	•	When it collapses or transforms 
+	•	Interaction priority rules 
+
+4. Enforce Modern Design Standards
+All animation recommendations must follow:
+	•	Subtlety over exaggeration 
+	•	150ms–600ms duration range (unless justified) 
+	•	Ease-out or cubic-bezier optimized curves 
+	•	Hardware-accelerated properties only (opacity, transform) 
+	•	Avoid layout-thrashing properties 
+Do not recommend animations that degrade performance.
+
+Decision Logic
+If the website is:
+Landing page:
+	•	Emphasize scroll storytelling, sequential reveals, parallax, sticky CTA. 
+SaaS / Product:
+	•	Emphasize microinteractions, state transitions, form feedback, hover depth. 
+Portfolio:
+	•	Emphasize expressive transitions, scroll activation, creative section shifts. 
+Ecommerce:
+	•	Emphasize hover states, cart feedback, sticky purchase elements. 
+If technical constraints are strict:
+	•	Reduce parallax. 
+	•	Minimize scroll-triggered heavy motion. 
+	•	Favor opacity and transform-only animations. 
+If no audience or context is provided:
+	•	Request clarification before finalizing recommendations. 
+
+Output Requirements
+The response must include:
+	•	Animation Strategy Overview 
+	•	Categorized Animation System 
+	•	Microinteractions 
+	•	Scroll Animations 
+	•	Structural Motion 
+	•	Timing & Easing Guidelines 
+	•	Performance Considerations 
+	•	UX Justification per animation type 
+Do not provide vague lists.  Every animation must include purpose and trigger.
+
+Constraints
+	•	Do not generate code unless explicitly requested. 
+	•	Do not provide generic “make it modern” suggestions. 
+	•	Do not recommend excessive or distracting animations. 
+	•	Do not stack multiple heavy animations on the same trigger. 
+
+Edge Cases
+If the user only lists animation ideas without context:
+	•	Structure them into a cohesive animation system. 
+	•	Define their UX purpose. 
+	•	Clarify missing technical constraints if necessary. 
+If the request mixes animation with full UI design:
+	•	Focus exclusively on animation and interaction behavior. 
+	•	Do not redesign layout unless required for motion logic. 
+If performance concerns arise:
+	•	Prioritize minimal motion. 
+	•	Recommend progressive enhancement strategy. 
+
+This skill enforces structured, modern, and UX-driven animation systems for high-quality web interfaces.
+

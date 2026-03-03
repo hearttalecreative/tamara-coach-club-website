@@ -1,0 +1,97 @@
+---
+name: strategic-marketing-design-alignment
+description: Alinea el posicionamiento de marca y la estrategia de marketing con decisiones de diseño (estética, sistema visual y componentes) para evitar retrabajo. Usar cuando se define o rediseña identidad visual, UI de marketing, sitios, landing pages o campañas y exista riesgo de estética genérica o desalineada con una audiencia premium.
+---
+
+# Purpose
+Definir, validar y traducir el posicionamiento (audiencia, propuesta de valor, nivel de exclusividad y tono) en un **direction set** de diseño accionable (estética, componentes, reglas) antes de producir UI/creativos, minimizando retrabajo por “demasiado común”.
+
+# Activation Criteria
+Usar este skill cuando:
+- El equipo inicia un diseño sin claridad de **audiencia objetivo** o **posicionamiento**.
+- Aparecen señales de “se ve genérico”, “parece de plantilla”, “le falta exclusividad”.
+- Se requiere elegir entre estéticas (p.ej., “visualmente inmersivo” vs “lujo editorial”).
+- Se diseñan componentes reutilizables (design system, UI kit) y el costo de retrabajo es alto.
+- Hay tensión entre marketing (mensaje) y diseño (look & feel).
+
+# Inputs
+Esperados (si falta algo, pedirlo explícitamente):
+- Contexto de producto/servicio (1–3 frases).
+- Objetivo del artefacto (sitio, landing, campaña, app marketing, etc.).
+- Audiencia objetivo: segmento + nivel socioeconómico + motivaciones + objeciones.
+- Posicionamiento: “para quién”, “qué promete”, “por qué nosotros”, “contra qué alternativas”.
+- Lista de competidores o referencias (3–8).
+- Restricciones: marca existente, paleta/logotipo, canales, plazos, requisitos legales.
+- Activos actuales (si existen): mocks, componentes, guías, copy, métricas o feedback cualitativo.
+
+# Procedure
+1. **Mapear intención y riesgo**
+   - Identificar: qué se está diseñando, para qué etapa del funnel, y dónde duele el retrabajo (componentes, layout, sistema visual).
+
+2. **Definir el “Luxury/Generic Gate” (prueba de exclusividad)**
+   - Establecer criterios de exclusividad/refinamiento: señales que deben estar presentes (tipografía, grid, whitespace, fotografía, materiales, microcopy, motion, densidad de info).
+   - Definir señales prohibidas (patrones “plantilla”, exceso de gradients genéricos, iconografía stock, CTAs sin jerarquía editorial, componentes demasiado “SaaS común”).
+
+3. **Construir un Brief de Alineación (1 página)**
+   - Audiencia: quién es + qué valora (estatus, artesanía, discreción, performance, rareza, servicio).
+   - Promesa: beneficio premium (resultado + emoción).
+   - Personalidad: 3–5 adjetivos operables (ej.: “editorial”, “discreto”, “artesanal”, “refinado”, “contemporáneo”).
+   - Tono verbal: reglas de copy (p.ej., menos hype, más precisión; escasez con discreción).
+
+4. **Traducir a Dirección de Diseño (Design Direction Set)**
+   - Proponer 2–3 direcciones (incluyendo “lujo editorial” si el brief lo exige), cada una con:
+     - Principios visuales (grid, ritmo, contraste, whitespace).
+     - Tipografía (familias y jerarquía).
+     - Color (rol funcional: fondo/acentos/estados; evitar “color de moda” si rompe exclusividad).
+     - Fotografía/arte (estilo, encuadres, tratamiento, textura).
+     - Componentes: 6–10 componentes clave con reglas (botones, cards, headers, módulos editoriales, etc.).
+     - “Anti-patterns” explícitos.
+
+5. **Validación rápida con stakeholders**
+   - Validar contra: audiencia, exclusividad, coherencia con promesa, diferenciación vs competidores.
+   - Capturar decisiones: qué se aprueba, qué se descarta, y por qué.
+
+6. **Congelar reglas antes de construir**
+   - Convertir la dirección elegida en reglas operables del sistema:
+     - tokens (tipografía/espaciado/color),
+     - grid y layout,
+     - biblioteca mínima de componentes,
+     - pautas de fotografía y copy.
+
+# Decision Logic
+- **Si** la audiencia valora exclusividad, refinamiento, estatus, artesanía o servicio boutique:
+  - Priorizar **estética de lujo editorial** (jerarquía tipográfica fuerte, layouts editoriales, whitespace generoso, contraste controlado, fotografía premium y consistente).
+- **Si** el objetivo principal es “impacto sensorial” pero sin señales premium claras:
+  - Mantener “visualmente inmersivo” solo si pasa el Luxury/Generic Gate; de lo contrario, ajustar hacia editorial o una dirección premium equivalente.
+- **Si** el feedback recurrente incluye “genérico / demasiado común / parece plantilla”:
+  - Detener producción de componentes, ejecutar de nuevo los pasos 2–5 y **redefinir** reglas (no “parchar” pantallas sueltas).
+- **Si** faltan datos críticos (audiencia/posicionamiento/referencias):
+  - No asumir. Solicitar los mínimos necesarios y proponer hipótesis etiquetadas como “provisional”.
+
+# Output Requirements
+La respuesta/entregable debe incluir SIEMPRE:
+1. **Alineación Estratégica (Brief 1 página)**
+   - Audiencia, promesa, personalidad, tono, diferenciadores.
+2. **Luxury/Generic Gate**
+   - Criterios (must-have) + anti-patrones (must-not).
+3. **Direcciones de Diseño (2–3)**
+   - Para cada una: principios, tipografía, color, fotografía, componentes clave, riesgos.
+4. **Recomendación**
+   - Dirección elegida + justificación ligada a audiencia/posicionamiento.
+5. **Reglas para ejecución**
+   - Lista concreta de decisiones congeladas (tokens, grid, componentes iniciales, pautas de arte/copy).
+
+# Constraints
+- No “inventar” audiencia o posicionamiento sin marcarlo como hipótesis.
+- No entregar solo adjetivos: cada adjetivo debe traducirse a reglas visuales y de componentes.
+- No optimizar por “tendencia” si reduce diferenciación o exclusividad.
+- No construir un design system completo; solo el **mínimo** necesario para evitar retrabajo.
+
+# Edge Cases
+- **Feedback contradictorio** (“premium” pero piden colores llamativos y saturados):
+  - Proponer 2 rutas: premium discreto vs premium expresivo, y explicar trade-offs.
+- **Marca existente muy genérica**:
+  - Mantener identidad base, pero elevar con: tipografía, grid editorial, fotografía, materiales y microcopy.
+- **Referencias mezcladas** (lujo + gaming + minimalismo extremo):
+  - Separar referencias por intención (estatus / energía / claridad) y reconstruir una dirección coherente.
+

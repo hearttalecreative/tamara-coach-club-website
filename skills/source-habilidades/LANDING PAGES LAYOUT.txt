@@ -1,0 +1,157 @@
+Defines the structural layout and responsive behavior of landing pages to ensure logical content hierarchy, section organization, and adaptability across different screen sizes. Use when creating or auditing landing pages from a structural and responsive design perspective without addressing visual styling specifics.
+
+Purpose
+This skill defines the structural architecture and responsive layout logic of a landing page.  It ensures consistent content hierarchy, modular section composition, and deterministic behavior across mobile, tablet, and desktop breakpoints without specifying visual styling (colors, typography, branding, imagery style).
+The skill standardizes layout decisions so the resulting landing page works in any domain or industry.
+
+Activation Criteria
+Use this skill when:
+	•	Creating a new landing page structure from scratch. 
+	•	Refactoring or auditing an existing landing page layout. 
+	•	Defining responsive behavior across screen sizes. 
+	•	Designing content hierarchy without entering branding or visual design specifics. 
+	•	Establishing layout rules for developers or design systems. 
+Do not use this skill for:
+	•	Copywriting. 
+	•	SEO optimization. 
+	•	Visual branding decisions. 
+	•	Conversion psychology strategy. 
+	•	Graphic/UI styling. 
+
+Inputs
+Expected inputs:
+	•	Primary goal of the landing page (e.g., lead capture, product sale, demo booking). 
+	•	List of content blocks or required sections (if available). 
+	•	Target devices (if specified). 
+	•	Constraints (CMS, framework, grid system, etc.) if relevant. 
+If section list is not provided, generate a generic high-performance structural layout.
+
+Procedure
+1. Define Structural Hierarchy
+Establish a deterministic section order:
+	•	Hero section 
+	•	Value proposition expansion 
+	•	Problem framing (optional) 
+	•	Solution explanation 
+	•	Features or benefits blocks 
+	•	Social proof (if applicable) 
+	•	Objection handling (optional) 
+	•	Call-to-action reinforcement 
+	•	FAQ (optional) 
+	•	Final CTA 
+Remove optional sections if not relevant to the goal.
+
+2. Define Layout System
+Specify:
+	•	Use of container-based structure. 
+	•	Maximum content width. 
+	•	Vertical spacing rhythm. 
+	•	Section padding consistency. 
+	•	Content alignment rules. 
+	•	Grid logic (e.g., 12-column, fluid grid, flex-based stacking). 
+Do not define colors, typography, or decorative elements.
+
+3. Define Responsive Breakpoints
+Establish deterministic breakpoint logic:
+	•	Mobile-first baseline (default layout). 
+	•	Tablet breakpoint behavior. 
+	•	Desktop breakpoint behavior. 
+	•	Optional large-screen optimization. 
+For each breakpoint, define:
+	•	Column stacking behavior. 
+	•	Content reflow logic. 
+	•	CTA positioning changes (if any). 
+	•	Navigation adaptation (if present). 
+	•	Image scaling rules. 
+	•	Text container width adjustments. 
+
+4. Define Component Responsiveness Rules
+For each structural component:
+Hero
+	•	Headline width behavior. 
+	•	CTA stacking logic. 
+	•	Media alignment rules. 
+Multi-Column Sections
+	•	Desktop: horizontal grid. 
+	•	Tablet: 2-column or adaptive grid. 
+	•	Mobile: vertical stacking. 
+Forms
+	•	Field stacking behavior. 
+	•	Label positioning. 
+	•	Button width adaptation. 
+CTA Blocks
+	•	Full-width behavior on mobile. 
+	•	Centering logic. 
+	•	Padding consistency. 
+
+5. Define Scroll and Flow Behavior
+Specify:
+	•	Logical reading flow top-to-bottom. 
+	•	No structural dead-ends. 
+	•	Clear visual hierarchy by spacing only. 
+	•	Consistent section transitions. 
+
+Decision Logic
+If target device constraints are provided:
+	•	Adapt breakpoints to specified device ranges. 
+If a framework is specified:
+	•	Align layout to that framework’s grid rules. 
+If no constraints are provided:
+	•	Default to mobile-first responsive layout. 
+	•	Use flexible grid and percentage-based widths. 
+	•	Avoid fixed pixel-based layout constraints. 
+If content quantity exceeds initial structure:
+	•	Introduce modular repeating sections. 
+	•	Maintain consistent spacing and alignment rules. 
+If insufficient information is provided:
+	•	Request clarification about: 
+	•	Primary goal. 
+	•	Required sections. 
+	•	Target device emphasis. 
+Do not assume branding or visual identity.
+
+Output Requirements
+The response must be structured and include:
+	•	Page Structure Overview 
+	•	Ordered section list. 
+	•	Layout System Specification 
+	•	Container rules. 
+	•	Grid behavior. 
+	•	Spacing logic. 
+	•	Responsive Behavior Specification 
+	•	Mobile behavior. 
+	•	Tablet behavior. 
+	•	Desktop behavior. 
+	•	Component-Level Rules 
+	•	Hero. 
+	•	Multi-column blocks. 
+	•	Forms. 
+	•	CTA modules. 
+	•	Implementation Notes 
+	•	Technical recommendations. 
+	•	Structural constraints. 
+The output must be systematic, structured, and implementation-ready.
+
+Constraints
+	•	Do not define colors, typography, animations, or stylistic choices. 
+	•	Do not generate copywriting text. 
+	•	Do not include marketing claims. 
+	•	Do not mix SEO or analytics recommendations. 
+	•	Do not speculate about branding. 
+	•	Keep focus strictly on structural design and responsive behavior. 
+
+Edge Cases
+If the user requests visual styling:
+	•	State that this skill does not handle visual design specifics. 
+	•	Recommend a separate visual-design skill. 
+If the user mixes layout and copywriting:
+	•	Only define structure. 
+	•	Exclude textual content generation. 
+If the user provides incomplete information:
+	•	Request clarification before proceeding. 
+If the landing page is intended for single-device kiosk use:
+	•	Disable responsive multi-breakpoint logic. 
+	•	Define fixed layout structure explicitly. 
+
+This skill enforces deterministic structural design and responsive logic for landing pages, ensuring scalability, clarity, and cross-device consistency without entering visual styling domains.
+
