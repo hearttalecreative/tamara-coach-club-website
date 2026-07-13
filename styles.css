@@ -1791,3 +1791,344 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     transform: none;
   }
 }
+
+/* ===================== App access + modern UI layer ===================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 150;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 12px rgba(240, 0, 140, 0.6);
+}
+
+/* Menu student-access pill */
+.menu .app-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 0, 140, 0.5);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(240, 0, 140, 0.1);
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.menu .app-link:hover,
+.menu .app-link:focus-visible {
+  background: rgba(240, 0, 140, 0.22);
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+.menu .app-link-icon {
+  width: 13px;
+  height: 13px;
+  display: inline-flex;
+}
+
+.menu .app-link-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--accent-2);
+}
+
+/* App action buttons (hero + app section): light, high contrast */
+.btn-app,
+.btn-primary.btn-app {
+  gap: 0.55rem;
+  background: #ffffff;
+  color: #0a0a0d;
+  border-color: #ffffff;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.28);
+}
+
+.btn-app:hover,
+.btn-app:focus-visible,
+.btn-primary.btn-app:hover,
+.btn-primary.btn-app:focus-visible {
+  background: #ffffff;
+  color: #0a0a0d;
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.38);
+}
+
+.btn-app-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-flex;
+}
+
+.btn-app-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--accent);
+}
+
+/* Hero "already a student" chip */
+.hero-app-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: #eef2f6;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.hero-app-chip:hover,
+.hero-app-chip:focus-visible {
+  border-color: rgba(240, 0, 140, 0.5);
+  background: rgba(240, 0, 140, 0.12);
+  transform: translateY(-1px);
+}
+
+.hero-app-chip strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.hero-app-chip-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #29d17c;
+  flex: none;
+  animation: chipPulse 2.2s ease-out infinite;
+}
+
+@keyframes chipPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(41, 209, 124, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(41, 209, 124, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(41, 209, 124, 0);
+  }
+}
+
+/* Achievements marquee */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(8, 8, 11, 0.7);
+  padding: 0.9rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-left: 1.4rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 34s linear infinite;
+}
+
+.marquee-track span {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(0.9rem, 1.6vw, 1.25rem);
+  color: #e9edf2;
+}
+
+.marquee-track .marquee-dot {
+  color: var(--accent-2);
+  font-style: normal;
+  font-size: 0.7em;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Store "coming soon" badges */
+.store-soon {
+  margin-top: 1.3rem;
+}
+
+.store-soon-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef2f6;
+}
+
+.store-badge-icon {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  flex: none;
+}
+
+.store-badge-text {
+  display: grid;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.store-badge-text small {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.store-badge-text strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+/* Process CTA banner */
+.process-cta {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(240, 0, 140, 0.32);
+  background: linear-gradient(120deg, rgba(240, 0, 140, 0.14), rgba(10, 10, 14, 0.9));
+  box-shadow: var(--shadow-md);
+}
+
+.process-cta-text {
+  color: #e9eff6;
+  max-width: 60ch;
+}
+
+.process-cta .btn {
+  flex: none;
+}
+
+/* Audience card numbering */
+.audience-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.audience-num {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.7rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(240, 0, 140, 0.16);
+  pointer-events: none;
+}
+
+/* Footer app access */
+.footer-app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.footer-app-label {
+  color: #ced8e3;
+}
+
+.footer-app-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240, 0, 140, 0.6);
+  padding-bottom: 1px;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.footer-app-link:hover,
+.footer-app-link:focus-visible {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+@media (max-width: 860px) {
+  .menu .app-link,
+  .menu .cta-link {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu .app-link {
+    order: 9;
+    padding: 0.6rem 0.72rem;
+    font-size: 0.72rem;
+  }
+
+  .marquee-track {
+    animation-duration: 22s;
+  }
+
+  .process-cta {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .process-cta .btn {
+    width: 100%;
+  }
+}

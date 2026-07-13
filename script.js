@@ -47,13 +47,16 @@ const I18N = {
     title: "Tamara's Coaching & Fitness Club | Alto Rendimiento en Tulum",
     description:
       "Tamara's Coaching & Fitness Club: gimnasio de alto rendimiento en Tulum con coaching fitness estructurado, entrenador personal y programas presenciales y online.",
-    menu: ["El Método", "Trayectoria", "Premios", "Programas", "Online", "App", "Ubicación", "Transfórmate!"],
+    menu: ["Método", "Trayectoria", "Premios", "Online", "App", "Ubicación"],
+    appMenuLink: "Acceso alumnos",
+    menuCta: "Transfórmate!",
+    heroAppChip: "¿Ya eres alumno? Ingresa a la app en <strong>app.tamaracoachclub.com</strong>",
     heroEyebrow: "Tulum, México",
     heroTitle: "Disciplina primero.<br>La <span>transformación</span> es consecuencia.",
     heroLead:
       "Coaching de alto rendimiento en Tulum para quienes buscan resultados reales con estructura, seguimiento y compromiso.",
     heroPrimary: "Quiero información",
-    heroSecondary: "Ver membresías",
+    heroSecondary: "Acceso alumnos",
     heroTag: "Grupos reducidos. Seguimiento real. Cupos limitados.",
     quoteTitle: "No es un gimnasio.<br>Es una cultura.",
     quoteLead: "Aquí no se entrena por moda. Se entrena con estructura, método y propósito.",
@@ -98,8 +101,11 @@ const I18N = {
     environmentTitle: "Un entorno que te empuja a cumplir",
     environmentLead:
       "El espacio del club está pensado para entrenar con foco: equipamiento funcional, sesiones guiadas y una cultura donde cada persona entrena en serio sin importar su nivel de inicio.",
-    plansEyebrow: "Programas",
-    plansTitle: "Membresías",
+    plansEyebrow: "El proceso",
+    plansTitle: "Entrenamiento con acompañamiento real",
+    plansLead: "Cada persona entrena según su nivel, su objetivo y su contexto. Definimos tu ruta en una asesoría inicial y ajustamos el plan contigo, paso a paso, con seguimiento directo.",
+    processCtaText: "Sin planes rígidos ni letras pequeñas. Cuéntanos tu objetivo y te armamos una ruta a tu medida.",
+    processCtaButton: "Solicita tu asesoría",
     planKickers: ["Más elegido", "Progreso constante", "Punto de partida", "Evaluación inicial"],
     planTitles: ["Rendimiento Elite", "Base Fuerte", "Inicio Comprometido", "Sesión Única"],
     planBullets: [
@@ -144,17 +150,18 @@ const I18N = {
     onlinePoints: ["Feedback semanal", "Ajustes según avance", "Contacto directo por WhatsApp"],
     onlineButton: "Consultar programa online",
     appEyebrow: "App Tamara Club",
-    appTitle: "Tu progreso en una sola aplicación",
+    appTitle: "Toda tu experiencia, en una sola app",
     appLead:
-      "Descarga gratis la app de Tamara's Coach & Fitness Club en Apple Store para gestionar tus reservas, consultar rutinas y dar seguimiento a tu desarrollo y evolucion.",
+      "Gestiona tus reservas, consulta tus rutinas y sigue tu progreso. <strong>Todos los alumnos ya pueden ingresar</strong> desde el navegador en app.tamaracoachclub.com.",
     appList: [
       "Reserva y organiza tus clases en segundos.",
       "Accede a tus rutinas y tareas semanales.",
-      "Monitorea avances fisicos y consistencia.",
+      "Monitorea avances físicos y consistencia.",
       "Participa en la comunidad del gimnasio.",
       "Uso 100% gratuito para miembros del club.",
     ],
-    appButton: "Quiero la app",
+    appButton: "Ingresar a la app",
+    storeSoonLabel: "Muy pronto también en:",
     communityEyebrow: "Comunidad",
     communityTitle: "Respeto. Constancia. Carácter.",
     communityLead: "El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.",
@@ -183,7 +190,8 @@ const I18N = {
     ],
     formEyebrow: "Aplicación",
     formTitle: "Recibe asesoría personalizada",
-    formLead: "Déjanos tus datos y te contactamos para recomendarte la membresía ideal.",
+    formLead: "Déjanos tus datos y te contactamos para recomendarte la mejor opción para tu objetivo.",
+    footerAppLabel: "Acceso alumnos:",
     formPlatform:
       "Nuestra plataforma digital permite control de clases, gestión y seguimiento estructurado de tus progresos.",
     objections: [
@@ -213,13 +221,16 @@ const I18N = {
     title: "Tamara's Coaching & Fitness Club | High Performance in Tulum",
     description:
       "Tamara's Coaching & Fitness Club: high-performance gym in Tulum with structured fitness coaching, personal training, and in-person plus online programs.",
-    menu: ["Method", "Career", "Awards", "Programs", "Online", "App", "Location", "Transform Yourself!"],
+    menu: ["Method", "Career", "Awards", "Online", "App", "Location"],
+    appMenuLink: "Student access",
+    menuCta: "Transform Yourself!",
+    heroAppChip: "Already a member? Log in at <strong>app.tamaracoachclub.com</strong>",
     heroEyebrow: "Tulum, Mexico",
     heroTitle: "Discipline first.<br><span>Transformation</span> is the consequence.",
     heroLead:
       "High-performance coaching in Tulum for people who want real results through structure, follow-up, and commitment.",
     heroPrimary: "I want information",
-    heroSecondary: "View memberships",
+    heroSecondary: "Student access",
     heroTag: "Small groups. Real follow-up. Limited spots.",
     quoteTitle: "This is not a gym.<br>It is a culture.",
     quoteLead: "We do not train for trends. We train with structure, method, and purpose.",
@@ -264,8 +275,11 @@ const I18N = {
     environmentTitle: "An environment that pushes you to deliver",
     environmentLead:
       "The club is designed for focused training: functional equipment, guided sessions, and a culture where everyone trains seriously regardless of starting level.",
-    plansEyebrow: "Programs",
-    plansTitle: "Memberships",
+    plansEyebrow: "The process",
+    plansTitle: "Training with real coaching support",
+    plansLead: "Everyone trains according to their level, goal, and context. We map your path in an initial assessment and adjust the plan with you, step by step, with direct follow-up.",
+    processCtaText: "No rigid plans, no fine print. Tell us your goal and we build a route made for you.",
+    processCtaButton: "Request your assessment",
     planKickers: ["Most chosen", "Steady progress", "Starting point", "Initial assessment"],
     planTitles: ["Elite Performance", "Strong Base", "Committed Start", "Single Session"],
     planBullets: [
@@ -310,9 +324,9 @@ const I18N = {
     onlinePoints: ["Weekly feedback", "Adjustments based on progress", "Direct WhatsApp contact"],
     onlineButton: "Ask about online program",
     appEyebrow: "Tamara Club App",
-    appTitle: "Your progress in one app",
+    appTitle: "Your whole experience, in one app",
     appLead:
-      "Download the Tamara's Coach & Fitness Club app for free on the Apple Store to manage class bookings, view routines, and track your development and progress.",
+      "Manage your bookings, check your routines, and track your progress. <strong>All members can already log in</strong> from the browser at app.tamaracoachclub.com.",
     appList: [
       "Book and organize your classes in seconds.",
       "Access your routines and weekly tasks.",
@@ -320,7 +334,8 @@ const I18N = {
       "Join the gym community.",
       "100% free for club members.",
     ],
-    appButton: "I want the app",
+    appButton: "Open the app",
+    storeSoonLabel: "Coming soon to:",
     communityEyebrow: "Community",
     communityTitle: "Respect. Consistency. Character.",
     communityLead: "Our core value is respect: for your body, your process, and your word.",
@@ -345,7 +360,8 @@ const I18N = {
     urgencyTags: ["Groups up to 5 people", "Entry by initial assessment", "1-to-1 WhatsApp follow-up"],
     formEyebrow: "Application",
     formTitle: "Get personalized guidance",
-    formLead: "Leave your details and we will contact you to recommend the ideal membership.",
+    formLead: "Leave your details and we'll contact you to recommend the best option for your goal.",
+    footerAppLabel: "Student access:",
     formPlatform:
       "Our digital platform allows class control, management, and structured progress tracking.",
     objections: [
@@ -515,13 +531,16 @@ const applyLanguage = (lang) => {
     metaDescription.setAttribute("content", t.description);
   }
 
-  setTextAll(".menu a", t.menu);
+  setTextAll(".menu a.nav-link", t.menu);
+  setText(".menu .app-link .app-link-label", t.appMenuLink);
+  setText(".menu .cta-link", t.menuCta);
   setText(".hero-copy .eyebrow", t.heroEyebrow);
   setText(".hero-copy h1", t.heroTitle, true);
   setText(".hero-copy .lead", t.heroLead);
-  setText(".hero-copy .btn", t.heroPrimary);
-  setText(".hero-copy .text-link", t.heroSecondary);
+  setText(".hero-copy .actions .btn-primary", t.heroPrimary);
+  setText(".hero-copy .btn-app .btn-app-label", t.heroSecondary);
   setText(".hero-copy .tagline", t.heroTag);
+  setText(".hero-app-chip .hero-app-chip-text", t.heroAppChip, true);
 
   setText(".section-quote h2", t.quoteTitle, true);
   setText(".section-quote .lead", t.quoteLead);
@@ -560,20 +579,11 @@ const applyLanguage = (lang) => {
 
   setText("#membresias .section-header .eyebrow", t.plansEyebrow);
   setText("#membresias .section-header h2", t.plansTitle);
-  setTextAll("#membresias .plan-kicker", t.planKickers);
-  setTextAll("#membresias .plan h3", t.planTitles);
-  const planItems = document.querySelectorAll("#membresias .plan");
-  t.planBullets.forEach((list, index) => {
-    const lis = planItems[index] ? planItems[index].querySelectorAll("ul li") : [];
-    list.forEach((item, itemIndex) => {
-      if (lis[itemIndex]) lis[itemIndex].textContent = item;
-    });
-  });
-  setTextAll("#membresias .plan-meta", t.planMeta);
-  setTextAll("#membresias .plan .btn", [t.planButton, t.planButton, t.planButton, t.planButton]);
-  setText("#membresias > .container > .form-note", t.plansNotice);
+  setText("#membresias > .container > .lead", t.plansLead);
   setTextAll("#membresias .audience-card h3", t.audienceTitles);
   setTextAll("#membresias .audience-card p", t.audienceTexts);
+  setText("#membresias .process-cta-text", t.processCtaText);
+  setText("#membresias .process-cta .btn", t.processCtaButton);
 
   setText("#online .container > div:first-child .eyebrow", t.onlineEyebrow);
   setText("#online .container > div:first-child h2", t.onlineTitle);
@@ -585,9 +595,10 @@ const applyLanguage = (lang) => {
 
   setText("#app .app-section-copy .app-eyebrow", t.appEyebrow);
   setText("#app .app-section-copy h2", t.appTitle);
-  setText("#app .app-section-copy .app-lead", t.appLead);
+  setText("#app .app-section-copy .app-lead", t.appLead, true);
   setTextAll("#app .app-section-list li", t.appList);
-  setText("#app .app-section-copy .btn", t.appButton);
+  setText("#app .btn-app .btn-app-label", t.appButton);
+  setText("#app .store-soon-label", t.storeSoonLabel);
 
   setText("#comunidad .section-header .eyebrow", t.communityEyebrow);
   setText("#comunidad .section-header h2", t.communityTitle);
@@ -619,6 +630,7 @@ const applyLanguage = (lang) => {
   setText("#ubicacion .visit-copy .btn.btn-ghost", t.locationMap);
 
   setText(".whatsapp-fab span:last-child", t.fab);
+  setText(".footer-app-label", t.footerAppLabel);
   setText(".site-footer p:nth-child(2)", t.footerLine);
   setText(".copyright-text", `${t.copyrightLabel} ${new Date().getFullYear()} ${t.copyrightText} `);
 
@@ -759,13 +771,34 @@ if (leadForm) {
   });
 }
 
-if (header) {
-  const onScroll = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 18);
+const scrollProgressBar = document.querySelector(".scroll-progress span");
+
+if (header || scrollProgressBar) {
+  let ticking = false;
+
+  const updateOnScroll = () => {
+    if (header) {
+      header.classList.toggle("is-scrolled", window.scrollY > 18);
+    }
+    if (scrollProgressBar) {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      scrollProgressBar.style.transform = `scaleX(${ratio})`;
+    }
+    ticking = false;
   };
 
-  onScroll();
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateOnScroll);
+      ticking = true;
+    }
+  };
+
+  updateOnScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
 }
 
 const revealElements = document.querySelectorAll(".reveal");
@@ -787,5 +820,48 @@ if ("IntersectionObserver" in window) {
   revealElements.forEach((el) => el.classList.add("is-visible"));
 }
 
+const initStatCountUp = () => {
+  const stats = document.querySelectorAll(".awards-stat span");
+  if (!stats.length || reduceMotion || !("IntersectionObserver" in window)) return;
+
+  const animate = (el) => {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^(\D*)(\d+)(.*)$/);
+    if (!match) return;
+    const [, prefix, numStr, suffix] = match;
+    const target = parseInt(numStr, 10);
+    const duration = 1300;
+    const start = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(target * eased) + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = raw;
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  const statObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  stats.forEach((stat) => statObserver.observe(stat));
+};
+
 applyLanguage(currentLang);
 initHeroVideoPlayback();
+initStatCountUp();
