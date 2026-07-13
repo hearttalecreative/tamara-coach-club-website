@@ -117,6 +117,30 @@ p {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.6rem;
+  left: 50%;
+  transform: translate(-50%, -160%);
+  z-index: 200;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .site-header {
   position: fixed;
   inset: 1rem 0 auto;
@@ -1053,7 +1077,7 @@ main {
 
 .section-emotional {
   overflow: hidden;
-  background: url("assets/web/young-beautiful-sportive-girl-listening-music-dark-wall.jpg") center / cover no-repeat;
+  background: url("assets/web/young-beautiful-sportive-girl-listening-music-dark-wall.webp") center / cover no-repeat;
 }
 
 .section-emotional::before {
@@ -1523,9 +1547,10 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     border: 1px solid var(--line);
     background: rgba(10, 15, 23, 0.95);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-6px);
-    transition: opacity 180ms ease, transform 180ms ease;
+    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
   }
 
   .lang-switch {
@@ -1547,6 +1572,7 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
 
   .menu.is-open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }

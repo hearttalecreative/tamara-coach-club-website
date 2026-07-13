@@ -19,13 +19,13 @@ const buildWhatsAppUrl = (message) => {
 
 const WA_MESSAGES = {
   es: {
-    general_info: "Hola Tamara Club, quiero informacion sobre membresias.",
-    hero_info: "Hola Tamara Club, quiero recibir informacion y disponibilidad de membresias.",
-    plan_elite: "Hola Tamara Club, me interesa la membresia Rendimiento Elite. Quiero mas informacion.",
-    plan_base: "Hola Tamara Club, me interesa la membresia Base Fuerte. Quiero mas informacion.",
-    plan_inicio: "Hola Tamara Club, me interesa la membresia Inicio Comprometido. Quiero mas informacion.",
-    plan_sesion: "Hola Tamara Club, me interesa la Sesion Unica. Quiero mas informacion.",
-    online_program: "Hola Tamara Club, quiero informacion del programa Online Personalizado.",
+    general_info: "Hola Tamara Club, quiero información sobre membresías.",
+    hero_info: "Hola Tamara Club, quiero recibir información y disponibilidad de membresías.",
+    plan_elite: "Hola Tamara Club, me interesa la membresía Rendimiento Elite. Quiero más información.",
+    plan_base: "Hola Tamara Club, me interesa la membresía Base Fuerte. Quiero más información.",
+    plan_inicio: "Hola Tamara Club, me interesa la membresía Inicio Comprometido. Quiero más información.",
+    plan_sesion: "Hola Tamara Club, me interesa la Sesión Única. Quiero más información.",
+    online_program: "Hola Tamara Club, quiero información del programa Online Personalizado.",
     app_info: "Hola Tamara Club, quiero descargar la app de Tamara's Coach & Fitness Club.",
     visit_booking: "Hola Tamara Club, quiero agendar una visita para conocer el gimnasio.",
   },
@@ -47,47 +47,47 @@ const I18N = {
     title: "Tamara's Coaching & Fitness Club | Alto Rendimiento en Tulum",
     description:
       "Tamara's Coaching & Fitness Club: gimnasio de alto rendimiento en Tulum con coaching fitness estructurado, entrenador personal y programas presenciales y online.",
-    menu: ["El Método", "Trayectoria", "Premios", "Programas", "Online", "App", "Ubicacion", "Transfórmate!"],
-    heroEyebrow: "Tulum, Mexico",
-    heroTitle: "Disciplina primero.<br>La <span>transformacion</span> es consecuencia.",
+    menu: ["El Método", "Trayectoria", "Premios", "Programas", "Online", "App", "Ubicación", "Transfórmate!"],
+    heroEyebrow: "Tulum, México",
+    heroTitle: "Disciplina primero.<br>La <span>transformación</span> es consecuencia.",
     heroLead:
       "Coaching de alto rendimiento en Tulum para quienes buscan resultados reales con estructura, seguimiento y compromiso.",
-    heroPrimary: "Quiero informacion",
-    heroSecondary: "Ver membresias",
+    heroPrimary: "Quiero información",
+    heroSecondary: "Ver membresías",
     heroTag: "Grupos reducidos. Seguimiento real. Cupos limitados.",
     quoteTitle: "No es un gimnasio.<br>Es una cultura.",
-    quoteLead: "Aqui no se entrena por moda. Se entrena con estructura, metodo y proposito.",
-    methodEyebrow: "Metodo",
-    methodTitle: "El Metodo Tamara",
+    quoteLead: "Aquí no se entrena por moda. Se entrena con estructura, método y propósito.",
+    methodEyebrow: "Método",
+    methodTitle: "El Método Tamara",
     methodCopy1:
-      "Trabajamos con un sistema estructurado que combina entrenamiento de fuerza, progresion semanal y control tecnico para que cada sesion tenga un objetivo claro.",
+      "Trabajamos con un sistema estructurado que combina entrenamiento de fuerza, progresión semanal y control técnico para que cada sesión tenga un objetivo claro.",
     methodCopy2:
-      "No improvisamos rutinas. Evaluamos punto de partida, historial fisico y nivel de compromiso para construir un proceso sostenible, medible y realista.",
-    methodCardsTitles: ["Cultura Mental", "Programacion Personalizada", "Enfoque Integral"],
+      "No improvisamos rutinas. Evaluamos punto de partida, historial físico y nivel de compromiso para construir un proceso sostenible, medible y realista.",
+    methodCardsTitles: ["Cultura Mental", "Programación Personalizada", "Enfoque Integral"],
     methodCardsTexts: [
       "Disciplina por encima de la motivacion. Compromiso sostenido con resultados medibles.",
-      "Cada miembro avanza segun su objetivo, nivel actual y contexto real.",
-      "Entrenamiento, nutricion y estrategia en un sistema claro y aplicable.",
+      "Cada miembro avanza según su objetivo, nivel actual y contexto real.",
+      "Entrenamiento, nutrición y estrategia en un sistema claro y aplicable.",
     ],
     trajectoryEyebrow: "Coaching profesional",
     trajectoryTitle: "Experiencia real.<br>Resultados reales.",
     trajectoryLead:
       "Tamara trabaja como coach con un enfoque personalizado: evalua tu punto de partida, estructura una estrategia clara y ajusta cada fase para que avances con seguridad, consistencia y resultados medibles.",
     trajectoryList: [
-      "Diagnostico inicial para conocer tu nivel real y tus necesidades.",
-      "Programacion individual con objetivos claros por etapa.",
-      "Correccion tecnica permanente para entrenar mejor y evitar estancarte.",
+      "Diagnóstico inicial para conocer tu nivel real y tus necesidades.",
+      "Programación individual con objetivos claros por etapa.",
+      "Corrección técnica permanente para entrenar mejor y evitar estancarte.",
       "Seguimiento continuo para medir progreso y ajustar cuando sea necesario.",
     ],
     awardsEyebrow: "Logros",
-    awardsTitle: "Premios que respaldan el metodo",
+    awardsTitle: "Premios que respaldan el método",
     awardsLead:
-      "Los resultados de Tamara no son casualidad. Su trayectoria competitiva confirma que trabaja con estructura, disciplina y estandares de alto rendimiento en cada etapa del proceso.",
+      "Los resultados de Tamara no son casualidad. Su trayectoria competitiva confirma que trabaja con estructura, disciplina y estándares de alto rendimiento en cada etapa del proceso.",
     awardsList: [
       "<strong>IFBB Miami Grand Prix 2025:</strong> 1er lugar en Women Bodyfitness Open.",
       "<strong>Mr. Tulum 2025:</strong> campeona en Body Fitness Master y Body Fitness Clasificadas.",
-      "<strong>Seleccion nacional:</strong> clasificacion tras su rendimiento en Monterrey.",
-      "<strong>Trayectoria consolidada:</strong> campeona estatal multiple y bicampeona nacional.",
+      "<strong>Selección nacional:</strong> clasificación tras su rendimiento en Monterrey.",
+      "<strong>Trayectoria consolidada:</strong> campeona estatal múltiple y bicampeona nacional.",
     ],
     awardsStats: [
       ["+35", "Podios nacionales e internacionales"],
@@ -97,54 +97,54 @@ const I18N = {
     environmentEyebrow: "Entrenamiento",
     environmentTitle: "Un entorno que te empuja a cumplir",
     environmentLead:
-      "El espacio del club esta pensado para entrenar con foco: equipamiento funcional, sesiones guiadas y una cultura donde cada persona entrena en serio sin importar su nivel de inicio.",
+      "El espacio del club está pensado para entrenar con foco: equipamiento funcional, sesiones guiadas y una cultura donde cada persona entrena en serio sin importar su nivel de inicio.",
     plansEyebrow: "Programas",
-    plansTitle: "Membresias",
-    planKickers: ["Mas elegido", "Progreso constante", "Punto de partida", "Evaluacion inicial"],
-    planTitles: ["Rendimiento Elite", "Base Fuerte", "Inicio Comprometido", "Sesion Unica"],
+    plansTitle: "Membresías",
+    planKickers: ["Más elegido", "Progreso constante", "Punto de partida", "Evaluación inicial"],
+    planTitles: ["Rendimiento Elite", "Base Fuerte", "Inicio Comprometido", "Sesión Única"],
     planBullets: [
       [
         "5 sesiones por semana",
-        "Grupo maximo 5 personas",
+        "Grupo máximo 5 personas",
         "2 dietas mensuales y 2 evaluaciones",
-        "Suplementacion + plataforma de seguimiento",
+        "Suplementación + plataforma de seguimiento",
         "20% de descuento en fisioterapia",
       ],
-      ["4 sesiones por semana", "1 dieta mensual", "1 evaluacion estructural"],
+      ["4 sesiones por semana", "1 dieta mensual", "1 evaluación estructural"],
       ["3 sesiones por semana", "Plan de inicio estructurado"],
-      ["110 minutos personalizados", "Diagnostico de base y ruta sugerida"],
+      ["110 minutos personalizados", "Diagnóstico de base y ruta sugerida"],
     ],
     planMeta: [
-      "Ideal si buscas cambios visibles y acompanamiento completo.",
-      "Perfecta para consolidar habitos sin perder ritmo semanal.",
+      "Ideal si buscas cambios visibles y acompañamiento completo.",
+      "Perfecta para consolidar hábitos sin perder ritmo semanal.",
       "Recomendada para empezar con estructura y adherencia real.",
-      "Para conocer tu nivel, corregir tecnica y definir siguientes pasos.",
+      "Para conocer tu nivel, corregir técnica y definir siguientes pasos.",
     ],
-    planButton: "Solicitar informacion",
+    planButton: "Solicitar información",
     plansNotice:
-      "*Por ahora no estamos gestionando alta online de membresias. Te asesoramos para elegir la mejor opcion segun tu objetivo.",
-    audienceTitles: ["Si estas empezando", "Si ya entrenas", "Si compites"],
+      "*Por ahora no estamos gestionando alta online de membresías. Te asesoramos para elegir la mejor opción según tu objetivo.",
+    audienceTitles: ["Si estás empezando", "Si ya entrenas", "Si compites"],
     audienceTexts: [
-      "Construimos base tecnica, habitos y constancia sin frustracion.",
+      "Construimos base técnica, hábitos y constancia sin frustración.",
       "Ordenamos tu plan para salir del estancamiento y subir nivel.",
-      "Aplicamos estrategia avanzada de rendimiento, composicion y pico competitivo.",
+      "Aplicamos estrategia avanzada de rendimiento, composición y pico competitivo.",
     ],
     onlineEyebrow: "Online",
     onlineTitle: "Alto rendimiento desde cualquier lugar.",
     onlineLead:
-      "Si no estas en Tulum, puedes trabajar con Tamara en formato online con seguimiento semanal, ajustes de plan y contacto continuo por WhatsApp para sostener adherencia.",
+      "Si no estás en Tulum, puedes trabajar con Tamara en formato online con seguimiento semanal, ajustes de plan y contacto continuo por WhatsApp para sostener adherencia.",
     onlineList: [
       "Sesiones en vivo con seguimiento",
-      "Activacion + entrenamiento guiado",
+      "Activación + entrenamiento guiado",
       "Material de estiramientos",
-      "Adaptacion individual segun nivel",
+      "Adaptación individual según nivel",
     ],
     onlineNote:
       "Control de clases, seguimiento de progreso y ajustes semanales en una experiencia online clara y personalizada.",
-    onlinePoints: ["Feedback semanal", "Ajustes segun avance", "Contacto directo por WhatsApp"],
+    onlinePoints: ["Feedback semanal", "Ajustes según avance", "Contacto directo por WhatsApp"],
     onlineButton: "Consultar programa online",
     appEyebrow: "App Tamara Club",
-    appTitle: "Tu progreso en una sola aplicacion",
+    appTitle: "Tu progreso en una sola aplicación",
     appLead:
       "Descarga gratis la app de Tamara's Coach & Fitness Club en Apple Store para gestionar tus reservas, consultar rutinas y dar seguimiento a tu desarrollo y evolucion.",
     appList: [
@@ -156,36 +156,36 @@ const I18N = {
     ],
     appButton: "Quiero la app",
     communityEyebrow: "Comunidad",
-    communityTitle: "Respeto. Constancia. Caracter.",
+    communityTitle: "Respeto. Constancia. Carácter.",
     communityLead: "El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.",
     faqEyebrow: "FAQ",
     faqTitle: "Preguntas frecuentes",
     faqQuestions: [
       "¿Necesito experiencia previa?",
-      "¿Y si tengo una lesion?",
+      "¿Y si tengo una lesión?",
       "¿Incluye plan nutricional?",
       "¿Puedo probar antes?",
     ],
     faqAnswers: [
       "No. El entrenamiento se adapta completamente a tu nivel.",
-      "Se evalua y adapta con enfoque biomecanico para mantener progreso seguro.",
-      "Si, segun el programa sugerido para tu objetivo.",
-      "Si. Puedes iniciar con sesion unica para evaluarte y definir tu ruta.",
+      "Se evalua y adapta con enfoque biomecánico para mantener progreso seguro.",
+      "Si, según el programa sugerido para tu objetivo.",
+      "Si. Puedes iniciar con sesión única para evaluarte y definir tu ruta.",
     ],
     urgencyEyebrow: "Cupos",
     urgencyTitle: "Aperturas limitadas por horario",
     urgencyText:
-      "Trabajamos con grupos reducidos para mantener acompanamiento real. Si quieres entrenar con seguimiento directo, te recomendamos agendar tu lugar cuanto antes.",
+      "Trabajamos con grupos reducidos para mantener acompañamiento real. Si quieres entrenar con seguimiento directo, te recomendamos agendar tu lugar cuanto antes.",
     urgencyTags: [
-      "Grupos maximo 5 personas",
-      "Ingreso por evaluacion inicial",
+      "Grupos máximo 5 personas",
+      "Ingreso por evaluación inicial",
       "Seguimiento 1 a 1 por WhatsApp",
     ],
-    formEyebrow: "Aplicacion",
-    formTitle: "Recibe asesoria personalizada",
-    formLead: "Dejanos tus datos y te contactamos para recomendarte la membresia ideal.",
+    formEyebrow: "Aplicación",
+    formTitle: "Recibe asesoría personalizada",
+    formLead: "Déjanos tus datos y te contactamos para recomendarte la membresía ideal.",
     formPlatform:
-      "Nuestra plataforma digital permite control de clases, gestion y seguimiento estructurado de tus progresos.",
+      "Nuestra plataforma digital permite control de clases, gestión y seguimiento estructurado de tus progresos.",
     objections: [
       "No necesitas experiencia previa.",
       "Adaptamos el plan a tu nivel y contexto.",
@@ -193,21 +193,21 @@ const I18N = {
     ],
     formButton: "Enviar por WhatsApp",
     formNote: "Al enviar, abriremos WhatsApp con tu mensaje listo para contactar al club.",
-    locationEyebrow: "Ubicacion",
+    locationEyebrow: "Ubicación",
     locationTitle: "Conoce el club en persona",
     locationLead:
-      "Si quieres transformar tu cuerpo con metodo, este es el mejor siguiente paso: venir a conocer el espacio, hablar con Tamara y definir una ruta real segun tu objetivo.",
+      "Si quieres transformar tu cuerpo con método, este es el mejor siguiente paso: venir a conocer el espacio, hablar con Tamara y definir una ruta real según tu objetivo.",
     locationList: [
-      "Visita el gimnasio y vive la energia del club.",
-      "Recibe orientacion inicial segun tu nivel actual.",
+      "Visita el gimnasio y vive la energía del club.",
+      "Recibe orientación inicial según tu nivel actual.",
       "Elige el programa que mejor se adapta a tu meta.",
     ],
     locationVisit: "Agendar visita",
     locationMap: "Abrir en Google Maps",
     fab: "Habla con Tamara",
-    footerLine: "Tulum, Mexico | Gimnasio de alto rendimiento y coaching fitness en Tulum",
+    footerLine: "Tulum, México | Gimnasio de alto rendimiento y coaching fitness en Tulum",
     copyrightLabel: "Copyright",
-    copyrightText: "Tamara's Coach & Fitness Club | Desarrollo web y aplicacion desarrollada por",
+    copyrightText: "Tamara's Coach & Fitness Club | Desarrollo web y aplicación desarrollada por",
   },
   en: {
     title: "Tamara's Coaching & Fitness Club | High Performance in Tulum",
@@ -416,79 +416,92 @@ const enableHeroFallback = () => {
 const initHeroVideoPlayback = () => {
   if (!heroPlayerIframe || !heroVideoContainer) return;
 
+  const dataSrc = heroPlayerIframe.getAttribute("data-src");
+  if (!dataSrc) return;
+
+  // Reduced motion: keep the static hero image, never load the YouTube embed.
   const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (isReducedMotion) {
     enableHeroFallback();
     return;
   }
 
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-  if (!isIOS) {
-    heroVideoContainer.classList.remove("is-fallback");
-    return;
-  }
-
   let didPlay = false;
-
-  const fallbackTimer = window.setTimeout(() => {
-    if (!didPlay) enableHeroFallback();
-  }, 6000);
 
   const onPlaybackConfirmed = () => {
     didPlay = true;
-    window.clearTimeout(fallbackTimer);
     heroVideoContainer.classList.remove("is-fallback");
   };
 
-  const apiScriptId = "youtube-iframe-api";
-  if (!document.getElementById(apiScriptId)) {
-    const script = document.createElement("script");
-    script.id = apiScriptId;
-    script.src = "https://www.youtube.com/iframe_api";
-    script.async = true;
-    document.head.appendChild(script);
-  }
+  const loadVideo = () => {
+    if (heroPlayerIframe.src) return;
+    heroPlayerIframe.src = dataSrc;
 
-  const startPlayer = () => {
-    if (!("YT" in window) || !window.YT.Player) return;
+    const fallbackTimer = window.setTimeout(() => {
+      if (!didPlay) enableHeroFallback();
+    }, 6000);
 
-    const player = new window.YT.Player("hero-youtube-player", {
-      events: {
-        onReady: (event) => {
-          event.target.mute();
-          event.target.setPlaybackQuality?.("hd1080");
-          event.target.playVideo();
+    const apiScriptId = "youtube-iframe-api";
+    if (!document.getElementById(apiScriptId)) {
+      const script = document.createElement("script");
+      script.id = apiScriptId;
+      script.src = "https://www.youtube.com/iframe_api";
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    const startPlayer = () => {
+      if (!("YT" in window) || !window.YT.Player) return;
+
+      const player = new window.YT.Player("hero-youtube-player", {
+        events: {
+          onReady: (event) => {
+            event.target.mute();
+            event.target.setPlaybackQuality?.("hd1080");
+            event.target.playVideo();
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              window.clearTimeout(fallbackTimer);
+              onPlaybackConfirmed();
+            }
+          },
         },
-        onStateChange: (event) => {
-          if (event.data === window.YT.PlayerState.PLAYING) {
-            onPlaybackConfirmed();
-          }
-        },
-      },
-    });
+      });
 
-    const retryPlay = () => {
-      if (didPlay) return;
-      try {
-        player.mute();
-        player.playVideo();
-      } catch (_error) {
-        enableHeroFallback();
-      }
+      const retryPlay = () => {
+        if (didPlay) return;
+        try {
+          player.mute();
+          player.playVideo();
+        } catch (_error) {
+          enableHeroFallback();
+        }
+      };
+
+      window.addEventListener("pageshow", retryPlay, { passive: true });
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") retryPlay();
+      });
     };
 
-    window.addEventListener("pageshow", retryPlay, { passive: true });
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "visible") retryPlay();
-    });
+    if ("YT" in window && window.YT.Player) {
+      startPlayer();
+    } else {
+      window.onYouTubeIframeAPIReady = startPlayer;
+    }
   };
 
-  if ("YT" in window && window.YT.Player) {
-    startPlayer();
+  // Defer the third-party embed until the browser is idle so the hero image
+  // (LCP) and critical content are not blocked by YouTube's network cost.
+  const schedule = window.requestIdleCallback
+    ? (cb) => window.requestIdleCallback(cb, { timeout: 2500 })
+    : (cb) => window.setTimeout(cb, 1200);
+
+  if (document.readyState === "complete") {
+    schedule(loadVideo);
   } else {
-    window.onYouTubeIframeAPIReady = startPlayer;
+    window.addEventListener("load", () => schedule(loadVideo), { once: true });
   }
 };
 
@@ -630,7 +643,7 @@ const applyLanguage = (lang) => {
 
   const select = leadForm ? leadForm.querySelector('select[name="objetivo"]') : null;
   if (select) {
-    const optionsEs = ["Selecciona una opcion", "Bajar grasa", "Ganar masa muscular", "Mejorar rendimiento", "Recomposicion corporal"];
+    const optionsEs = ["Selecciona una opción", "Bajar grasa", "Ganar masa muscular", "Mejorar rendimiento", "Recomposición corporal"];
     const optionsEn = ["Choose an option", "Lose fat", "Gain muscle", "Improve performance", "Body recomposition"];
     const options = lang === "es" ? optionsEs : optionsEn;
     options.forEach((optionLabel, index) => {
@@ -644,12 +657,16 @@ const applyLanguage = (lang) => {
   if (textarea) {
     textarea.placeholder =
       lang === "es"
-        ? "Cuentanos brevemente tu situacion actual"
+        ? "Cuéntanos brevemente tu situación actual"
         : "Tell us briefly about your current situation";
   }
 
   setTextAll(".lang-btn", ["ES", "EN"]);
-  langButtons.forEach((btn) => btn.classList.toggle("is-active", btn.dataset.lang === lang));
+  langButtons.forEach((btn) => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle("is-active", isActive);
+    btn.setAttribute("aria-pressed", String(isActive));
+  });
 
   updateWhatsAppLinks(lang);
 };
@@ -722,7 +739,7 @@ if (leadForm) {
     const text =
       currentLang === "es"
         ? [
-            "Hola Tamara Club, quiero recibir informacion:",
+            "Hola Tamara Club, quiero recibir información:",
             `Nombre: ${nombre}`,
             `WhatsApp: ${telefono}`,
             `Correo: ${correo}`,
