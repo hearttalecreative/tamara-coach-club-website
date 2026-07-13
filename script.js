@@ -19,8 +19,8 @@ const buildWhatsAppUrl = (message) => {
 
 const WA_MESSAGES = {
   es: {
-    general_info: "Hola Tamara Club, quiero información sobre membresías.",
-    hero_info: "Hola Tamara Club, quiero recibir información y disponibilidad de membresías.",
+    general_info: "Hola Tamara Club, quiero información sobre los programas y cómo empezar.",
+    hero_info: "Hola Tamara Club, quiero recibir información y disponibilidad para entrenar en el club.",
     plan_elite: "Hola Tamara Club, me interesa la membresía Rendimiento Elite. Quiero más información.",
     plan_base: "Hola Tamara Club, me interesa la membresía Base Fuerte. Quiero más información.",
     plan_inicio: "Hola Tamara Club, me interesa la membresía Inicio Comprometido. Quiero más información.",
@@ -30,8 +30,8 @@ const WA_MESSAGES = {
     visit_booking: "Hola Tamara Club, quiero agendar una visita para conocer el gimnasio.",
   },
   en: {
-    general_info: "Hi Tamara Club, I would like information about memberships.",
-    hero_info: "Hi Tamara Club, I would like membership info and current availability.",
+    general_info: "Hi Tamara Club, I'd like information about your programs and how to start.",
+    hero_info: "Hi Tamara Club, I'd like info and availability to start training at the club.",
     plan_elite: "Hi Tamara Club, I am interested in the Elite Performance membership. I would like more information.",
     plan_base: "Hi Tamara Club, I am interested in the Strong Base membership. I would like more information.",
     plan_inicio: "Hi Tamara Club, I am interested in the Committed Start membership. I would like more information.",
