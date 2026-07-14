@@ -192,6 +192,7 @@ const I18N = {
     formTitle: "Recibe asesoría personalizada",
     formLead: "Déjanos tus datos y te contactamos para recomendarte la mejor opción para tu objetivo.",
     footerAppLabel: "Acceso alumnos:",
+    privacyLink: "Aviso de Privacidad",
     formPlatform:
       "Nuestra plataforma digital permite control de clases, gestión y seguimiento estructurado de tus progresos.",
     objections: [
@@ -362,6 +363,7 @@ const I18N = {
     formTitle: "Get personalized guidance",
     formLead: "Leave your details and we'll contact you to recommend the best option for your goal.",
     footerAppLabel: "Student access:",
+    privacyLink: "Privacy Policy",
     formPlatform:
       "Our digital platform allows class control, management, and structured progress tracking.",
     objections: [
@@ -631,6 +633,7 @@ const applyLanguage = (lang) => {
 
   setText(".whatsapp-fab span:last-child", t.fab);
   setText(".footer-app-label", t.footerAppLabel);
+  setText(".footer-legal-link", t.privacyLink);
   setText(".site-footer p:nth-child(2)", t.footerLine);
   setText(".copyright-text", `${t.copyrightLabel} ${new Date().getFullYear()} ${t.copyrightText} `);
 

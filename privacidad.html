@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso de Privacidad | Tamara's Coaching & Fitness Club</title>
+  <meta name="description"
+    content="Aviso de Privacidad y Política de Privacidad de Tamara's Coaching & Fitness Club: qué datos tratamos en el sitio web y en la app, cómo los usamos y tus derechos." />
+  <link rel="canonical" href="https://www.tamaracoachclub.com/privacidad.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050506" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      width: min(1260px, 92vw);
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+
+    .legal-header .brand-logo {
+      height: clamp(26px, 3vw, 34px);
+      width: auto;
+      display: block;
+    }
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #eef2f6;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.68rem;
+      font-weight: 700;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem;
+      background: rgba(255, 255, 255, 0.04);
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .legal-back:hover,
+    .legal-back:focus-visible {
+      border-color: rgba(240, 0, 140, 0.55);
+      background: rgba(240, 0, 140, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .legal {
+      width: min(820px, 92vw);
+      margin: 1.5rem auto clamp(4rem, 8vw, 7rem);
+    }
+
+    .legal-hero {
+      padding: 1.5rem 0 2rem;
+      border-bottom: 1px solid var(--line-soft);
+      margin-bottom: 2rem;
+    }
+
+    .legal-hero .eyebrow {
+      margin-bottom: 0.9rem;
+    }
+
+    .legal-hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-style: italic;
+      margin-bottom: 0.9rem;
+    }
+
+    .legal-meta {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .legal-lang {
+      display: inline-flex;
+      gap: 0.4rem;
+      margin-top: 1.2rem;
+    }
+
+    .legal-lang a {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #dce5ee;
+      text-decoration: none;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      transition: border-color 180ms ease, background 180ms ease;
+    }
+
+    .legal-lang a:hover,
+    .legal-lang a:focus-visible {
+      border-color: rgba(240, 0, 140, 0.55);
+      background: rgba(240, 0, 140, 0.12);
+    }
+
+    .legal h2 {
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-style: italic;
+      margin: 2.4rem 0 0.9rem;
+      scroll-margin-top: 90px;
+    }
+
+    .legal h3 {
+      font-size: 1.05rem;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin: 1.6rem 0 0.5rem;
+      color: #f2f6fa;
+    }
+
+    .legal p,
+    .legal li {
+      color: #cdd6e0;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .legal p {
+      margin-bottom: 1rem;
+    }
+
+    .legal ul {
+      margin: 0 0 1.2rem;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .legal strong {
+      color: #ffffff;
+    }
+
+    .legal a {
+      color: var(--accent-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .legal-note {
+      margin: 1.5rem 0;
+      padding: 1rem 1.2rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(240, 0, 140, 0.3);
+      background: rgba(240, 0, 140, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .legal-divider {
+      margin: 3.5rem 0;
+      border: 0;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .legal table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .legal th,
+    .legal td {
+      text-align: left;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid var(--line-soft);
+      vertical-align: top;
+      color: #cdd6e0;
+    }
+
+    .legal th {
+      background: rgba(255, 255, 255, 0.04);
+      color: #f2f6fa;
+      font-weight: 700;
+    }
+
+    .legal-contact-box {
+      margin-top: 1rem;
+      padding: 1.1rem 1.3rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line-soft);
+      background: var(--bg-card);
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="legal-header">
+    <a class="brand" href="/" aria-label="Tamara's Coaching & Fitness Club">
+      <img class="brand-logo" src="logo.png" alt="Tamara's Coaching & Fitness Club" decoding="async" />
+    </a>
+    <a class="legal-back" href="/">&larr; Volver al sitio</a>
+  </header>
+
+  <main class="legal" id="contenido">
+    <div class="legal-hero">
+      <p class="eyebrow">Legal</p>
+      <h1>Aviso de Privacidad</h1>
+      <p class="legal-meta">Última actualización: 14 de julio de 2026</p>
+      <div class="legal-lang">
+        <a href="#es">Español</a>
+        <a href="#en">English</a>
+      </div>
+    </div>
+
+    <!-- ============================== ESPAÑOL ============================== -->
+    <section id="es">
+      <p>Este Aviso de Privacidad describe cómo <strong>Tamara's Coaching &amp; Fitness Club</strong> ("el Club", "nosotros")
+        trata los datos personales de las personas que usan nuestro sitio web
+        <a href="https://www.tamaracoachclub.com/">www.tamaracoachclub.com</a> y nuestra aplicación
+        (disponible en <a href="https://app.tamaracoachclub.com/">app.tamaracoachclub.com</a> y, próximamente, en App Store
+        y Google Play). Al usar el sitio o la app, aceptas las prácticas descritas aquí.</p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <div class="legal-contact-box">
+        <p style="margin:0">
+          <strong>Tamara's Coaching &amp; Fitness Club</strong><br />
+          Tulum, Quintana Roo, México<br />
+          Correo de privacidad: <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a><br />
+          WhatsApp: <a href="https://wa.me/5219842384258">+52 984 238 4258</a>
+        </p>
+      </div>
+
+      <h2>2. Datos personales que tratamos</h2>
+      <p>Según cómo interactúes con nosotros, podemos tratar las siguientes categorías de datos:</p>
+
+      <h3>a) Datos que nos proporcionas</h3>
+      <ul>
+        <li><strong>Identificación y contacto:</strong> nombre, teléfono/WhatsApp y correo electrónico.</li>
+        <li><strong>Formulario del sitio:</strong> objetivo de entrenamiento y el mensaje que decidas enviarnos.</li>
+        <li><strong>Cuenta de la app:</strong> datos de registro y de tu perfil de alumno.</li>
+        <li><strong>Datos de actividad física y salud:</strong> objetivos, reservas de clases, rutinas, asistencia,
+          medidas, avances y, si decides subirlas, <strong>fotos de progreso</strong>. Algunos de estos datos pueden
+          considerarse sensibles y se tratan solo para prestarte el servicio de coaching.</li>
+        <li><strong>Comunicaciones:</strong> los mensajes que intercambias con nosotros por WhatsApp, correo o la app.</li>
+      </ul>
+
+      <h3>b) Datos que se recopilan automáticamente</h3>
+      <ul>
+        <li><strong>Datos de uso y dispositivo:</strong> tipo de dispositivo, sistema operativo, identificadores del
+          dispositivo, idioma, páginas o pantallas vistas y datos de registro (log).</li>
+        <li><strong>Notificaciones push:</strong> si las activas, el identificador (token) necesario para enviarte avisos.</li>
+        <li><strong>Ubicación aproximada:</strong> derivada de tu conexión o del mapa; no rastreamos tu ubicación precisa
+          en segundo plano.</li>
+        <li><strong>Cookies y tecnologías similares</strong> en el sitio web (ver sección 9).</li>
+      </ul>
+
+      <h2>3. Para qué usamos tus datos</h2>
+      <ul>
+        <li>Prestarte el servicio: gestionar tu cuenta, reservas de clases, rutinas y seguimiento de progreso.</li>
+        <li>Brindarte asesoría y coaching personalizado y responder tus solicitudes.</li>
+        <li>Comunicarnos contigo por WhatsApp, correo o notificaciones sobre clases, recordatorios y novedades.</li>
+        <li>Operar, mantener, proteger y mejorar el sitio y la app, y prevenir fraude o abuso.</li>
+        <li>Cumplir obligaciones legales y atender requerimientos de autoridades competentes.</li>
+      </ul>
+
+      <h2>4. Fundamento del tratamiento</h2>
+      <p>Tratamos tus datos con base en: tu <strong>consentimiento</strong> (que puedes retirar en cualquier momento),
+        la <strong>ejecución del servicio</strong> que solicitas, nuestro <strong>interés legítimo</strong> en operar y
+        mejorar el Club, y el <strong>cumplimiento de obligaciones legales</strong>.</p>
+
+      <h2>5. Con quién compartimos datos</h2>
+      <p>No vendemos tus datos personales. Podemos compartirlos con proveedores que nos ayudan a operar, únicamente para
+        las finalidades anteriores:</p>
+      <ul>
+        <li><strong>Proveedores tecnológicos:</strong> alojamiento del sitio y la app, y la plataforma que gestiona
+          reservas, rutinas y seguimiento.</li>
+        <li><strong>Google (Google LLC):</strong> mapa de ubicación, fuentes y video incrustado; y, en su caso,
+          herramientas de analítica o notificaciones.</li>
+        <li><strong>Meta (WhatsApp):</strong> cuando nos contactas o te contactamos por WhatsApp.</li>
+        <li><strong>Apple y Google:</strong> como tiendas de distribución de la app móvil.</li>
+        <li><strong>Autoridades</strong> cuando la ley lo exija.</li>
+      </ul>
+      <p>Estos terceros pueden tratar datos fuera de México; en esos casos procuramos que existan garantías adecuadas.</p>
+
+      <h2>6. Conservación de datos</h2>
+      <p>Conservamos tus datos mientras mantengas una relación con el Club y durante el tiempo necesario para cumplir las
+        finalidades descritas y las obligaciones legales aplicables. Cuando ya no sean necesarios, los eliminamos o
+        anonimizamos de forma segura.</p>
+
+      <h2>7. Tus derechos y cómo ejercerlos</h2>
+      <p>Tienes derecho a <strong>acceder</strong>, <strong>rectificar</strong>, <strong>cancelar</strong> (eliminar) y
+        <strong>oponerte</strong> al tratamiento de tus datos (derechos ARCO), así como a <strong>retirar tu
+          consentimiento</strong> y a la <strong>portabilidad</strong> de tu información.</p>
+      <p>Para ejercerlos, escríbenos a
+        <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a>. Responderemos tu solicitud
+        en un plazo razonable conforme a la legislación aplicable.</p>
+
+      <h2>8. Eliminación de cuenta y datos</h2>
+      <p>Puedes solicitar la eliminación de tu cuenta y de los datos asociados en cualquier momento:</p>
+      <ul>
+        <li>Desde la app, en los ajustes de tu cuenta, si la opción está disponible; o</li>
+        <li>Enviando tu solicitud a <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a>
+          desde el correo asociado a tu cuenta.</li>
+      </ul>
+      <p>Eliminaremos tu cuenta y los datos personales vinculados, salvo aquellos que debamos conservar por obligación
+        legal o para fines legítimos (por ejemplo, registros contables o de seguridad), que se conservarán solo por el
+        tiempo estrictamente necesario.</p>
+
+      <h2>9. Cookies y tecnologías similares</h2>
+      <p>El sitio web puede usar cookies y tecnologías similares, propias y de terceros (por ejemplo, contenido
+        incrustado de Google), para recordar tus preferencias (como el idioma) y entender el uso del sitio. Puedes
+        controlar las cookies desde la configuración de tu navegador.</p>
+
+      <h2>10. Menores de edad</h2>
+      <p>La app y el sitio no están dirigidos a menores de 13 años. Si eres menor de edad, necesitas el consentimiento y
+        acompañamiento de tu madre, padre o tutor para usar nuestros servicios y proporcionar datos.</p>
+
+      <h2>11. Seguridad</h2>
+      <p>Aplicamos medidas razonables de seguridad técnica y organizativa para proteger tus datos. Ningún sistema es
+        100% infalible; si detectamos un incidente que te afecte, actuaremos conforme a la ley aplicable.</p>
+
+      <h2>12. Cambios a este aviso</h2>
+      <p>Podemos actualizar este Aviso de Privacidad. Publicaremos la versión vigente en esta página con su fecha de
+        actualización. Los cambios relevantes se comunicarán por los medios disponibles.</p>
+
+      <h2>13. Contacto</h2>
+      <p>Para cualquier duda sobre este aviso o sobre el tratamiento de tus datos, escríbenos a
+        <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a> o por
+        <a href="https://wa.me/5219842384258">WhatsApp</a>.</p>
+    </section>
+
+    <hr class="legal-divider" />
+
+    <!-- ============================== ENGLISH ============================== -->
+    <section id="en">
+      <h2 style="margin-top:0">Privacy Policy (English)</h2>
+      <p class="legal-meta" style="margin-bottom:1.4rem">Last updated: July 14, 2026</p>
+
+      <p>This Privacy Policy explains how <strong>Tamara's Coaching &amp; Fitness Club</strong> ("the Club", "we")
+        processes personal data of people who use our website
+        <a href="https://www.tamaracoachclub.com/">www.tamaracoachclub.com</a> and our application (available at
+        <a href="https://app.tamaracoachclub.com/">app.tamaracoachclub.com</a> and, soon, on the App Store and Google
+        Play). By using the site or the app, you accept the practices described here.</p>
+
+      <h2>1. Data controller</h2>
+      <div class="legal-contact-box">
+        <p style="margin:0">
+          <strong>Tamara's Coaching &amp; Fitness Club</strong><br />
+          Tulum, Quintana Roo, Mexico<br />
+          Privacy email: <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a><br />
+          WhatsApp: <a href="https://wa.me/5219842384258">+52 984 238 4258</a>
+        </p>
+      </div>
+
+      <h2>2. Data we process</h2>
+      <p>Depending on how you interact with us, we may process the following categories:</p>
+      <h3>a) Data you provide</h3>
+      <ul>
+        <li><strong>Identity and contact:</strong> name, phone/WhatsApp and email.</li>
+        <li><strong>Website form:</strong> your training goal and any message you send us.</li>
+        <li><strong>App account:</strong> sign-up and member profile data.</li>
+        <li><strong>Fitness and health data:</strong> goals, class bookings, routines, attendance, measurements,
+          progress and, if you choose to upload them, <strong>progress photos</strong>. Some of this may be considered
+          sensitive and is used only to provide the coaching service.</li>
+        <li><strong>Communications:</strong> messages you exchange with us via WhatsApp, email or the app.</li>
+      </ul>
+      <h3>b) Data collected automatically</h3>
+      <ul>
+        <li><strong>Usage and device data:</strong> device type, operating system, device identifiers, language,
+          pages/screens viewed and log data.</li>
+        <li><strong>Push notifications:</strong> if enabled, the token needed to send you alerts.</li>
+        <li><strong>Approximate location</strong> derived from your connection or the map; we do not track precise
+          background location.</li>
+        <li><strong>Cookies and similar technologies</strong> on the website (see section 9).</li>
+      </ul>
+
+      <h2>3. How we use your data</h2>
+      <ul>
+        <li>Provide the service: manage your account, class bookings, routines and progress tracking.</li>
+        <li>Offer personalized coaching and respond to your requests.</li>
+        <li>Communicate with you via WhatsApp, email or notifications about classes, reminders and updates.</li>
+        <li>Operate, maintain, secure and improve the site and app, and prevent fraud or abuse.</li>
+        <li>Comply with legal obligations and lawful requests from authorities.</li>
+      </ul>
+
+      <h2>4. Legal basis</h2>
+      <p>We process your data based on your <strong>consent</strong> (which you can withdraw at any time), the
+        <strong>performance of the service</strong> you request, our <strong>legitimate interest</strong> in operating
+        and improving the Club, and <strong>compliance with legal obligations</strong>.</p>
+
+      <h2>5. Who we share data with</h2>
+      <p>We do not sell your personal data. We may share it with providers that help us operate, only for the purposes
+        above:</p>
+      <ul>
+        <li><strong>Technology providers:</strong> hosting for the site and app, and the platform that manages bookings,
+          routines and tracking.</li>
+        <li><strong>Google (Google LLC):</strong> location map, fonts and embedded video; and, where applicable,
+          analytics or notification tools.</li>
+        <li><strong>Meta (WhatsApp):</strong> when you contact us or we contact you via WhatsApp.</li>
+        <li><strong>Apple and Google:</strong> as distribution stores for the mobile app.</li>
+        <li><strong>Authorities</strong> where required by law.</li>
+      </ul>
+      <p>These third parties may process data outside Mexico; in such cases we seek adequate safeguards.</p>
+
+      <h2>6. Data retention</h2>
+      <p>We keep your data while you have a relationship with the Club and for as long as necessary to fulfill the
+        purposes described and applicable legal obligations. When no longer needed, we securely delete or anonymize it.</p>
+
+      <h2>7. Your rights</h2>
+      <p>You have the right to <strong>access</strong>, <strong>rectify</strong>, <strong>erase</strong>,
+        <strong>object to</strong> and <strong>restrict</strong> processing, to <strong>withdraw consent</strong> and to
+        <strong>data portability</strong>. To exercise them, email
+        <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a>.</p>
+
+      <h2>8. Account and data deletion</h2>
+      <p>You can request deletion of your account and associated data at any time, either from your account settings in
+        the app (where available) or by emailing
+        <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a> from the address linked to
+        your account. We will delete your account and linked personal data, except where we must retain certain records
+        for legal or legitimate purposes, and only for as long as strictly necessary.</p>
+
+      <h2>9. Cookies</h2>
+      <p>The website may use first- and third-party cookies and similar technologies (for example, embedded Google
+        content) to remember preferences such as language and to understand site usage. You can control cookies through
+        your browser settings.</p>
+
+      <h2>10. Children</h2>
+      <p>The app and site are not directed to children under 13. If you are a minor, you need consent and supervision
+        from a parent or guardian to use our services and provide data.</p>
+
+      <h2>11. Security</h2>
+      <p>We apply reasonable technical and organizational security measures. No system is completely secure; if we
+        detect an incident affecting you, we will act in accordance with applicable law.</p>
+
+      <h2>12. Changes</h2>
+      <p>We may update this Privacy Policy. The current version will be posted on this page with its update date.</p>
+
+      <h2>13. Contact</h2>
+      <p>For any questions about this policy or your data, contact
+        <a href="mailto:privacidad@tamaracoachclub.com">privacidad@tamaracoachclub.com</a> or
+        <a href="https://wa.me/5219842384258">WhatsApp</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Tamara's Coaching &amp; Fitness Club</p>
+    <p>Tulum, México | Gimnasio de alto rendimiento y coaching fitness en Tulum</p>
+    <p class="copyright-text">Copyright 2026 Tamara's Coach &amp; Fitness Club |
+      <a href="/">Inicio</a></p>
+  </footer>
+</body>
+
+</html>

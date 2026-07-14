@@ -2132,3 +2132,20 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
     width: 100%;
   }
 }
+
+.footer-legal {
+  margin-top: 0.1rem;
+}
+
+.footer-legal-link {
+  color: #cdd6e0;
+  font-size: 0.82rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 180ms ease;
+}
+
+.footer-legal-link:hover,
+.footer-legal-link:focus-visible {
+  color: var(--accent-2);
+}
