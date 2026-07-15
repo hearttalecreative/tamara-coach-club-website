@@ -44,17 +44,17 @@ const WA_MESSAGES = {
 
 const I18N = {
   es: {
-    title: "Tamara's Coaching & Fitness Club | Alto Rendimiento en Tulum",
+    title: "Gimnasio y Entrenador Personal en Tulum | Tamara's Coaching & Fitness Club",
     description:
-      "Tamara's Coaching & Fitness Club: gimnasio de alto rendimiento en Tulum con coaching fitness estructurado, entrenador personal y programas presenciales y online.",
+      "Gimnasio de fitness y entrenamiento personal en Tulum, México. Entrena con Tamara, entrenadora personal y coach de alto rendimiento: fuerza, método y seguimiento real, presencial y online.",
     menu: ["Método", "Trayectoria", "Premios", "Online", "App", "Ubicación"],
     appMenuLink: "Acceso alumnos",
     menuCta: "Transfórmate!",
     heroAppChip: "¿Ya eres alumno? Ingresa a la app en <strong>app.tamaracoachclub.com</strong>",
-    heroEyebrow: "Tulum, México",
+    heroEyebrow: "Gimnasio y entrenamiento personal · Tulum, México",
     heroTitle: "Disciplina primero.<br>La <span>transformación</span> es consecuencia.",
     heroLead:
-      "Coaching de alto rendimiento en Tulum para quienes buscan resultados reales con estructura, seguimiento y compromiso.",
+      "Gimnasio de alto rendimiento y entrenamiento personal en Tulum para quienes buscan resultados reales con estructura, seguimiento y compromiso.",
     heroPrimary: "Quiero información",
     heroSecondary: "Acceso alumnos",
     heroTag: "Grupos reducidos. Seguimiento real. Cupos limitados.",
@@ -75,7 +75,7 @@ const I18N = {
     trajectoryEyebrow: "Coaching profesional",
     trajectoryTitle: "Experiencia real.<br>Resultados reales.",
     trajectoryLead:
-      "Tamara trabaja como coach con un enfoque personalizado: evalua tu punto de partida, estructura una estrategia clara y ajusta cada fase para que avances con seguridad, consistencia y resultados medibles.",
+      "Tamara trabaja como entrenadora personal y coach en Tulum con un enfoque personalizado: evalúa tu punto de partida, estructura una estrategia clara y ajusta cada fase para que avances con seguridad, consistencia y resultados medibles.",
     trajectoryList: [
       "Diagnóstico inicial para conocer tu nivel real y tus necesidades.",
       "Programación individual con objetivos claros por etapa.",
@@ -219,17 +219,17 @@ const I18N = {
     copyrightText: "Tamara's Coach & Fitness Club | Desarrollo web y aplicación desarrollada por",
   },
   en: {
-    title: "Tamara's Coaching & Fitness Club | High Performance in Tulum",
+    title: "Gym & Personal Trainer in Tulum | Tamara's Coaching & Fitness Club",
     description:
-      "Tamara's Coaching & Fitness Club: high-performance gym in Tulum with structured fitness coaching, personal training, and in-person plus online programs.",
+      "Gym, fitness and personal training in Tulum, Mexico. Train with Tamara, a personal trainer and high-performance coach: strength, method and real follow-up, in person and online.",
     menu: ["Method", "Career", "Awards", "Online", "App", "Location"],
     appMenuLink: "Student access",
     menuCta: "Transform Yourself!",
     heroAppChip: "Already a member? Log in at <strong>app.tamaracoachclub.com</strong>",
-    heroEyebrow: "Tulum, Mexico",
+    heroEyebrow: "Gym & personal training · Tulum, Mexico",
     heroTitle: "Discipline first.<br><span>Transformation</span> is the consequence.",
     heroLead:
-      "High-performance coaching in Tulum for people who want real results through structure, follow-up, and commitment.",
+      "High-performance gym and personal training in Tulum for people who want real results through structure, follow-up, and commitment.",
     heroPrimary: "I want information",
     heroSecondary: "Student access",
     heroTag: "Small groups. Real follow-up. Limited spots.",
@@ -250,7 +250,7 @@ const I18N = {
     trajectoryEyebrow: "Professional coaching",
     trajectoryTitle: "Real experience.<br>Real results.",
     trajectoryLead:
-      "Tamara coaches with a fully personalized approach: she evaluates your starting point, builds a clear strategy, and adjusts every phase so you progress with safety, consistency, and measurable outcomes.",
+      "Tamara works as a personal trainer and coach in Tulum with a fully personalized approach: she evaluates your starting point, builds a clear strategy, and adjusts every phase so you progress with safety, consistency, and measurable outcomes.",
     trajectoryList: [
       "Initial assessment to understand your real level and specific needs.",
       "Individual programming with clear goals for each phase.",

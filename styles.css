@@ -2149,3 +2149,11 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
 .footer-legal-link:focus-visible {
   color: var(--accent-2);
 }
+
+.footer-seo {
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  max-width: 62ch;
+}
