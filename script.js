@@ -21,12 +21,10 @@ const WA_MESSAGES = {
   es: {
     general_info: "Hola Tamara Club, quiero información sobre los programas y cómo empezar.",
     hero_info: "Hola Tamara Club, quiero recibir información y disponibilidad para entrenar en el club.",
-    plan_linea: "Hola Tamara Club, quiero suscribirme al Plan En Línea ($1,500 MXN mensual). ¿Me pasas los detalles para empezar?",
-    plan_gold: "Hola Tamara Club, quiero suscribirme al Plan Gold ($2,500 MXN mensual). ¿Me pasas los detalles para empezar?",
-    plan_inicio: "Hola Tamara Club, quiero suscribirme al Plan Inicio Comprometido ($3,000 MXN mensual). ¿Me pasas los detalles para empezar?",
-    plan_intermedio: "Hola Tamara Club, quiero suscribirme al Plan Intermedio ($3,000 MXN mensual). ¿Me pasas los detalles para empezar?",
-    plan_base: "Hola Tamara Club, quiero suscribirme al Plan Base Fuerte ($3,500 MXN mensual). ¿Me pasas los detalles para empezar?",
-    plan_elite: "Hola Tamara Club, quiero suscribirme al Plan Rendimiento Elite ($4,000 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_inicio: "Hola Tamara Club, quiero suscribirme al Plan Inicio Comprometido ($3,500 MXN al mes). ¿Me pasas los detalles para empezar?",
+    plan_base: "Hola Tamara Club, quiero suscribirme al Plan Base Fuerte ($4,000 MXN al mes). ¿Me pasas los detalles para empezar?",
+    plan_elite: "Hola Tamara Club, quiero suscribirme al Plan Rendimiento Élite ($4,500 MXN al mes). ¿Me pasas los detalles para empezar?",
+    plan_turistica: "Hola Tamara Club, quiero reservar una Sesión Turística Única ($700 MXN). ¿Qué horarios tienen disponibles?",
     online_program: "Hola Tamara Club, quiero información del programa Online Personalizado.",
     app_info: "Hola Tamara Club, quiero descargar la app de Tamara's Coach & Fitness Club.",
     visit_booking: "Hola Tamara Club, quiero agendar una visita para conocer el gimnasio.",
@@ -34,12 +32,10 @@ const WA_MESSAGES = {
   en: {
     general_info: "Hi Tamara Club, I'd like information about your programs and how to start.",
     hero_info: "Hi Tamara Club, I'd like info and availability to start training at the club.",
-    plan_linea: "Hi Tamara Club, I'd like to subscribe to the Online Plan ($1,500 MXN/month). Could you share the details to get started?",
-    plan_gold: "Hi Tamara Club, I'd like to subscribe to the Gold Plan ($2,500 MXN/month). Could you share the details to get started?",
-    plan_inicio: "Hi Tamara Club, I'd like to subscribe to the Committed Start Plan ($3,000 MXN/month). Could you share the details to get started?",
-    plan_intermedio: "Hi Tamara Club, I'd like to subscribe to the Intermediate Plan ($3,000 MXN/month). Could you share the details to get started?",
-    plan_base: "Hi Tamara Club, I'd like to subscribe to the Strong Base Plan ($3,500 MXN/month). Could you share the details to get started?",
-    plan_elite: "Hi Tamara Club, I'd like to subscribe to the Elite Performance Plan ($4,000 MXN/month). Could you share the details to get started?",
+    plan_inicio: "Hi Tamara Club, I'd like to join the Committed Start Plan ($3,500 MXN/month). Could you share the details to get started?",
+    plan_base: "Hi Tamara Club, I'd like to join the Strong Base Plan ($4,000 MXN/month). Could you share the details to get started?",
+    plan_elite: "Hi Tamara Club, I'd like to join the Elite Performance Plan ($4,500 MXN/month). Could you share the details to get started?",
+    plan_turistica: "Hi Tamara Club, I'd like to book a Single Visitor Session ($700 MXN). What times do you have available?",
     online_program: "Hi Tamara Club, I would like information about the Online Personalized program.",
     app_info: "Hi Tamara Club, I want to download the Tamara's Coach & Fitness Club app.",
     visit_booking: "Hi Tamara Club, I want to schedule a visit to get to know the gym.",
@@ -47,12 +43,10 @@ const WA_MESSAGES = {
 };
 
 const PLANS = [
-  { name: "Plan En Línea", price: 1500, freq: 3, dur: "1h", waKey: "plan_linea", tag: "online" },
-  { name: "Plan Gold", price: 2500, freq: 3, dur: "1.5h", waKey: "plan_gold", tag: null },
-  { name: "Plan Inicio Comprometido", price: 3000, freq: 3, dur: "1.5h", waKey: "plan_inicio", tag: null },
-  { name: "Plan Intermedio", price: 3000, freq: 4, dur: "1.5h", waKey: "plan_intermedio", tag: null },
-  { name: "Plan Base Fuerte", price: 3500, freq: 4, dur: "1.5h", waKey: "plan_base", tag: null },
-  { name: "Plan Rendimiento Elite", price: 4000, freq: 5, dur: "1.5h", waKey: "plan_elite", tag: "elite" },
+  { key: "plan_inicio", price: 3500, period: "month", freq: 3, dur: "1.5h", tag: null },
+  { key: "plan_base", price: 4000, period: "month", freq: 4, dur: "1.5h", tag: null },
+  { key: "plan_elite", price: 4500, period: "month", freq: 5, dur: "1.5h", tag: "elite" },
+  { key: "plan_turistica", price: 700, period: "once", freq: null, dur: "110 min", tag: "single" },
 ];
 
 const I18N = {
@@ -124,20 +118,93 @@ const I18N = {
     pricingLead: "Elige el plan que se adapta a tu ritmo. Todos incluyen acompañamiento de Tamara y seguimiento real. Te suscribes por WhatsApp en un minuto.",
     pricingNote: "Precios en pesos mexicanos (MXN), cargo mensual. ¿Dudas sobre cuál elegir? Escríbenos y te asesoramos.",
     planButtonSub: "Suscribirme",
+    planButtonBook: "Reservar sesión",
+    planTagSingle: "Sesión única",
+    planUpTo: "Hasta",
     planPerWeek: "días/sem",
-    planPerSession: "h/sesión",
+    planPerSession: " por sesión",
     planPer: "mes",
     planTagMonthly: "Mensual",
-    planTagOnline: "Online",
     planTagElite: "Élite",
-    planDescriptions: [
-      "Entrena desde donde estés, con rutina y seguimiento a distancia.",
-      "Acompañamiento cercano con más tiempo por sesión para afinar técnica.",
-      "Arranca con estructura y buenos hábitos, a tu ritmo y sin frustrarte.",
-      "Sube el ritmo con cuatro días a la semana y progreso constante.",
-      "Construye una base sólida con volumen y consistencia semanal.",
-      "Máxima frecuencia y enfoque para resultados de alto nivel.",
+    planItems: [
+      {
+        name: "Plan Inicio Comprometido",
+        desc: "Empieza con estructura y buenos hábitos, a tu ritmo y sin frustrarte.",
+        includes: [
+          "Plan de entrenamiento mensual",
+          "Asesoría en suplementación",
+          "1 dieta fitness por mes",
+          "1 evaluación mensual",
+          "Acceso a la app de Tamara Coach",
+          "20% de descuento en fisioterapia",
+        ],
+        conditions: [
+          "3 sesiones por semana (L–V)",
+          "1.5 horas por sesión",
+          "No reembolsable ni acumulable",
+          "Asesoría en línea por viaje",
+          "Sin cambios de horario",
+          "Dentro del horario del gimnasio",
+        ],
+      },
+      {
+        name: "Plan Base Fuerte",
+        desc: "Construye una base sólida con volumen y consistencia semanal.",
+        includes: [
+          "Plan mensual personalizado",
+          "Asesoría en suplementación",
+          "1 dieta fitness por mes",
+          "1 evaluación mensual",
+          "Acceso a la app de Tamara Coach",
+          "20% de descuento en fisioterapia",
+        ],
+        conditions: [
+          "4 sesiones por semana (L–V)",
+          "1.5 horas por sesión",
+          "No reembolsable ni acumulable",
+          "Asesoría en línea por viaje",
+          "Sin cambios de horario",
+          "Dentro del horario del gimnasio",
+        ],
+      },
+      {
+        name: "Plan Rendimiento Élite",
+        desc: "Diseñado para quienes buscan un nivel de transformación profesional.",
+        includes: [
+          "Programa personalizado",
+          "Correcciones de técnica en tiempo real",
+          "Fuerza, acondicionamiento y movilidad",
+          "Ejercicios personalizados (máx. 5 personas)",
+          "Asesoría en suplementación",
+          "2 dietas fitness al mes",
+          "2 evaluaciones mensuales",
+          "Acceso a la app de Tamara Coach",
+          "20% de descuento en fisioterapia",
+        ],
+        conditions: [
+          "5 sesiones por semana (L–V)",
+          "1.5 horas por sesión",
+          "No reembolsable ni acumulable",
+          "Asesoría en línea por viaje",
+          "Hasta 2 modificaciones semanales",
+          "Dentro del horario del gimnasio",
+        ],
+      },
+      {
+        name: "Sesiones Turísticas Únicas",
+        desc: "Entrenamiento totalmente personalizado, ideal si estás de visita en Tulum.",
+        includes: [
+          "Ejercicios personalizados",
+          "Correcciones en tiempo real",
+          "Fuerza, acondicionamiento y movilidad",
+          "Coaching individual",
+          "Grupo máximo 5 personas",
+        ],
+        conditions: ["Disponibilidad: 7:00–14:00 h", "Disponibilidad: 18:30–22:00 h"],
+      },
     ],
+    planIncludesLabel: "Incluye",
+    planConditionsLabel: "Ver condiciones",
     planKickers: ["Más elegido", "Progreso constante", "Punto de partida", "Evaluación inicial"],
     planTitles: ["Rendimiento Elite", "Base Fuerte", "Inicio Comprometido", "Sesión Única"],
     planBullets: [
@@ -220,9 +287,9 @@ const I18N = {
       "Se evalúa y adapta con enfoque biomecánico para mantener progreso seguro.",
       "Sí, según el programa sugerido para tu objetivo.",
       "Sí. Puedes iniciar con sesión única para evaluarte y definir tu ruta.",
-      "Los planes van de $1,500 a $4,000 MXN al mes, según cuántos días entrenes por semana. Puedes ver el detalle de cada plan en la sección de planes de esta página.",
+      "Los planes mensuales van de $3,500 a $4,500 MXN según cuántos días entrenes por semana. También hay sesiones únicas de $700 MXN, ideales si estás de visita en Tulum.",
       "Estamos en Tulum, Quintana Roo. En la sección de ubicación encuentras el mapa y puedes abrir la ruta directa en Google Maps.",
-      "Sí. El Plan En Línea incluye rutina, seguimiento semanal y contacto directo por WhatsApp, para que entrenes desde donde estés.",
+      "Sí. Ofrecemos coaching online con seguimiento semanal y contacto directo por WhatsApp, y todos los planes presenciales incluyen asesoría en línea cuando estás de viaje.",
       "Yes. Coaching and follow-up are available in English and Spanish, and the whole site and app can be used in English.",
       "Sí. La app de Tamara's Coaching & Fitness Club está disponible gratis para iPhone en el App Store, y también puedes entrar desde el navegador en app.tamaracoachclub.com.",
     ],
@@ -333,20 +400,93 @@ const I18N = {
     pricingLead: "Pick the plan that fits your pace. All include Tamara's coaching and real follow-up. You subscribe via WhatsApp in a minute.",
     pricingNote: "Prices in Mexican pesos (MXN), billed monthly. Not sure which one to pick? Message us and we'll guide you.",
     planButtonSub: "Subscribe",
+    planButtonBook: "Book a session",
+    planTagSingle: "Single session",
+    planUpTo: "Up to",
     planPerWeek: "days/wk",
-    planPerSession: "h/session",
+    planPerSession: " per session",
     planPer: "mo",
     planTagMonthly: "Monthly",
-    planTagOnline: "Online",
     planTagElite: "Elite",
-    planDescriptions: [
-      "Train from anywhere, with a routine and remote follow-up.",
-      "Close guidance with more time per session to refine technique.",
-      "Start with structure and solid habits, at your pace, frustration-free.",
-      "Step it up with four days a week and steady progress.",
-      "Build a strong base with weekly volume and consistency.",
-      "Maximum frequency and focus for high-level results.",
+    planItems: [
+      {
+        name: "Committed Start Plan",
+        desc: "Start with structure and solid habits, at your pace, frustration-free.",
+        includes: [
+          "Monthly training plan",
+          "Supplement guidance",
+          "1 fitness meal plan per month",
+          "1 monthly assessment",
+          "Access to the Tamara Coach app",
+          "20% off physiotherapy",
+        ],
+        conditions: [
+          "3 sessions per week (Mon–Fri)",
+          "1.5 hours per session",
+          "Non-refundable, cannot roll over",
+          "Online coaching while travelling",
+          "No schedule changes",
+          "Within gym opening hours",
+        ],
+      },
+      {
+        name: "Strong Base Plan",
+        desc: "Build a strong base with weekly volume and consistency.",
+        includes: [
+          "Personalized monthly plan",
+          "Supplement guidance",
+          "1 fitness meal plan per month",
+          "1 monthly assessment",
+          "Access to the Tamara Coach app",
+          "20% off physiotherapy",
+        ],
+        conditions: [
+          "4 sessions per week (Mon–Fri)",
+          "1.5 hours per session",
+          "Non-refundable, cannot roll over",
+          "Online coaching while travelling",
+          "No schedule changes",
+          "Within gym opening hours",
+        ],
+      },
+      {
+        name: "Elite Performance Plan",
+        desc: "Built for those after a professional level of transformation.",
+        includes: [
+          "Personalized program",
+          "Real-time technique corrections",
+          "Strength, conditioning and mobility",
+          "Personalized exercises (max. 5 people)",
+          "Supplement guidance",
+          "2 fitness meal plans per month",
+          "2 monthly assessments",
+          "Access to the Tamara Coach app",
+          "20% off physiotherapy",
+        ],
+        conditions: [
+          "5 sessions per week (Mon–Fri)",
+          "1.5 hours per session",
+          "Non-refundable, cannot roll over",
+          "Online coaching while travelling",
+          "Up to 2 weekly changes",
+          "Within gym opening hours",
+        ],
+      },
+      {
+        name: "Single Visitor Sessions",
+        desc: "Fully personalized training, ideal if you are visiting Tulum.",
+        includes: [
+          "Personalized exercises",
+          "Real-time corrections",
+          "Strength, conditioning and mobility",
+          "One-to-one coaching",
+          "Groups of up to 5 people",
+        ],
+        conditions: ["Available 7:00 AM–2:00 PM", "Available 6:30 PM–10:00 PM"],
+      },
     ],
+    planIncludesLabel: "Includes",
+    planConditionsLabel: "View conditions",
     planKickers: ["Most chosen", "Steady progress", "Starting point", "Initial assessment"],
     planTitles: ["Elite Performance", "Strong Base", "Committed Start", "Single Session"],
     planBullets: [
@@ -429,9 +569,9 @@ const I18N = {
       "We evaluate and adapt using a biomechanical approach to keep progress safe.",
       "Yes, depending on the program recommended for your goal.",
       "Yes. You can start with a single session to assess your current level and define your path.",
-      "Plans range from $1,500 to $4,000 MXN per month, depending on how many days a week you train. You can see each plan in the plans section of this page.",
+      "Monthly plans range from $3,500 to $4,500 MXN depending on how many days a week you train. There are also single sessions at $700 MXN, ideal if you are visiting Tulum.",
       "We are in Tulum, Quintana Roo. The location section has the map and opens directions straight in Google Maps.",
-      "Yes. The Online Plan includes your routine, weekly follow-up and direct WhatsApp contact, so you can train from anywhere.",
+      "Yes. We offer online coaching with weekly follow-up and direct WhatsApp contact, and every in-person plan includes online coaching while you travel.",
       "Yes. Coaching and follow-up are available in English and Spanish, and the whole site and app can be used in English.",
       "Yes. The Tamara's Coaching & Fitness Club app is free for iPhone on the App Store, and you can also log in from the browser at app.tamaracoachclub.com.",
     ],
@@ -607,31 +747,17 @@ const initHeroVideoPlayback = () => {
   }
 };
 
-const PLAN_NAMES_EN = {
-  plan_linea: "Online Plan",
-  plan_gold: "Gold Plan",
-  plan_inicio: "Committed Start Plan",
-  plan_intermedio: "Intermediate Plan",
-  plan_base: "Strong Base Plan",
-  plan_elite: "Elite Performance Plan",
-};
-
 const plansGrid = document.querySelector("#plans-grid");
 
 const renderPlans = (lang) => {
   if (!plansGrid) return;
   const t = I18N[lang] || I18N.es;
   const messages = WA_MESSAGES[lang] || WA_MESSAGES.es;
+  const locale = lang === "en" ? "en-US" : "es-MX";
 
   const cards = PLANS.map((plan, index) => {
-    const name = lang === "en" ? PLAN_NAMES_EN[plan.waKey] || plan.name : plan.name;
-    const description = (t.planDescriptions && t.planDescriptions[index]) || "";
-    const href = buildWhatsAppUrl(messages[plan.waKey] || messages.general_info);
-    const price = plan.price.toLocaleString(lang === "en" ? "en-US" : "es-MX");
-
-    let tagLabel = t.planTagMonthly;
-    if (plan.tag === "online") tagLabel = t.planTagOnline;
-    if (plan.tag === "elite") tagLabel = t.planTagElite;
+    const copy = (t.planItems && t.planItems[index]) || {};
+    const href = buildWhatsAppUrl(messages[plan.key] || messages.general_info);
 
     const card = document.createElement("article");
     card.className = "plan-card" + (plan.tag === "elite" ? " is-featured" : "");
@@ -639,49 +765,75 @@ const renderPlans = (lang) => {
     const head = document.createElement("div");
     head.className = "plan-card-head";
     const title = document.createElement("h3");
-    title.textContent = name;
+    title.textContent = copy.name || "";
     const tag = document.createElement("span");
     tag.className = "plan-card-tag" + (plan.tag ? " is-" + plan.tag : "");
-    tag.textContent = tagLabel;
+    tag.textContent =
+      plan.tag === "elite" ? t.planTagElite : plan.period === "once" ? t.planTagSingle : t.planTagMonthly;
     head.append(title, tag);
 
     const desc = document.createElement("p");
     desc.className = "plan-card-desc";
-    desc.textContent = description;
+    desc.textContent = copy.desc || "";
 
     const priceRow = document.createElement("p");
     priceRow.className = "plan-card-price";
     const amount = document.createElement("span");
     amount.className = "plan-card-amount";
-    amount.textContent = "$" + price;
+    amount.textContent = "$" + plan.price.toLocaleString(locale);
     const currency = document.createElement("span");
     currency.className = "plan-card-currency";
-    currency.textContent = "MXN / " + t.planPer;
+    currency.textContent = "MXN" + (plan.period === "once" ? "" : " / " + t.planPer);
     priceRow.append(amount, currency);
 
     const specs = document.createElement("ul");
     specs.className = "plan-card-specs";
-    [
-      { icon: "calendar", text: plan.freq + " " + t.planPerWeek },
-      { icon: "clock", text: plan.dur + (lang === "en" ? "/session" : "/sesión") },
-    ].forEach((spec) => {
+    const specTexts = [];
+    if (plan.freq) specTexts.push(plan.freq + " " + t.planPerWeek);
+    specTexts.push(plan.period === "once" ? t.planUpTo + " " + plan.dur : plan.dur + t.planPerSession);
+    specTexts.forEach((text) => {
       const li = document.createElement("li");
       const dot = document.createElement("span");
       dot.className = "plan-spec-dot";
       dot.setAttribute("aria-hidden", "true");
-      li.append(dot, document.createTextNode(spec.text));
+      li.append(dot, document.createTextNode(text));
       specs.appendChild(li);
     });
+
+    const includesWrap = document.createElement("div");
+    includesWrap.className = "plan-card-includes";
+    const includesLabel = document.createElement("p");
+    includesLabel.className = "plan-card-includes-label";
+    includesLabel.textContent = t.planIncludesLabel;
+    const includesList = document.createElement("ul");
+    (copy.includes || []).forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      includesList.appendChild(li);
+    });
+    includesWrap.append(includesLabel, includesList);
+
+    const conditions = document.createElement("details");
+    conditions.className = "plan-card-conditions";
+    const summary = document.createElement("summary");
+    summary.textContent = t.planConditionsLabel;
+    const condList = document.createElement("ul");
+    (copy.conditions || []).forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      condList.appendChild(li);
+    });
+    conditions.append(summary, condList);
 
     const cta = document.createElement("a");
     cta.className = "btn " + (plan.tag === "elite" ? "btn-primary" : "btn-ghost") + " plan-card-btn";
     cta.href = href;
     cta.target = "_blank";
     cta.rel = "noopener noreferrer";
-    cta.textContent = t.planButtonSub;
-    cta.setAttribute("aria-label", t.planButtonSub + " — " + name);
+    cta.textContent = plan.period === "once" ? t.planButtonBook : t.planButtonSub;
+    cta.setAttribute("aria-label", cta.textContent + " — " + (copy.name || ""));
 
-    card.append(head, desc, priceRow, specs, cta);
+    card.append(head, desc, priceRow, specs, includesWrap, conditions, cta);
     return card;
   });
 
