@@ -61,7 +61,7 @@ const I18N = {
     description:
       "Gimnasio de fitness y entrenamiento personal en Tulum, México. Entrena con Tamara, entrenadora personal y coach de alto rendimiento: fuerza, método y seguimiento real, presencial y online.",
     menu: ["Método", "Trayectoria", "Premios", "Planes", "Online", "App", "Ubicación"],
-    appMenuLink: "Acceso alumnos",
+    appMenuLink: "Alumnos",
     menuCta: "Transfórmate!",
     heroAppChip: "Nueva app para iPhone: <strong>descárgala en el App Store</strong>",
     heroEyebrow: "Gimnasio y entrenamiento personal · Tulum, México",
@@ -95,7 +95,7 @@ const I18N = {
       "Corrección técnica permanente para entrenar mejor y evitar estancarte.",
       "Seguimiento continuo para medir progreso y ajustar cuando sea necesario.",
     ],
-    awardsEyebrow: "Logros",
+    awardsEyebrow: "Coach de alto rendimiento",
     awardsTitle: "Premios que respaldan el método",
     awardsLead:
       "Los resultados de Tamara no son casualidad. Su trayectoria competitiva confirma que trabaja con estructura, disciplina y estándares de alto rendimiento en cada etapa del proceso.",
@@ -110,17 +110,17 @@ const I18N = {
       ["2X", "Campeona nacional"],
       ["2025", "Oro internacional en Miami"],
     ],
-    environmentEyebrow: "Entrenamiento",
-    environmentTitle: "Un entorno que te empuja a cumplir",
+    environmentEyebrow: "El club en Tulum",
+    environmentTitle: "Un gimnasio en Tulum que te empuja a cumplir",
     environmentLead:
       "El espacio del club está pensado para entrenar con foco: equipamiento funcional, sesiones guiadas y una cultura donde cada persona entrena en serio sin importar su nivel de inicio.",
     plansEyebrow: "El proceso",
-    plansTitle: "Entrenamiento con acompañamiento real",
+    plansTitle: "Entrenamiento personal con acompañamiento real",
     plansLead: "Cada persona entrena según su nivel, su objetivo y su contexto. Definimos tu ruta en una asesoría inicial y ajustamos el plan contigo, paso a paso, con seguimiento directo.",
     processCtaText: "Sin planes rígidos ni letras pequeñas. Cuéntanos tu objetivo y te armamos una ruta a tu medida.",
     processCtaButton: "Solicita tu asesoría",
     pricingEyebrow: "Membresías",
-    pricingTitle: "Planes de entrenamiento",
+    pricingTitle: "Planes de entrenamiento en Tulum",
     pricingLead: "Elige el plan que se adapta a tu ritmo. Todos incluyen acompañamiento de Tamara y seguimiento real. Te suscribes por WhatsApp en un minuto.",
     pricingNote: "Precios en pesos mexicanos (MXN), cargo mensual. ¿Dudas sobre cuál elegir? Escríbenos y te asesoramos.",
     planButtonSub: "Suscribirme",
@@ -196,6 +196,9 @@ const I18N = {
     storeCtaSmall: "Descárgala en el",
     appPlatformNote: "Disponible para iPhone. Gratis para miembros del club.",
     pricingAppText: "Al inscribirte, gestionas tus clases y tu progreso desde la app del club.",
+    emotionalTitle: "Si alguna vez sentiste que no podías",
+    emotionalLead:
+      "Muchos llegan después de abandonar procesos, perder confianza o no lograr constancia. Aquí no se juzga. Se estructura. Se acompaña. Se construye.",
     communityEyebrow: "Comunidad",
     communityTitle: "Respeto. Constancia. Carácter.",
     communityLead: "El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.",
@@ -206,12 +209,22 @@ const I18N = {
       "¿Y si tengo una lesión?",
       "¿Incluye plan nutricional?",
       "¿Puedo probar antes?",
+      "¿Cuánto cuesta entrenar en el gimnasio?",
+      "¿Dónde está el gimnasio en Tulum?",
+      "¿Puedo entrenar si no vivo en Tulum?",
+      "Do you speak English?",
+      "¿El gimnasio tiene aplicación?",
     ],
     faqAnswers: [
       "No. El entrenamiento se adapta completamente a tu nivel.",
       "Se evalúa y adapta con enfoque biomecánico para mantener progreso seguro.",
-      "Si, según el programa sugerido para tu objetivo.",
-      "Si. Puedes iniciar con sesión única para evaluarte y definir tu ruta.",
+      "Sí, según el programa sugerido para tu objetivo.",
+      "Sí. Puedes iniciar con sesión única para evaluarte y definir tu ruta.",
+      "Los planes van de $1,500 a $4,000 MXN al mes, según cuántos días entrenes por semana. Puedes ver el detalle de cada plan en la sección de planes de esta página.",
+      "Estamos en Tulum, Quintana Roo. En la sección de ubicación encuentras el mapa y puedes abrir la ruta directa en Google Maps.",
+      "Sí. El Plan En Línea incluye rutina, seguimiento semanal y contacto directo por WhatsApp, para que entrenes desde donde estés.",
+      "Yes. Coaching and follow-up are available in English and Spanish, and the whole site and app can be used in English.",
+      "Sí. La app de Tamara's Coaching & Fitness Club está disponible gratis para iPhone en el App Store, y también puedes entrar desde el navegador en app.tamaracoachclub.com.",
     ],
     urgencyEyebrow: "Cupos",
     urgencyTitle: "Aperturas limitadas por horario",
@@ -237,7 +250,7 @@ const I18N = {
     formButton: "Enviar por WhatsApp",
     formNote: "Al enviar, abriremos WhatsApp con tu mensaje listo para contactar al club.",
     locationEyebrow: "Ubicación",
-    locationTitle: "Conoce el club en persona",
+    locationTitle: "Visita el gimnasio en Tulum",
     locationLead:
       "Si quieres transformar tu cuerpo con método, este es el mejor siguiente paso: venir a conocer el espacio, hablar con Tamara y definir una ruta real según tu objetivo.",
     locationList: [
@@ -257,8 +270,8 @@ const I18N = {
     description:
       "Gym, fitness and personal training in Tulum, Mexico. Train with Tamara, a personal trainer and high-performance coach: strength, method and real follow-up, in person and online.",
     menu: ["Method", "Career", "Awards", "Plans", "Online", "App", "Location"],
-    appMenuLink: "Student access",
-    menuCta: "Transform Yourself!",
+    appMenuLink: "Students",
+    menuCta: "Transform!",
     heroAppChip: "New iPhone app: <strong>download it on the App Store</strong>",
     heroEyebrow: "Gym & personal training · Tulum, Mexico",
     heroTitle: "Discipline first.<br><span>Transformation</span> is the consequence.",
@@ -291,7 +304,7 @@ const I18N = {
       "Continuous technical correction to train better and avoid plateaus.",
       "Ongoing follow-up to measure progress and adjust when needed.",
     ],
-    awardsEyebrow: "Achievements",
+    awardsEyebrow: "High-performance coach",
     awardsTitle: "Awards that validate the method",
     awardsLead:
       "Tamara's results are not random. Her competitive path confirms a high-performance system built on structure, discipline, and measurable standards at every stage.",
@@ -306,17 +319,17 @@ const I18N = {
       ["2X", "National champion"],
       ["2025", "International gold in Miami"],
     ],
-    environmentEyebrow: "Training",
-    environmentTitle: "An environment that pushes you to deliver",
+    environmentEyebrow: "The club in Tulum",
+    environmentTitle: "A gym in Tulum that pushes you to deliver",
     environmentLead:
       "The club is designed for focused training: functional equipment, guided sessions, and a culture where everyone trains seriously regardless of starting level.",
     plansEyebrow: "The process",
-    plansTitle: "Training with real coaching support",
+    plansTitle: "Personal training with real coaching support",
     plansLead: "Everyone trains according to their level, goal, and context. We map your path in an initial assessment and adjust the plan with you, step by step, with direct follow-up.",
     processCtaText: "No rigid plans, no fine print. Tell us your goal and we build a route made for you.",
     processCtaButton: "Request your assessment",
     pricingEyebrow: "Memberships",
-    pricingTitle: "Training plans",
+    pricingTitle: "Training plans in Tulum",
     pricingLead: "Pick the plan that fits your pace. All include Tamara's coaching and real follow-up. You subscribe via WhatsApp in a minute.",
     pricingNote: "Prices in Mexican pesos (MXN), billed monthly. Not sure which one to pick? Message us and we'll guide you.",
     planButtonSub: "Subscribe",
@@ -392,6 +405,9 @@ const I18N = {
     storeCtaSmall: "Download on the",
     appPlatformNote: "Available for iPhone. Free for club members.",
     pricingAppText: "Once you join, you manage your classes and progress from the club app.",
+    emotionalTitle: "If you have ever felt you could not",
+    emotionalLead:
+      "Many people arrive after dropping out of programs, losing confidence or failing to stay consistent. Here you are not judged. You get structure, support and a plan you can build on.",
     communityEyebrow: "Community",
     communityTitle: "Respect. Consistency. Character.",
     communityLead: "Our core value is respect: for your body, your process, and your word.",
@@ -402,12 +418,22 @@ const I18N = {
       "What if I have an injury?",
       "Does it include nutrition guidance?",
       "Can I try before joining?",
+      "How much does it cost to train at the gym?",
+      "Where is the gym in Tulum?",
+      "Can I train if I don't live in Tulum?",
+      "Do you speak English?",
+      "Does the gym have an app?",
     ],
     faqAnswers: [
       "No. Training is fully adapted to your current level.",
       "We evaluate and adapt using a biomechanical approach to keep progress safe.",
       "Yes, depending on the program recommended for your goal.",
       "Yes. You can start with a single session to assess your current level and define your path.",
+      "Plans range from $1,500 to $4,000 MXN per month, depending on how many days a week you train. You can see each plan in the plans section of this page.",
+      "We are in Tulum, Quintana Roo. The location section has the map and opens directions straight in Google Maps.",
+      "Yes. The Online Plan includes your routine, weekly follow-up and direct WhatsApp contact, so you can train from anywhere.",
+      "Yes. Coaching and follow-up are available in English and Spanish, and the whole site and app can be used in English.",
+      "Yes. The Tamara's Coaching & Fitness Club app is free for iPhone on the App Store, and you can also log in from the browser at app.tamaracoachclub.com.",
     ],
     urgencyEyebrow: "Spots",
     urgencyTitle: "Limited openings by schedule",
@@ -429,7 +455,7 @@ const I18N = {
     formButton: "Send via WhatsApp",
     formNote: "When you submit, WhatsApp opens with your message ready to send to the club.",
     locationEyebrow: "Location",
-    locationTitle: "Visit the club in person",
+    locationTitle: "Visit the gym in Tulum",
     locationLead:
       "If you want to transform your body with a proven method, this is your best next step: visit the space, talk with Tamara, and define a realistic path for your goal.",
     locationList: [
@@ -446,7 +472,10 @@ const I18N = {
   },
 };
 
-let currentLang = localStorage.getItem("site_lang") || "es";
+// Dedicated language pages (e.g. /en/) declare their language on <html>.
+// The URL wins over the stored preference so each URL is stable for crawlers.
+const pageLang = document.documentElement.dataset.pageLang || "";
+let currentLang = pageLang || localStorage.getItem("site_lang") || "es";
 if (!I18N[currentLang]) {
   currentLang = "es";
 }
@@ -750,6 +779,9 @@ const applyLanguage = (lang) => {
   setText("#comunidad .section-header h2", t.communityTitle);
   setText("#comunidad .container.content-layer > .lead", t.communityLead);
 
+  setText("#empezar h2", t.emotionalTitle);
+  setText("#empezar .lead", t.emotionalLead);
+
   setText("#faq .section-header .eyebrow", t.faqEyebrow);
   setText("#faq .section-header h2", t.faqTitle);
   setTextAll("#faq summary", t.faqQuestions);
@@ -830,12 +862,22 @@ const applyLanguage = (lang) => {
   updateWhatsAppLinks(lang);
 };
 
+const LANG_URLS = { es: "/", en: "/en/" };
+
 langButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.dataset.lang;
     if (!I18N[lang]) return;
+    localStorage.setItem("site_lang", lang);
+
+    // On a dedicated language page, switching language means changing URL so
+    // each language keeps its own indexable address.
+    if (pageLang && lang !== pageLang) {
+      window.location.href = LANG_URLS[lang] || "/";
+      return;
+    }
+
     currentLang = lang;
-    localStorage.setItem("site_lang", currentLang);
     applyLanguage(currentLang);
   });
 });
