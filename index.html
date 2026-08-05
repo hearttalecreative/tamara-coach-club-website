@@ -45,9 +45,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="assets/web/DSC04219.webp" fetchpriority="high" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" />
+  </noscript>
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
@@ -155,7 +160,7 @@
 
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Tamara's Coaching & Fitness Club">
-      <img class="brand-logo" src="logo.png" alt="Tamara's Coaching & Fitness Club" fetchpriority="high" decoding="async" />
+      <img class="brand-logo" src="logo.png" alt="Tamara's Coaching & Fitness Club" fetchpriority="high" decoding="async" width="3501" height="777" />
     </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav id="menu" class="menu">
@@ -260,17 +265,17 @@
         </div>
         <div class="grid-3">
           <article class="card">
-            <img class="card-media" src="assets/web/young-fitness-man-studio.webp" alt="Atleta enfocada en entrenamiento de fuerza" loading="lazy" decoding="async" />
+            <img class="card-media" src="assets/web/young-fitness-man-studio.webp" alt="Atleta enfocada en entrenamiento de fuerza" loading="lazy" decoding="async" width="1800" height="1197" />
             <h3>Cultura Mental</h3>
             <p>Disciplina por encima de la motivación. Compromiso sostenido con resultados medibles.</p>
           </article>
           <article class="card">
-            <img class="card-media" src="assets/web/woman-helping-man-gym.webp" alt="Coaching tecnico personalizado en gimnasio" loading="lazy" decoding="async" />
+            <img class="card-media" src="assets/web/woman-helping-man-gym.webp" alt="Coaching técnico personalizado en gimnasio" loading="lazy" decoding="async" width="1800" height="1200" />
             <h3>Programación Personalizada</h3>
             <p>Cada miembro avanza según su objetivo, nivel actual y contexto real.</p>
           </article>
           <article class="card">
-            <img class="card-media" src="assets/web/athletic-blonde-woman-sportswear-doing-exercise-legs-press-machine-gym.webp" alt="Trabajo integral de fuerza en Tamara Club" loading="lazy" decoding="async" />
+            <img class="card-media" src="assets/web/athletic-blonde-woman-sportswear-doing-exercise-legs-press-machine-gym.webp" alt="Trabajo integral de fuerza en Tamara Club" loading="lazy" decoding="async" width="1800" height="1200" />
             <h3>Enfoque Integral</h3>
             <p>Entrenamiento, nutrición y estrategia en un sistema claro y aplicable.</p>
           </article>
@@ -294,10 +299,10 @@
         </div>
         <div class="media-panel" aria-label="Tamara en competencia">
           <div class="tamara-rotator rotator" aria-hidden="true">
-            <img src="assets/web/DSC04191.webp" alt="" class="is-active" loading="eager" decoding="async" />
-            <img src="assets/web/DSC04219.webp" alt="" loading="eager" decoding="async" />
-            <img src="assets/web/DSC04230.webp" alt="" loading="lazy" decoding="async" />
-            <img src="assets/web/DSC04257.webp" alt="" loading="lazy" decoding="async" />
+            <img src="assets/web/DSC04191.webp" alt="" class="is-active" loading="eager" decoding="async" width="1800" height="2700" />
+            <img src="assets/web/DSC04219.webp" alt="" loading="eager" decoding="async" width="1800" height="2700" />
+            <img src="assets/web/DSC04230.webp" alt="" loading="lazy" decoding="async" width="1800" height="2700" />
+            <img src="assets/web/DSC04257.webp" alt="" loading="lazy" decoding="async" width="1800" height="2700" />
           </div>
         </div>
       </div>
@@ -337,11 +342,37 @@
         </div>
         <p class="lead">El espacio del club está pensado para entrenar con foco: equipamiento funcional, sesiones guiadas y una cultura donde cada persona entrena en serio sin importar su nivel de inicio.</p>
         <div class="gym-visual-grid">
-          <figure class="gym-shot gym-shot-wide"><img src="assets/web/young-man-sportswear-exercise-class-gym.webp" alt="Entrenamiento grupal en Tamara Club" loading="lazy" decoding="async" /></figure>
-          <figure class="gym-shot"><img src="assets/web/medium-shot-woman-holding-weight.webp" alt="Atleta entrenando con pesas" loading="lazy" decoding="async" /></figure>
-          <figure class="gym-shot"><img src="assets/web/sporty-beautiful-female-showing-her-well-trained-body.webp" alt="Entrenamiento de fuerza en gimnasio" loading="lazy" decoding="async" /></figure>
-          <figure class="gym-shot"><img src="assets/web/cropped-photo-athletic-man-keeping-dumbbells.webp" alt="Trabajo de fuerza con mancuernas" loading="lazy" decoding="async" /></figure>
-          <figure class="gym-shot"><img src="assets/web/woman-helping-man-gym.webp" alt="Acompanamiento tecnico en entrenamiento" loading="lazy" decoding="async" /></figure>
+          <figure class="gym-shot gym-shot-wide"><img src="assets/web/young-man-sportswear-exercise-class-gym.webp" alt="Entrenamiento grupal en Tamara Club" loading="lazy" decoding="async" width="1800" height="1201" /></figure>
+          <figure class="gym-shot"><img src="assets/web/medium-shot-woman-holding-weight.webp" alt="Atleta entrenando con pesas" loading="lazy" decoding="async" width="1800" height="2696" /></figure>
+          <figure class="gym-shot"><img src="assets/web/sporty-beautiful-female-showing-her-well-trained-body.webp" alt="Entrenamiento de fuerza en gimnasio" loading="lazy" decoding="async" width="1800" height="2698" /></figure>
+          <figure class="gym-shot"><img src="assets/web/cropped-photo-athletic-man-keeping-dumbbells.webp" alt="Trabajo de fuerza con mancuernas" loading="lazy" decoding="async" width="1800" height="2303" /></figure>
+          <figure class="gym-shot"><img src="assets/web/woman-helping-man-gym.webp" alt="Acompañamiento técnico en entrenamiento" loading="lazy" decoding="async" width="1800" height="1200" /></figure>
+        </div>
+      </div>
+    </section>
+
+<section id="comunidad" class="section reveal bg-light-section diagonal-both">
+      <div class="bg-giant-text" aria-hidden="true">EQUIPO</div>
+      <div class="container content-layer">
+        <div class="section-header">
+          <p class="eyebrow">Comunidad</p>
+          <h2>Respeto. Constancia. Carácter.</h2>
+        </div>
+        <p class="lead">
+          El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-emotional reveal diagonal-both">
+      <div class="bg-giant-text" aria-hidden="true">FUERZA</div>
+      <div class="container content-layer">
+        <div class="floating-card floating-card-contrast">
+          <h2>Si alguna vez sentiste que no podías</h2>
+          <p class="lead">
+            Muchos llegan después de abandonar procesos, perder confianza o no lograr constancia. Aquí
+            no se juzga. Se estructura. Se acompaña. Se construye.
+          </p>
         </div>
       </div>
     </section>
@@ -414,7 +445,7 @@
         </div>
         <div class="app-box online-box">
           <figure class="online-media">
-            <img src="assets/web/young-beautiful-sportive-girl-listening-music-dark-wall.webp" alt="Entrenamiento online guiado" loading="lazy" />
+            <img src="assets/web/young-beautiful-sportive-girl-listening-music-dark-wall.webp" alt="Entrenamiento online guiado" loading="lazy" width="1800" height="1200" />
           </figure>
           <div class="online-content">
             <p class="online-note">Control de clases, seguimiento de progreso y ajustes semanales en una experiencia online clara y personalizada.</p>
@@ -471,32 +502,6 @@
       </div>
     </section>
 
-    <section id="comunidad" class="section reveal bg-light-section diagonal-both">
-      <div class="bg-giant-text" aria-hidden="true">EQUIPO</div>
-      <div class="container content-layer">
-        <div class="section-header">
-          <p class="eyebrow">Comunidad</p>
-          <h2>Respeto. Constancia. Carácter.</h2>
-        </div>
-        <p class="lead">
-          El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-emotional reveal diagonal-both">
-      <div class="bg-giant-text" aria-hidden="true">FUERZA</div>
-      <div class="container content-layer">
-        <div class="floating-card floating-card-contrast">
-          <h2>Si alguna vez sentiste que no podías</h2>
-          <p class="lead">
-            Muchos llegan después de abandonar procesos, perder confianza o no lograr constancia. Aquí
-            no se juzga. Se estructura. Se acompaña. Se construye.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section id="faq" class="section reveal diagonal-both">
       <div class="bg-giant-text" aria-hidden="true">DUDAS</div>
       <div class="container content-layer">
@@ -530,7 +535,7 @@
       <div class="container content-layer">
         <div class="urgency-banner">
           <p class="eyebrow">Cupos</p>
-          <h3>Aperturas limitadas por horario</h3>
+          <p class="urgency-title">Aperturas limitadas por horario</p>
           <p class="urgency-text">Trabajamos con grupos reducidos para mantener acompañamiento real. Si quieres entrenar con seguimiento directo, te recomendamos agendar tu lugar cuanto antes.</p>
           <div class="urgency-tags">
             <span>Grupos máximo 5 personas</span>
@@ -556,9 +561,9 @@
             </div>
           </div>
           <form class="form" action="#" method="post" id="lead-form">
-            <label>Nombre<input type="text" name="nombre" required /></label>
-            <label>WhatsApp<input type="tel" name="telefono" required /></label>
-            <label>Correo<input type="email" name="correo" /></label>
+            <label>Nombre<input type="text" name="nombre" autocomplete="name" enterkeyhint="next" required /></label>
+            <label>WhatsApp<input type="tel" name="telefono" autocomplete="tel" inputmode="tel" enterkeyhint="next" required /></label>
+            <label>Correo<input type="email" name="correo" autocomplete="email" inputmode="email" spellcheck="false" /></label>
             <label>Objetivo principal
               <select name="objetivo" required>
                 <option value="">Selecciona una opción</option>
@@ -568,7 +573,7 @@
                 <option>Recomposición corporal</option>
               </select>
             </label>
-            <label class="field-message">Mensaje (opcional)<textarea name="mensaje" rows="3" placeholder="Cuentanos brevemente tu situacion actual"></textarea></label>
+            <label class="field-message">Mensaje (opcional)<textarea name="mensaje" rows="3" placeholder="Cuéntanos brevemente tu situación actual"></textarea></label>
             <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
             <p class="form-note">Al enviar, abriremos WhatsApp con tu mensaje listo para contactar al club.</p>
           </form>
@@ -593,7 +598,7 @@
             <a class="btn btn-ghost" href="https://maps.app.goo.gl/nExt3WbL4Zu5REWo6" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
           </div>
         </div>
-        <div class="map-embed" aria-label="Ubicacion del gimnasio en Google Maps">
+        <div class="map-embed" aria-label="Ubicación del gimnasio en Google Maps">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.663782407074!2d-87.46495466975897!3d20.196959863974577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd778ae39bdbb%3A0xf6667fd9e2aab5c1!2sRIO%20TULUM!5e0!3m2!1ses!2smx!4v1772487607618!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación de Tamara's Coach & Fitness Club en Tulum" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>

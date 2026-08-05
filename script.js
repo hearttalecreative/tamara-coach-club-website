@@ -81,7 +81,7 @@ const I18N = {
       "No improvisamos rutinas. Evaluamos punto de partida, historial físico y nivel de compromiso para construir un proceso sostenible, medible y realista.",
     methodCardsTitles: ["Cultura Mental", "Programación Personalizada", "Enfoque Integral"],
     methodCardsTexts: [
-      "Disciplina por encima de la motivacion. Compromiso sostenido con resultados medibles.",
+      "Disciplina por encima de la motivación. Compromiso sostenido con resultados medibles.",
       "Cada miembro avanza según su objetivo, nivel actual y contexto real.",
       "Entrenamiento, nutrición y estrategia en un sistema claro y aplicable.",
     ],
@@ -209,7 +209,7 @@ const I18N = {
     ],
     faqAnswers: [
       "No. El entrenamiento se adapta completamente a tu nivel.",
-      "Se evalua y adapta con enfoque biomecánico para mantener progreso seguro.",
+      "Se evalúa y adapta con enfoque biomecánico para mantener progreso seguro.",
       "Si, según el programa sugerido para tu objetivo.",
       "Si. Puedes iniciar con sesión única para evaluarte y definir tu ruta.",
     ],
@@ -756,7 +756,7 @@ const applyLanguage = (lang) => {
   setTextAll("#faq details p", t.faqAnswers);
 
   setText("#aplicar .urgency-banner .eyebrow", t.urgencyEyebrow);
-  setText("#aplicar .urgency-banner h3", t.urgencyTitle);
+  setText("#aplicar .urgency-banner .urgency-title", t.urgencyTitle);
   setText("#aplicar .urgency-banner .urgency-text", t.urgencyText);
   setTextAll("#aplicar .urgency-tags span", t.urgencyTags);
 
@@ -1012,3 +1012,62 @@ const initStatCountUp = () => {
 applyLanguage(currentLang);
 initHeroVideoPlayback();
 initStatCountUp();
+
+// One-page scroll spy: highlights the section currently in view.
+const initScrollSpy = () => {
+  const links = Array.from(document.querySelectorAll(".menu .nav-link"));
+  if (!links.length) return;
+
+  const targets = links
+    .map((link) => {
+      const id = (link.getAttribute("href") || "").replace("#", "");
+      const section = id ? document.getElementById(id) : null;
+      return section ? { link, section } : null;
+    })
+    .filter(Boolean);
+
+  if (!targets.length) return;
+
+  let current = null;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    // The section that owns the point just below the sticky header wins.
+    const line = window.scrollY + window.innerHeight * 0.3;
+    let active = null;
+
+    targets.forEach(({ section }) => {
+      const top = section.offsetTop;
+      if (top <= line) active = section;
+    });
+
+    // Near the page bottom the last linked section should stay highlighted.
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+      active = targets[targets.length - 1].section;
+    }
+
+    if (active === current) return;
+    current = active;
+
+    targets.forEach(({ link, section }) => {
+      if (section === active) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  };
+
+  update();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+};
+
+initScrollSpy();

@@ -1170,8 +1170,15 @@ main {
   box-shadow: var(--shadow-md);
 }
 
-.urgency-banner h3 {
+.urgency-banner .urgency-title {
   margin-bottom: 0.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .urgency-banner p {
@@ -2525,4 +2532,146 @@ html.js-enabled .reveal.is-visible .app-shot:nth-child(3) {
 
 .btn-ghost.btn-app .btn-app-icon svg {
   fill: var(--accent-2);
+}
+
+/* ============ Audit pass: focus, targets, tablet rhythm ============ */
+
+/* WCAG 2.4.7 — visible keyboard focus everywhere (mouse clicks unaffected) */
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.btn:focus-visible,
+.store-cta:focus-visible,
+.whatsapp-fab:focus-visible,
+.menu a:focus-visible,
+.lang-btn:focus-visible,
+.plan-card-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.bg-light-section :focus-visible {
+  outline-color: #9a155f;
+}
+
+/* WCAG 2.2 AA (2.5.8) — minimum 24px interactive targets */
+.lang-btn {
+  min-height: 26px;
+  min-width: 34px;
+  padding: 0.35rem 0.55rem;
+}
+
+.footer-legal-link,
+.copyright-text a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+/* Tablet gap fix: 620–860px kept collapsing card grids to a single column */
+@media (min-width: 620px) and (max-width: 860px) {
+  .grid-3,
+  .gym-visual-grid,
+  .audience-grid,
+  .awards-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gym-shot-wide {
+    grid-column: span 2;
+  }
+
+  .audience-grid > *:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Image inside the online box was overflowing its figure at tablet widths */
+.online-media {
+  overflow: hidden;
+}
+
+/* Scroll-spy state for one-page navigation */
+.menu .nav-link[aria-current="true"] {
+  color: #fff;
+  background: rgba(240, 0, 140, 0.18);
+}
+
+@media (min-width: 861px) {
+  .menu .nav-link {
+    position: relative;
+  }
+
+  .menu .nav-link[aria-current="true"]::after {
+    content: "";
+    position: absolute;
+    left: 0.55rem;
+    right: 0.55rem;
+    bottom: 0.08rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--accent-2);
+  }
+}
+
+/* Focus ring must beat the component-level `outline: none` declarations */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible,
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible,
+.faq-list summary:focus-visible,
+.footer-legal-link:focus-visible,
+.copyright-text a:focus-visible,
+.hero-app-chip:focus-visible,
+.footer-app-link:focus-visible,
+.header-ig:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+  outline-offset: 1px;
+}
+
+.btn:focus-visible,
+.store-cta:focus-visible,
+.whatsapp-fab:focus-visible,
+.menu a:focus-visible,
+.lang-btn:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.bg-light-section a:focus-visible,
+.bg-light-section button:focus-visible,
+.bg-light-section summary:focus-visible {
+  outline-color: #9a155f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-enabled .reveal .app-shot,
+  html.js-enabled .reveal .media-panel img,
+  html.js-enabled .reveal .awards-media img,
+  html.js-enabled .reveal .online-media img,
+  html.js-enabled .reveal .app-preview-media img {
+    opacity: 1;
+    transform: none;
+  }
+
+  .scroll-progress span {
+    transition: none;
+  }
 }
