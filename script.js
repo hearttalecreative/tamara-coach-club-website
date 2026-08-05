@@ -21,10 +21,12 @@ const WA_MESSAGES = {
   es: {
     general_info: "Hola Tamara Club, quiero información sobre los programas y cómo empezar.",
     hero_info: "Hola Tamara Club, quiero recibir información y disponibilidad para entrenar en el club.",
-    plan_elite: "Hola Tamara Club, me interesa la membresía Rendimiento Elite. Quiero más información.",
-    plan_base: "Hola Tamara Club, me interesa la membresía Base Fuerte. Quiero más información.",
-    plan_inicio: "Hola Tamara Club, me interesa la membresía Inicio Comprometido. Quiero más información.",
-    plan_sesion: "Hola Tamara Club, me interesa la Sesión Única. Quiero más información.",
+    plan_linea: "Hola Tamara Club, quiero suscribirme al Plan En Línea ($1,500 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_gold: "Hola Tamara Club, quiero suscribirme al Plan Gold ($2,500 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_inicio: "Hola Tamara Club, quiero suscribirme al Plan Inicio Comprometido ($3,000 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_intermedio: "Hola Tamara Club, quiero suscribirme al Plan Intermedio ($3,000 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_base: "Hola Tamara Club, quiero suscribirme al Plan Base Fuerte ($3,500 MXN mensual). ¿Me pasas los detalles para empezar?",
+    plan_elite: "Hola Tamara Club, quiero suscribirme al Plan Rendimiento Elite ($4,000 MXN mensual). ¿Me pasas los detalles para empezar?",
     online_program: "Hola Tamara Club, quiero información del programa Online Personalizado.",
     app_info: "Hola Tamara Club, quiero descargar la app de Tamara's Coach & Fitness Club.",
     visit_booking: "Hola Tamara Club, quiero agendar una visita para conocer el gimnasio.",
@@ -32,25 +34,36 @@ const WA_MESSAGES = {
   en: {
     general_info: "Hi Tamara Club, I'd like information about your programs and how to start.",
     hero_info: "Hi Tamara Club, I'd like info and availability to start training at the club.",
-    plan_elite: "Hi Tamara Club, I am interested in the Elite Performance membership. I would like more information.",
-    plan_base: "Hi Tamara Club, I am interested in the Strong Base membership. I would like more information.",
-    plan_inicio: "Hi Tamara Club, I am interested in the Committed Start membership. I would like more information.",
-    plan_sesion: "Hi Tamara Club, I am interested in the Single Session. I would like more information.",
+    plan_linea: "Hi Tamara Club, I'd like to subscribe to the Online Plan ($1,500 MXN/month). Could you share the details to get started?",
+    plan_gold: "Hi Tamara Club, I'd like to subscribe to the Gold Plan ($2,500 MXN/month). Could you share the details to get started?",
+    plan_inicio: "Hi Tamara Club, I'd like to subscribe to the Committed Start Plan ($3,000 MXN/month). Could you share the details to get started?",
+    plan_intermedio: "Hi Tamara Club, I'd like to subscribe to the Intermediate Plan ($3,000 MXN/month). Could you share the details to get started?",
+    plan_base: "Hi Tamara Club, I'd like to subscribe to the Strong Base Plan ($3,500 MXN/month). Could you share the details to get started?",
+    plan_elite: "Hi Tamara Club, I'd like to subscribe to the Elite Performance Plan ($4,000 MXN/month). Could you share the details to get started?",
     online_program: "Hi Tamara Club, I would like information about the Online Personalized program.",
     app_info: "Hi Tamara Club, I want to download the Tamara's Coach & Fitness Club app.",
     visit_booking: "Hi Tamara Club, I want to schedule a visit to get to know the gym.",
   },
 };
 
+const PLANS = [
+  { name: "Plan En Línea", price: 1500, freq: 3, dur: "1h", waKey: "plan_linea", tag: "online" },
+  { name: "Plan Gold", price: 2500, freq: 3, dur: "1.5h", waKey: "plan_gold", tag: null },
+  { name: "Plan Inicio Comprometido", price: 3000, freq: 3, dur: "1.5h", waKey: "plan_inicio", tag: null },
+  { name: "Plan Intermedio", price: 3000, freq: 4, dur: "1.5h", waKey: "plan_intermedio", tag: null },
+  { name: "Plan Base Fuerte", price: 3500, freq: 4, dur: "1.5h", waKey: "plan_base", tag: null },
+  { name: "Plan Rendimiento Elite", price: 4000, freq: 5, dur: "1.5h", waKey: "plan_elite", tag: "elite" },
+];
+
 const I18N = {
   es: {
     title: "Gimnasio y Entrenador Personal en Tulum | Tamara's Coaching & Fitness Club",
     description:
       "Gimnasio de fitness y entrenamiento personal en Tulum, México. Entrena con Tamara, entrenadora personal y coach de alto rendimiento: fuerza, método y seguimiento real, presencial y online.",
-    menu: ["Método", "Trayectoria", "Premios", "Online", "App", "Ubicación"],
+    menu: ["Método", "Trayectoria", "Premios", "Planes", "Online", "App", "Ubicación"],
     appMenuLink: "Acceso alumnos",
     menuCta: "Transfórmate!",
-    heroAppChip: "¿Ya eres alumno? Ingresa a la app en <strong>app.tamaracoachclub.com</strong>",
+    heroAppChip: "Nueva app para iPhone: <strong>descárgala en el App Store</strong>",
     heroEyebrow: "Gimnasio y entrenamiento personal · Tulum, México",
     heroTitle: "Disciplina primero.<br>La <span>transformación</span> es consecuencia.",
     heroLead:
@@ -106,6 +119,25 @@ const I18N = {
     plansLead: "Cada persona entrena según su nivel, su objetivo y su contexto. Definimos tu ruta en una asesoría inicial y ajustamos el plan contigo, paso a paso, con seguimiento directo.",
     processCtaText: "Sin planes rígidos ni letras pequeñas. Cuéntanos tu objetivo y te armamos una ruta a tu medida.",
     processCtaButton: "Solicita tu asesoría",
+    pricingEyebrow: "Membresías",
+    pricingTitle: "Planes de entrenamiento",
+    pricingLead: "Elige el plan que se adapta a tu ritmo. Todos incluyen acompañamiento de Tamara y seguimiento real. Te suscribes por WhatsApp en un minuto.",
+    pricingNote: "Precios en pesos mexicanos (MXN), cargo mensual. ¿Dudas sobre cuál elegir? Escríbenos y te asesoramos.",
+    planButtonSub: "Suscribirme",
+    planPerWeek: "días/sem",
+    planPerSession: "h/sesión",
+    planPer: "mes",
+    planTagMonthly: "Mensual",
+    planTagOnline: "Online",
+    planTagElite: "Élite",
+    planDescriptions: [
+      "Entrena desde donde estés, con rutina y seguimiento a distancia.",
+      "Acompañamiento cercano con más tiempo por sesión para afinar técnica.",
+      "Arranca con estructura y buenos hábitos, a tu ritmo y sin frustrarte.",
+      "Sube el ritmo con cuatro días a la semana y progreso constante.",
+      "Construye una base sólida con volumen y consistencia semanal.",
+      "Máxima frecuencia y enfoque para resultados de alto nivel.",
+    ],
     planKickers: ["Más elegido", "Progreso constante", "Punto de partida", "Evaluación inicial"],
     planTitles: ["Rendimiento Elite", "Base Fuerte", "Inicio Comprometido", "Sesión Única"],
     planBullets: [
@@ -152,7 +184,7 @@ const I18N = {
     appEyebrow: "App Tamara Club",
     appTitle: "Toda tu experiencia, en una sola app",
     appLead:
-      "Gestiona tus reservas, consulta tus rutinas y sigue tu progreso. <strong>Todos los alumnos ya pueden ingresar</strong> desde el navegador en app.tamaracoachclub.com.",
+      "<strong>Ya disponible para iPhone en el App Store.</strong> Reserva tus clases, consulta tus rutinas y sigue tu progreso desde el móvil. También puedes entrar desde el navegador.",
     appList: [
       "Reserva y organiza tus clases en segundos.",
       "Accede a tus rutinas y tareas semanales.",
@@ -160,8 +192,10 @@ const I18N = {
       "Participa en la comunidad del gimnasio.",
       "Uso 100% gratuito para miembros del club.",
     ],
-    appButton: "Ingresar a la app",
-    storeSoonLabel: "Muy pronto también en:",
+    appButton: "Abrir en el navegador",
+    storeCtaSmall: "Descárgala en el",
+    appPlatformNote: "Disponible para iPhone. Gratis para miembros del club.",
+    pricingAppText: "Al inscribirte, gestionas tus clases y tu progreso desde la app del club.",
     communityEyebrow: "Comunidad",
     communityTitle: "Respeto. Constancia. Carácter.",
     communityLead: "El valor central es el respeto: por el cuerpo, por el proceso y por la palabra.",
@@ -222,10 +256,10 @@ const I18N = {
     title: "Gym & Personal Trainer in Tulum | Tamara's Coaching & Fitness Club",
     description:
       "Gym, fitness and personal training in Tulum, Mexico. Train with Tamara, a personal trainer and high-performance coach: strength, method and real follow-up, in person and online.",
-    menu: ["Method", "Career", "Awards", "Online", "App", "Location"],
+    menu: ["Method", "Career", "Awards", "Plans", "Online", "App", "Location"],
     appMenuLink: "Student access",
     menuCta: "Transform Yourself!",
-    heroAppChip: "Already a member? Log in at <strong>app.tamaracoachclub.com</strong>",
+    heroAppChip: "New iPhone app: <strong>download it on the App Store</strong>",
     heroEyebrow: "Gym & personal training · Tulum, Mexico",
     heroTitle: "Discipline first.<br><span>Transformation</span> is the consequence.",
     heroLead:
@@ -281,6 +315,25 @@ const I18N = {
     plansLead: "Everyone trains according to their level, goal, and context. We map your path in an initial assessment and adjust the plan with you, step by step, with direct follow-up.",
     processCtaText: "No rigid plans, no fine print. Tell us your goal and we build a route made for you.",
     processCtaButton: "Request your assessment",
+    pricingEyebrow: "Memberships",
+    pricingTitle: "Training plans",
+    pricingLead: "Pick the plan that fits your pace. All include Tamara's coaching and real follow-up. You subscribe via WhatsApp in a minute.",
+    pricingNote: "Prices in Mexican pesos (MXN), billed monthly. Not sure which one to pick? Message us and we'll guide you.",
+    planButtonSub: "Subscribe",
+    planPerWeek: "days/wk",
+    planPerSession: "h/session",
+    planPer: "mo",
+    planTagMonthly: "Monthly",
+    planTagOnline: "Online",
+    planTagElite: "Elite",
+    planDescriptions: [
+      "Train from anywhere, with a routine and remote follow-up.",
+      "Close guidance with more time per session to refine technique.",
+      "Start with structure and solid habits, at your pace, frustration-free.",
+      "Step it up with four days a week and steady progress.",
+      "Build a strong base with weekly volume and consistency.",
+      "Maximum frequency and focus for high-level results.",
+    ],
     planKickers: ["Most chosen", "Steady progress", "Starting point", "Initial assessment"],
     planTitles: ["Elite Performance", "Strong Base", "Committed Start", "Single Session"],
     planBullets: [
@@ -327,7 +380,7 @@ const I18N = {
     appEyebrow: "Tamara Club App",
     appTitle: "Your whole experience, in one app",
     appLead:
-      "Manage your bookings, check your routines, and track your progress. <strong>All members can already log in</strong> from the browser at app.tamaracoachclub.com.",
+      "<strong>Now available for iPhone on the App Store.</strong> Book your classes, check your routines and track your progress from your phone. You can also log in from the browser.",
     appList: [
       "Book and organize your classes in seconds.",
       "Access your routines and weekly tasks.",
@@ -335,8 +388,10 @@ const I18N = {
       "Join the gym community.",
       "100% free for club members.",
     ],
-    appButton: "Open the app",
-    storeSoonLabel: "Coming soon to:",
+    appButton: "Open in browser",
+    storeCtaSmall: "Download on the",
+    appPlatformNote: "Available for iPhone. Free for club members.",
+    pricingAppText: "Once you join, you manage your classes and progress from the club app.",
     communityEyebrow: "Community",
     communityTitle: "Respect. Consistency. Character.",
     communityLead: "Our core value is respect: for your body, your process, and your word.",
@@ -523,6 +578,87 @@ const initHeroVideoPlayback = () => {
   }
 };
 
+const PLAN_NAMES_EN = {
+  plan_linea: "Online Plan",
+  plan_gold: "Gold Plan",
+  plan_inicio: "Committed Start Plan",
+  plan_intermedio: "Intermediate Plan",
+  plan_base: "Strong Base Plan",
+  plan_elite: "Elite Performance Plan",
+};
+
+const plansGrid = document.querySelector("#plans-grid");
+
+const renderPlans = (lang) => {
+  if (!plansGrid) return;
+  const t = I18N[lang] || I18N.es;
+  const messages = WA_MESSAGES[lang] || WA_MESSAGES.es;
+
+  const cards = PLANS.map((plan, index) => {
+    const name = lang === "en" ? PLAN_NAMES_EN[plan.waKey] || plan.name : plan.name;
+    const description = (t.planDescriptions && t.planDescriptions[index]) || "";
+    const href = buildWhatsAppUrl(messages[plan.waKey] || messages.general_info);
+    const price = plan.price.toLocaleString(lang === "en" ? "en-US" : "es-MX");
+
+    let tagLabel = t.planTagMonthly;
+    if (plan.tag === "online") tagLabel = t.planTagOnline;
+    if (plan.tag === "elite") tagLabel = t.planTagElite;
+
+    const card = document.createElement("article");
+    card.className = "plan-card" + (plan.tag === "elite" ? " is-featured" : "");
+
+    const head = document.createElement("div");
+    head.className = "plan-card-head";
+    const title = document.createElement("h3");
+    title.textContent = name;
+    const tag = document.createElement("span");
+    tag.className = "plan-card-tag" + (plan.tag ? " is-" + plan.tag : "");
+    tag.textContent = tagLabel;
+    head.append(title, tag);
+
+    const desc = document.createElement("p");
+    desc.className = "plan-card-desc";
+    desc.textContent = description;
+
+    const priceRow = document.createElement("p");
+    priceRow.className = "plan-card-price";
+    const amount = document.createElement("span");
+    amount.className = "plan-card-amount";
+    amount.textContent = "$" + price;
+    const currency = document.createElement("span");
+    currency.className = "plan-card-currency";
+    currency.textContent = "MXN / " + t.planPer;
+    priceRow.append(amount, currency);
+
+    const specs = document.createElement("ul");
+    specs.className = "plan-card-specs";
+    [
+      { icon: "calendar", text: plan.freq + " " + t.planPerWeek },
+      { icon: "clock", text: plan.dur + (lang === "en" ? "/session" : "/sesión") },
+    ].forEach((spec) => {
+      const li = document.createElement("li");
+      const dot = document.createElement("span");
+      dot.className = "plan-spec-dot";
+      dot.setAttribute("aria-hidden", "true");
+      li.append(dot, document.createTextNode(spec.text));
+      specs.appendChild(li);
+    });
+
+    const cta = document.createElement("a");
+    cta.className = "btn " + (plan.tag === "elite" ? "btn-primary" : "btn-ghost") + " plan-card-btn";
+    cta.href = href;
+    cta.target = "_blank";
+    cta.rel = "noopener noreferrer";
+    cta.textContent = t.planButtonSub;
+    cta.setAttribute("aria-label", t.planButtonSub + " — " + name);
+
+    card.append(head, desc, priceRow, specs, cta);
+    return card;
+  });
+
+  plansGrid.replaceChildren(...cards);
+};
+
 const applyLanguage = (lang) => {
   const t = I18N[lang];
   if (!t) return;
@@ -587,6 +723,12 @@ const applyLanguage = (lang) => {
   setText("#membresias .process-cta-text", t.processCtaText);
   setText("#membresias .process-cta .btn", t.processCtaButton);
 
+  setText("#planes .section-header .eyebrow", t.pricingEyebrow);
+  setText("#planes .section-header h2", t.pricingTitle);
+  setText("#planes .pricing-lead", t.pricingLead);
+  setText("#planes .pricing-note", t.pricingNote);
+  renderPlans(lang);
+
   setText("#online .container > div:first-child .eyebrow", t.onlineEyebrow);
   setText("#online .container > div:first-child h2", t.onlineTitle);
   setText("#online .container > div:first-child .lead", t.onlineLead);
@@ -600,7 +742,9 @@ const applyLanguage = (lang) => {
   setText("#app .app-section-copy .app-lead", t.appLead, true);
   setTextAll("#app .app-section-list li", t.appList);
   setText("#app .btn-app .btn-app-label", t.appButton);
-  setText("#app .store-soon-label", t.storeSoonLabel);
+  setText("#app .app-platform-note", t.appPlatformNote);
+  setText("#planes .pricing-app-text", t.pricingAppText);
+  setTextAll(".store-cta-small", [t.storeCtaSmall, t.storeCtaSmall, t.storeCtaSmall]);
 
   setText("#comunidad .section-header .eyebrow", t.communityEyebrow);
   setText("#comunidad .section-header h2", t.communityTitle);

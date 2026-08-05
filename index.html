@@ -106,6 +106,20 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tamara Coaching & Fitness Club",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "url": "https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481",
+    "installUrl": "https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481",
+    "description": "App oficial de Tamara's Coaching & Fitness Club: reserva clases, consulta tus rutinas y sigue tu progreso.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MXN" },
+    "publisher": { "@id": "https://www.tamaracoachclub.com/#gym" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -148,6 +162,7 @@
       <a class="nav-link" href="#metodo">Método</a>
       <a class="nav-link" href="#trayectoria">Trayectoria</a>
       <a class="nav-link" href="#premios">Premios</a>
+      <a class="nav-link" href="#planes">Planes</a>
       <a class="nav-link" href="#online">Online</a>
       <a class="nav-link" href="#app">App</a>
       <a class="nav-link" href="#ubicacion">Ubicación</a>
@@ -199,9 +214,10 @@
           </a>
         </div>
         <p class="tagline">Grupos reducidos. Seguimiento real. Cupos limitados.</p>
-        <a class="hero-app-chip" href="https://app.tamaracoachclub.com/" target="_blank" rel="noopener noreferrer">
+        <a class="hero-app-chip" href="https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481" target="_blank" rel="noopener noreferrer">
           <span class="hero-app-chip-dot" aria-hidden="true"></span>
-          <span class="hero-app-chip-text">¿Ya eres alumno? Ingresa a la app en <strong>app.tamaracoachclub.com</strong></span>
+          <span class="hero-app-chip-text">Nueva app para iPhone: <strong>descárgala en el App Store</strong></span>
+          <svg class="hero-app-chip-apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.8c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.66 2.67-.66 1.24 0 1.6.66 2.69.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29ZM14.3 6.74c.56-.69.94-1.63.83-2.59-.81.03-1.8.54-2.38 1.22-.52.6-.98 1.57-.86 2.49.9.07 1.83-.46 2.41-1.12Z"/></svg>
         </a>
       </div>
     </section>
@@ -362,6 +378,26 @@
       </div>
     </section>
 
+    <section id="planes" class="section reveal">
+      <div class="bg-giant-text" aria-hidden="true">PLANES</div>
+      <div class="container content-layer">
+        <div class="section-header">
+          <p class="eyebrow">Membresías</p>
+          <h2>Planes de entrenamiento</h2>
+          <p class="lead pricing-lead">Elige el plan que se adapta a tu ritmo. Todos incluyen acompañamiento de Tamara y seguimiento real. Te suscribes por WhatsApp en un minuto.</p>
+        </div>
+        <div class="plans-grid" id="plans-grid"></div>
+        <p class="pricing-note">Precios en pesos mexicanos (MXN), cargo mensual. ¿Dudas sobre cuál elegir? Escríbenos y te asesoramos.</p>
+        <div class="pricing-app-strip">
+          <p class="pricing-app-text">Al inscribirte, gestionas tus clases y tu progreso desde la app del club.</p>
+          <a class="store-cta store-cta-sm" href="https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481" target="_blank" rel="noopener noreferrer">
+            <svg class="store-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.8c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.66 2.67-.66 1.24 0 1.6.66 2.69.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29ZM14.3 6.74c.56-.69.94-1.63.83-2.59-.81.03-1.8.54-2.38 1.22-.52.6-.98 1.57-.86 2.49.9.07 1.83-.46 2.41-1.12Z"/></svg>
+            <span class="store-cta-text"><small class="store-cta-small">Descárgala en el</small><strong>App Store</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="online" class="section reveal bg-light-section diagonal-both">
       <div class="bg-giant-text" aria-hidden="true">ONLINE</div>
       <div class="container split content-layer">
@@ -399,7 +435,7 @@
         <div class="app-section-copy">
           <p class="eyebrow app-eyebrow">App Tamara Club</p>
           <h2>Toda tu experiencia, en una sola app</h2>
-          <p class="lead app-lead">Gestiona tus reservas, consulta tus rutinas y sigue tu progreso. <strong>Todos los alumnos ya pueden ingresar</strong> desde el navegador en app.tamaracoachclub.com.</p>
+          <p class="lead app-lead"><strong>Ya disponible para iPhone en el App Store.</strong> Reserva tus clases, consulta tus rutinas y sigue tu progreso desde el móvil. También puedes entrar desde el navegador.</p>
           <ul class="list app-section-list">
             <li>Reserva y organiza tus clases en segundos.</li>
             <li>Accede a tus rutinas y tareas semanales.</li>
@@ -407,31 +443,31 @@
             <li>Participa en la comunidad del gimnasio.</li>
             <li>Uso 100% gratuito para miembros del club.</li>
           </ul>
-          <div class="actions">
-            <a class="btn btn-primary btn-app" href="https://app.tamaracoachclub.com/" target="_blank" rel="noopener noreferrer">
+          <div class="actions app-actions">
+            <a class="store-cta js-appstore-link" href="https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481" target="_blank" rel="noopener noreferrer">
+              <svg class="store-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.8c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.66 2.67-.66 1.24 0 1.6.66 2.69.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29ZM14.3 6.74c.56-.69.94-1.63.83-2.59-.81.03-1.8.54-2.38 1.22-.52.6-.98 1.57-.86 2.49.9.07 1.83-.46 2.41-1.12Z"/></svg>
+              <span class="store-cta-text"><small class="store-cta-small">Descárgala en el</small><strong>App Store</strong></span>
+            </a>
+            <a class="btn btn-ghost btn-app" href="https://app.tamaracoachclub.com/" target="_blank" rel="noopener noreferrer">
               <span class="btn-app-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg>
               </span>
-              <span class="btn-app-label">Ingresar a la app</span>
+              <span class="btn-app-label">Abrir en el navegador</span>
             </a>
           </div>
-          <div class="store-soon">
-            <span class="store-soon-label">Muy pronto también en:</span>
-            <div class="store-badges">
-              <span class="store-badge" aria-label="Próximamente en App Store de Apple">
-                <svg class="store-badge-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.8c-.02-2.06 1.68-3.05 1.76-3.1-0.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.66 2.67-.66 1.24 0 1.6.66 2.69.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29ZM14.3 6.74c.56-.69.94-1.63.83-2.59-.81.03-1.8.54-2.38 1.22-.52.6-.98 1.57-.86 2.49.9.07 1.83-.46 2.41-1.12Z"/></svg>
-                <span class="store-badge-text"><small>Próximamente en</small><strong>App Store</strong></span>
-              </span>
-              <span class="store-badge" aria-label="Próximamente en Google Play">
-                <svg class="store-badge-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.24.25-.38.64-.38 1.14v17.12c0 .5.14.89.39 1.13l.06.05L13.2 12.1v-.22L3.66 2.25l-.06.05Zm12.94 12.9-2.13-2.13v-.22l2.13-2.13.05.03 2.52 1.43c.72.41.72 1.08 0 1.49l-2.52 1.43-.05.03Zm-.62.66-2.72-2.72-9.6 9.6c.24.25.63.28 1.07.03l11.25-6.4Zm0-6.71L4.67 2.4c-.44-.25-.83-.22-1.07.03l9.6 9.6 2.72-2.72Z"/></svg>
-                <span class="store-badge-text"><small>Próximamente en</small><strong>Google Play</strong></span>
-              </span>
-            </div>
-          </div>
+          <p class="app-platform-note">Disponible para iPhone. Gratis para miembros del club.</p>
         </div>
-        <figure class="app-preview-media">
-          <img src="app1.webp" alt="Vista de la aplicación Tamara's Coach & Fitness Club" width="1000" height="1286" loading="lazy" decoding="async" />
-        </figure>
+        <div class="app-showcase">
+          <figure class="app-shot app-shot-lead">
+            <img src="assets/app/screen-3.webp" alt="Pantalla de la app: gestión de clases y horarios" width="460" height="995" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="app-shot app-shot-side">
+            <img src="assets/app/screen-4.webp" alt="Pantalla de la app: reservas y cancelaciones al día" width="460" height="995" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="app-shot app-shot-side">
+            <img src="assets/app/screen-2.webp" alt="Pantalla de la app: inicio de sesión de alumnos" width="460" height="995" loading="lazy" decoding="async" />
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -583,6 +619,10 @@
       <span class="footer-app-label">Acceso alumnos:</span>
       <a class="footer-app-link" href="https://app.tamaracoachclub.com/" target="_blank" rel="noopener noreferrer">app.tamaracoachclub.com</a>
     </p>
+    <a class="store-cta store-cta-sm footer-store-cta" href="https://apps.apple.com/mx/app/tamara-coaching-fitness-club/id6758464481" target="_blank" rel="noopener noreferrer">
+      <svg class="store-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.8c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.66 2.67-.66 1.24 0 1.6.66 2.69.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29ZM14.3 6.74c.56-.69.94-1.63.83-2.59-.81.03-1.8.54-2.38 1.22-.52.6-.98 1.57-.86 2.49.9.07 1.83-.46 2.41-1.12Z"/></svg>
+      <span class="store-cta-text"><small class="store-cta-small">Descárgala en el</small><strong>App Store</strong></span>
+    </a>
     <p class="footer-legal">
       <a class="footer-legal-link" href="/privacidad.html">Aviso de Privacidad</a>
     </p>

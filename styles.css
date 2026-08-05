@@ -2157,3 +2157,372 @@ html.js-enabled .reveal.is-visible .faq-list > *:nth-child(4) {
   opacity: 0.85;
   max-width: 62ch;
 }
+
+/* ===================== Pricing plans module ===================== */
+
+.pricing-lead {
+  margin-top: 1rem;
+  max-width: 68ch;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.5rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-soft);
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-md);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(240, 0, 140, 0.45);
+  box-shadow: 0 24px 44px rgba(2, 8, 15, 0.4);
+}
+
+.plan-card.is-featured {
+  border-color: rgba(240, 0, 140, 0.55);
+  background: linear-gradient(165deg, rgba(240, 0, 140, 0.16), rgba(12, 12, 16, 0.92));
+}
+
+.plan-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.plan-card-head h3 {
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+  line-height: 1.1;
+}
+
+.plan-card-tag {
+  flex: none;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 0, 140, 0.4);
+  color: #ffd0ef;
+  background: rgba(240, 0, 140, 0.12);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.plan-card-tag.is-elite {
+  color: #0a0a0d;
+  background: linear-gradient(110deg, var(--accent-2), #ffb3e0);
+  border-color: transparent;
+}
+
+.plan-card-desc {
+  color: #cdd6e0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.plan-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.plan-card-amount {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1;
+}
+
+.plan-card-currency {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.plan-card-specs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+}
+
+.plan-card-specs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #d3dbe4;
+  font-size: 0.86rem;
+}
+
+.plan-spec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent-2);
+  flex: none;
+}
+
+.plan-card-btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.pricing-note {
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  max-width: 70ch;
+}
+
+@media (max-width: 1100px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    padding: 1.25rem 1.15rem;
+  }
+}
+
+/* ===================== App Store CTA + showcase ===================== */
+
+.store-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.62rem 1.15rem;
+  border-radius: 12px;
+  background: #fff;
+  color: #0a0a0d;
+  text-decoration: none;
+  border: 1px solid #fff;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.3);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.store-cta:hover,
+.store-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 34px rgba(0, 0, 0, 0.4);
+}
+
+.store-cta-icon {
+  width: 24px;
+  height: 24px;
+  fill: #0a0a0d;
+  flex: none;
+}
+
+.store-cta-text {
+  display: grid;
+  line-height: 1.12;
+  text-align: left;
+}
+
+.store-cta-small {
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #55606b;
+}
+
+.store-cta-text strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.store-cta-sm {
+  padding: 0.5rem 0.95rem;
+}
+
+.store-cta-sm .store-cta-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.store-cta-sm .store-cta-text strong {
+  font-size: 0.9rem;
+}
+
+.app-actions {
+  gap: 0.7rem;
+}
+
+.app-platform-note {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.hero-app-chip-apple {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex: none;
+  opacity: 0.9;
+}
+
+/* Phone screenshot showcase */
+.app-showcase {
+  display: grid;
+  grid-template-columns: 1.15fr 0.92fr;
+  grid-template-rows: auto auto;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.app-shot {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.5);
+  background: #0a0a0d;
+  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 420ms ease;
+}
+
+.app-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.app-shot-lead {
+  grid-row: span 2;
+}
+
+.app-shot:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 60px rgba(240, 0, 140, 0.24);
+}
+
+html.js-enabled .reveal .app-shot {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+html.js-enabled .reveal.is-visible .app-shot {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html.js-enabled .reveal.is-visible .app-shot:nth-child(2) {
+  transition-delay: 110ms;
+}
+
+html.js-enabled .reveal.is-visible .app-shot:nth-child(3) {
+  transition-delay: 220ms;
+}
+
+/* Pricing → app strip */
+.pricing-app-strip {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pricing-app-text {
+  color: #dbe3ec;
+  font-size: 0.94rem;
+  max-width: 56ch;
+}
+
+.footer-store-cta {
+  justify-self: start;
+  width: fit-content;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 860px) {
+  .app-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 0.7rem;
+  }
+
+  .app-shot-lead {
+    grid-row: auto;
+    grid-column: span 2;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .pricing-app-strip {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pricing-app-strip .store-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .store-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .app-shot-lead {
+    max-width: 260px;
+  }
+}
+
+/* Secondary app action must not compete with the App Store CTA */
+.btn-ghost.btn-app {
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef2f6;
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: none;
+}
+
+.btn-ghost.btn-app:hover,
+.btn-ghost.btn-app:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-ghost.btn-app .btn-app-icon svg {
+  fill: var(--accent-2);
+}
