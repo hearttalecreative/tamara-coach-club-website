@@ -166,8 +166,11 @@ if (langLink) {
   langLink.textContent = "Versión en español";
 }
 
-const legalLink = document.querySelector(".footer-legal-link:not(.footer-lang-link)");
-if (legalLink) legalLink.textContent = "Privacy Policy";
+const privacyLink = document.querySelector(".footer-privacy-link");
+if (privacyLink) privacyLink.textContent = "Privacy Policy";
+
+const termsLink = document.querySelector(".footer-terms-link");
+if (termsLink) termsLink.textContent = "Terms & Conditions";
 
 const skip = document.querySelector(".skip-link");
 if (skip) skip.textContent = "Skip to content";
